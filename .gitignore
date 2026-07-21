@@ -1,0 +1,50 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# File riservati
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Log e file temporanei
+*.log
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+tmp/
+cache/
+
+# IDE
+.idea/
+.vscode/
+
+# Dipendenze o build future
+node_modules/
+dist/
+build/
+coverage/
+
+# File compressi temporanei
+*.zip
+*.tar
+*.tar.gz
+
+# Screenshot automatici e risultati di audit
+reference/visual-review/
+reference/screenshots-generated/
+
+# Originali multimediali molto pesanti
+source-assets/raw/
+source-assets/video-originali/
