@@ -1,6 +1,6 @@
-# Registro contenuti — Homepage Rio Storto
+# Registro contenuti — Rio Storto
 
-Tracciamento di testi e asset usati nella homepage dimostrativa.  
+Tracciamento di testi e asset usati nelle pagine dimostrative.  
 I commenti HTML (`CONTENT STATUS` / `IMAGE STATUS`) riflettono lo stesso stato.
 
 Stati ammessi:
@@ -10,6 +10,8 @@ Stati ammessi:
 - `asset temporaneo`
 - `da confermare`
 - `definitivo`
+
+## Homepage
 
 | Sezione | Testo o immagine | Fonte | Stato | Conferma cliente necessaria | File definitivo richiesto |
 | --- | --- | --- | --- | --- | --- |
@@ -36,9 +38,24 @@ Stati ammessi:
 | Footer | Nome azienda + link privacy/cookie | Bozza | riscritto provvisorio | Sì | Ragione sociale, P. IVA, privacy/cookie definitive |
 | Logo | PNG ottimizzati header/footer | Logo cliente 2024 | verificato da materiale precedente | No | Eventuale PNG/SVG trasparente ufficiale |
 
+## Pagina `/storia/`
+
+| Sezione | Testo o immagine | Fonte | Stato | Conferma cliente necessaria | Note |
+| --- | --- | --- | --- | --- | --- |
+| Hero interna | Soprattitolo, H1, introduzione | Brief pagina storia | riscritto provvisorio | Sì | — |
+| Origine del nome | Titolo e testo sul corso d’acqua di risorgiva | Brief pagina storia | riscritto provvisorio | Sì | Origine del nome: da verificare definitivamente con il cliente |
+| Timeline | Quattro tappe (radici → oggi), senza anni inventati | Brief pagina storia | riscritto provvisorio | Sì | “Prima del 1930” e “quattro generazioni”: da verificare definitivamente con il cliente |
+| Filiera narrativa | Terra → Accoglienza + testo | Brief pagina storia | riscritto provvisorio | Sì | — |
+| Valori | Genuinità, Stagionalità, Cura, Accoglienza | Brief pagina storia | riscritto provvisorio | Sì | — |
+| Citazione editoriale | Frase non attribuita | Brief pagina storia | riscritto provvisorio | Sì | Non è una testimonianza personale |
+| CTA | Link ad agricoltura / allevamento | Brief | riscritto provvisorio | — | Destinazioni 404 fino al prossimo ciclo |
+| Immagini | Nessuna fotografia dedicata in pagina | — | — | Sì | Mancanti: fotografia storica della famiglia e dell’azienda |
+| Nomi e date | Non presenti | — | da confermare | Sì | Non ancora forniti dal cliente |
+| OG image | `hero-rio-storto.jpg` (provvisoria) | Asset homepage | asset temporaneo | Sì | Sostituire con visual dedicato quando disponibile |
+
 ## Note operative
 
-1. I fallback fotografici sono gradienti e forme CSS: la homepage resta completa anche senza WebP.
+1. I fallback fotografici sono gradienti e forme CSS: le pagine restano complete anche senza WebP.
 2. Quando arriva un file in `html/assets/img/home/`, sostituisce automaticamente lo strato superiore dello slot (nessuna modifica HTML obbligatoria).
-3. Non pubblicare come certi: date eventi, orari, prezzi, certificazioni, quantità di animali, menu, aperture, P. IVA.
+3. Non pubblicare come certi: date eventi, orari, prezzi, certificazioni, quantità di animali, menu, aperture, P. IVA, nomi dei familiari.
 4. Aggiornare questa tabella a ogni conferma del cliente.

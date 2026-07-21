@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La nostra storia | Azienda Agricola Rio Storto</title>
+  <meta name="description" content="Da prima del 1930, quattro generazioni coltivano, allevano e trasformano nel territorio di Rio Storto, seguendo un’unica filiera familiare.">
+  <link rel="canonical" href="https://riostorto.touchlabs.it/storia/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="it_IT">
+  <meta property="og:site_name" content="Azienda Agricola Rio Storto">
+  <meta property="og:title" content="La nostra storia | Azienda Agricola Rio Storto">
+  <meta property="og:description" content="Da prima del 1930, quattro generazioni coltivano, allevano e trasformano nel territorio di Rio Storto, seguendo un’unica filiera familiare.">
+  <meta property="og:url" content="https://riostorto.touchlabs.it/storia/">
+  <meta property="og:image" content="https://riostorto.touchlabs.it/assets/img/home/hero-rio-storto.jpg">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="La nostra storia | Azienda Agricola Rio Storto">
+  <meta name="twitter:description" content="Da prima del 1930, quattro generazioni coltivano, allevano e trasformano nel territorio di Rio Storto.">
+  <meta name="twitter:image" content="https://riostorto.touchlabs.it/assets/img/home/hero-rio-storto.jpg">
+
+  <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
+
+  <!-- Prototipo: font da CDN. Prima della pubblicazione ospitare localmente in /assets/fonts/ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Fraunces:ital,opsz,wght@0,9..144,400..600;1,9..144,400..600&family=Newsreader:opsz,wght@6..72,400..600&display=swap" rel="stylesheet">
+
+  <script>
+    (function () {
+      try {
+        if (new URLSearchParams(window.location.search).get("font") === "newsreader") {
+          document.documentElement.classList.add("font-newsreader");
+        }
+      } catch (e) { /* ignore */ }
+    })();
+  </script>
+
+  <link rel="stylesheet" href="/assets/css/main.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://riostorto.touchlabs.it/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "La nostra storia",
+        "item": "https://riostorto.touchlabs.it/storia/"
+      }
+    ]
+  }
+  </script>
+</head>
+<body class="page-internal">
+  <a class="skip-link" href="#contenuto-principale">Vai al contenuto</a>
+
+  <header class="site-header is-scrolled" data-header data-header-solid>
+    <div class="site-header__inner">
+      <a class="site-logo" href="/" aria-label="Rio Storto — Vai alla home">
+        <span class="site-logo__media">
+          <img
+            class="site-logo__image"
+            src="/assets/img/logo-rio-storto-96.png"
+            srcset="/assets/img/logo-rio-storto-96.png 1x, /assets/img/logo-rio-storto-192.png 2x"
+            alt=""
+            width="52"
+            height="52"
+            decoding="async"
+          >
+        </span>
+      </a>
+
+      <nav class="nav-desktop" aria-label="Navigazione principale">
+        <ul class="nav-desktop__list">
+          <li><a href="/storia/" aria-current="page">La nostra storia</a></li>
+          <li class="has-dropdown" data-dropdown>
+            <button
+              type="button"
+              class="nav-desktop__trigger"
+              aria-expanded="false"
+              aria-controls="submenu-azienda"
+              id="trigger-azienda"
+            >
+              L’azienda
+              <svg class="nav-caret" width="12" height="8" viewBox="0 0 12 8" aria-hidden="true" focusable="false">
+                <path d="M1 1.5 L6 6.5 L11 1.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <ul class="nav-dropdown" id="submenu-azienda" role="list">
+              <li><a href="/azienda/allevamento/">Allevamento</a></li>
+              <li><a href="/azienda/agricoltura/">Agricoltura</a></li>
+            </ul>
+          </li>
+          <li><a href="/prodotti/">I nostri prodotti</a></li>
+          <li><a href="/fattoria-didattica/">Fattoria didattica</a></li>
+          <li><a href="/agriturismo/">Agriturismo</a></li>
+          <li><a href="/contatti/">Contatti</a></li>
+        </ul>
+      </nav>
+
+      <a class="btn btn--ghost btn--header" href="/contatti/">Vieni a trovarci</a>
+
+      <button
+        type="button"
+        class="nav-toggle"
+        data-nav-toggle
+        aria-expanded="false"
+        aria-controls="menu-mobile"
+        aria-label="Apri il menu"
+      >
+        <span class="nav-toggle__bar" aria-hidden="true"></span>
+        <span class="nav-toggle__bar" aria-hidden="true"></span>
+      </button>
+    </div>
+  </header>
+
+  <div
+    class="nav-mobile"
+    id="menu-mobile"
+    data-nav-mobile
+    hidden
+  >
+    <nav aria-label="Menu mobile">
+      <ul class="nav-mobile__list">
+        <li><a href="/storia/" aria-current="page">La nostra storia</a></li>
+        <li>
+          <button
+            type="button"
+            class="nav-mobile__subtrigger"
+            aria-expanded="false"
+            aria-controls="mobile-submenu-azienda"
+            data-mobile-subtrigger
+          >
+            L’azienda
+            <svg class="nav-caret" width="12" height="8" viewBox="0 0 12 8" aria-hidden="true" focusable="false">
+              <path d="M1 1.5 L6 6.5 L11 1.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <ul class="nav-mobile__sublist" id="mobile-submenu-azienda" hidden>
+            <li><a href="/azienda/allevamento/">Allevamento</a></li>
+            <li><a href="/azienda/agricoltura/">Agricoltura</a></li>
+          </ul>
+        </li>
+        <li><a href="/prodotti/">I nostri prodotti</a></li>
+        <li><a href="/fattoria-didattica/">Fattoria didattica</a></li>
+        <li><a href="/agriturismo/">Agriturismo</a></li>
+        <li><a href="/contatti/">Contatti</a></li>
+      </ul>
+      <a class="btn btn--primary nav-mobile__cta" href="/contatti/">Vieni a trovarci</a>
+    </nav>
+  </div>
+
+  <main id="contenuto-principale">
+    <!-- CONTENT STATUS: pagina storia — testi riscritti provvisori da confermare -->
+    <header class="page-hero">
+      <div class="container page-hero__inner">
+        <nav class="breadcrumbs" aria-label="Percorso di navigazione">
+          <ol class="breadcrumbs__list">
+            <li class="breadcrumbs__item"><a href="/">Home</a></li>
+            <li class="breadcrumbs__item"><span aria-current="page">La nostra storia</span></li>
+          </ol>
+        </nav>
+
+        <p class="eyebrow">La nostra storia</p>
+        <h1 id="page-title">Una storia che scorre da <span class="title-accent">quattro generazioni</span>.</h1>
+        <p class="page-hero__lead">Da prima del 1930, la famiglia Rio Storto coltiva, alleva e trasforma seguendo un percorso che unisce terra, lavoro e territorio.</p>
+
+        <svg class="page-hero__river" viewBox="0 0 640 28" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+          <path d="M0 16 C 80 6, 160 24, 240 14 S 400 4, 480 16 S 580 22, 640 12" fill="none" stroke="currentColor" stroke-width="1.4"/>
+          <circle cx="312" cy="12" r="2.4" fill="currentColor"/>
+        </svg>
+      </div>
+    </header>
+
+    <!-- ORIGINE DEL NOME -->
+    <section class="section editorial-section" aria-labelledby="nome-title">
+      <div class="container editorial-section__grid">
+        <div class="editorial-section__copy reveal">
+          <p class="eyebrow">Il nome</p>
+          <h2 id="nome-title">Un piccolo corso d’acqua, un legame profondo con la terra.</h2>
+          <p>Rio Storto prende il nome dal corso d’acqua di risorgiva che attraversa e accompagna i terreni della famiglia. Un elemento discreto del paesaggio, diventato nel tempo il simbolo di un’attività cresciuta seguendo i ritmi della campagna.</p>
+        </div>
+        <div class="editorial-section__aside reveal" aria-hidden="true">
+          <div class="story-mark">
+            <svg class="story-mark__line story-mark__line--desktop" viewBox="0 0 120 220" preserveAspectRatio="xMidYMid meet" focusable="false">
+              <path d="M58 8 C 42 48, 78 72, 52 118 S 70 168, 60 212" fill="none" stroke="currentColor" stroke-width="1.5"/>
+              <circle cx="58" cy="8" r="3.2" fill="currentColor"/>
+              <circle cx="60" cy="212" r="3.2" fill="currentColor"/>
+            </svg>
+            <svg class="story-mark__line story-mark__line--mobile" viewBox="0 0 320 40" preserveAspectRatio="none" focusable="false">
+              <path d="M8 22 C 60 8, 110 30, 160 16 S 250 8, 312 22" fill="none" stroke="currentColor" stroke-width="1.5"/>
+              <circle cx="8" cy="22" r="2.8" fill="currentColor"/>
+              <circle cx="312" cy="22" r="2.8" fill="currentColor"/>
+            </svg>
+            <p class="story-mark__caption">Risorgiva</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUATTRO GENERAZIONI -->
+    <section class="section story-timeline-section" aria-labelledby="generazioni-title">
+      <div class="container">
+        <header class="section-header reveal">
+          <h2 id="generazioni-title">Quattro generazioni</h2>
+        </header>
+
+        <ol class="story-timeline">
+          <li class="story-timeline__item reveal">
+            <span class="story-timeline__index" aria-hidden="true">01</span>
+            <div class="story-timeline__body">
+              <h3>Le radici</h3>
+              <p>Prima del 1930 inizia una storia familiare costruita sul lavoro agricolo e sul rapporto quotidiano con la terra.</p>
+            </div>
+          </li>
+          <li class="story-timeline__item reveal">
+            <span class="story-timeline__index" aria-hidden="true">02</span>
+            <div class="story-timeline__body">
+              <h3>La continuità</h3>
+              <p>Generazione dopo generazione, conoscenze, responsabilità e attenzione per l’azienda vengono tramandate e rinnovate.</p>
+            </div>
+          </li>
+          <li class="story-timeline__item reveal">
+            <span class="story-timeline__index" aria-hidden="true">03</span>
+            <div class="story-timeline__body">
+              <h3>La filiera cresce</h3>
+              <p>Agricoltura, allevamento e trasformazione si uniscono progressivamente in un percorso seguito direttamente dall’azienda.</p>
+            </div>
+          </li>
+          <li class="story-timeline__item reveal">
+            <span class="story-timeline__index" aria-hidden="true">04</span>
+            <div class="story-timeline__body">
+              <h3>Rio Storto oggi</h3>
+              <p>Prodotti, accoglienza e attività didattiche raccontano oggi la stessa origine: conoscere ciò che si coltiva, si alleva e si porta in tavola.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- UN’UNICA FILIERA -->
+    <section class="section editorial-section editorial-section--band" aria-labelledby="filiera-lavoro-title">
+      <div class="container">
+        <header class="section-header reveal">
+          <p class="eyebrow">Il nostro modo di lavorare</p>
+          <h2 id="filiera-lavoro-title">Conoscere ogni passaggio significa prendersene cura.</h2>
+          <p class="section-header__lede">La storia di Rio Storto non è fatta di attività separate. I campi sostengono l’azienda, l’allevamento richiede presenza quotidiana e la trasformazione dà valore alle materie prime. Ogni parte contribuisce alla successiva.</p>
+        </header>
+
+        <ol class="story-path">
+          <li class="story-path__step reveal">
+            <span class="story-path__num" aria-hidden="true">01</span>
+            <span class="story-path__label">Terra</span>
+          </li>
+          <li class="story-path__step reveal">
+            <span class="story-path__num" aria-hidden="true">02</span>
+            <span class="story-path__label">Animali</span>
+          </li>
+          <li class="story-path__step reveal">
+            <span class="story-path__num" aria-hidden="true">03</span>
+            <span class="story-path__label">Trasformazione</span>
+          </li>
+          <li class="story-path__step reveal">
+            <span class="story-path__num" aria-hidden="true">04</span>
+            <span class="story-path__label">Prodotti</span>
+          </li>
+          <li class="story-path__step reveal">
+            <span class="story-path__num" aria-hidden="true">05</span>
+            <span class="story-path__label">Accoglienza</span>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- VALORI -->
+    <section class="section" aria-labelledby="valori-title">
+      <div class="container">
+        <header class="section-header reveal">
+          <h2 id="valori-title">Ciò che resta, ciò che cresce.</h2>
+        </header>
+
+        <ul class="values-grid">
+          <li class="values-grid__item reveal">
+            <h3>Genuinità</h3>
+            <p>Conoscere l’origine delle materie prime e raccontarla con trasparenza.</p>
+          </li>
+          <li class="values-grid__item reveal">
+            <h3>Stagionalità</h3>
+            <p>Seguire i tempi della campagna invece di forzarli.</p>
+          </li>
+          <li class="values-grid__item reveal">
+            <h3>Cura</h3>
+            <p>Dedicare attenzione quotidiana agli animali, ai prodotti e alle persone.</p>
+          </li>
+          <li class="values-grid__item reveal">
+            <h3>Accoglienza</h3>
+            <p>Condividere il lavoro dell’azienda attraverso esperienze semplici e autentiche.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- CITAZIONE EDITORIALE -->
+    <section class="section editorial-quote" aria-labelledby="quote-title">
+      <div class="container editorial-quote__inner reveal">
+        <h2 id="quote-title" class="visually-hidden">Una frase sulla continuità</h2>
+        <blockquote class="editorial-quote__text">
+          <p>Il futuro dell’azienda nasce dalle stesse radici che l’hanno accompagnata per quattro generazioni.</p>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- CTA FINALE -->
+    <section class="section page-cta" aria-labelledby="cta-title">
+      <div class="container page-cta__inner reveal">
+        <h2 id="cta-title">Scopri come continua la nostra storia.</h2>
+        <p class="page-cta__lead">Dai campi agli animali, fino ai prodotti e all’accoglienza: ogni area di Rio Storto racconta una parte dello stesso percorso.</p>
+        <div class="page-cta__actions">
+          <a class="btn btn--primary" href="/azienda/agricoltura/">Scopri l’agricoltura</a>
+          <a class="btn btn--secondary" href="/azienda/allevamento/">Scopri l’allevamento</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__grid">
+      <div class="site-footer__brand">
+        <a class="site-logo site-logo--footer" href="/" aria-label="Rio Storto — Vai alla home">
+          <span class="site-logo__media">
+            <img
+              class="site-logo__image"
+              src="/assets/img/logo-rio-storto-96.png"
+              srcset="/assets/img/logo-rio-storto-96.png 1x, /assets/img/logo-rio-storto-192.png 2x"
+              alt=""
+              width="56"
+              height="56"
+              decoding="async"
+            >
+          </span>
+        </a>
+        <p class="site-footer__claim">Dalla nostra terra, il sapore di casa.</p>
+      </div>
+
+      <nav class="site-footer__nav" aria-label="Menu footer">
+        <ul>
+          <li><a href="/storia/" aria-current="page">La nostra storia</a></li>
+          <li><a href="/azienda/agricoltura/">L’azienda</a></li>
+          <li><a href="/prodotti/">I nostri prodotti</a></li>
+          <li><a href="/fattoria-didattica/">Fattoria didattica</a></li>
+          <li><a href="/agriturismo/">Agriturismo</a></li>
+          <li><a href="/contatti/">Contatti</a></li>
+        </ul>
+      </nav>
+
+      <div class="site-footer__meta">
+        <!-- CONTENT STATUS: dati societari da confermare — non inventare P. IVA / sede -->
+        <p>Azienda Agricola Rio Storto</p>
+        <ul class="site-footer__legal">
+          <li><a href="/privacy/">Privacy policy</a></li>
+          <li><a href="/cookie/">Cookie policy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="site-footer__bottom">
+      <div class="container">
+        <p>&copy; <span data-year>2026</span> Azienda Agricola Rio Storto. Tutti i diritti riservati.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/assets/js/main.js" defer></script>
+</body>
+</html>

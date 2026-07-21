@@ -1,6 +1,7 @@
 /**
- * Rio Storto — homepage interactions
+ * Rio Storto — site interactions
  * Vanilla JS only: header scroll state, accessible nav, reveal on scroll.
+ * Pagine interne: header con data-header-solid resta sempre in stato solido.
  */
 (function () {
   "use strict";
@@ -13,6 +14,7 @@
   const dropdown = document.querySelector("[data-dropdown]");
   const yearEl = document.querySelector("[data-year]");
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const solidHeader = header && header.hasAttribute("data-header-solid");
 
   if (yearEl) {
     yearEl.textContent = String(new Date().getFullYear());
@@ -21,6 +23,10 @@
   /* ---- Header scroll state ---- */
   function updateHeader() {
     if (!header) return;
+    if (solidHeader) {
+      header.classList.add("is-scrolled");
+      return;
+    }
     const scrolled = window.scrollY > 24;
     header.classList.toggle("is-scrolled", scrolled);
   }
