@@ -865,6 +865,58 @@ html.font-newsreader .site-footer__claim {
 }
 
 /* --------------------------------------------------------------------------
+   Toni di sezione
+   -------------------------------------------------------------------------- */
+
+.tone-cream {
+  background: var(--tone-cream);
+}
+
+.tone-sage {
+  background:
+    linear-gradient(180deg, transparent, rgba(232, 239, 228, 0.9) 12%, rgba(232, 239, 228, 0.95) 88%, transparent);
+  background-color: var(--tone-sage);
+}
+
+.tone-ivory {
+  background:
+    radial-gradient(ellipse 60% 40% at 85% 10%, rgba(201, 160, 137, 0.16), transparent 50%),
+    radial-gradient(ellipse 50% 35% at 10% 80%, rgba(141, 154, 134, 0.14), transparent 45%),
+    var(--tone-ivory);
+}
+
+.tone-mint {
+  background: var(--tone-mint);
+}
+
+.tone-peach {
+  background:
+    radial-gradient(ellipse 70% 50% at 20% 0%, rgba(201, 160, 137, 0.22), transparent 55%),
+    var(--tone-peach);
+}
+
+.tone-bordeaux {
+  background: var(--tone-bordeaux);
+  color: var(--color-cream);
+}
+
+.tone-contact {
+  background: var(--tone-contact);
+}
+
+.editorial--agricoltura {
+  padding: clamp(1.5rem, 3vw, 2.5rem);
+  border-radius: var(--radius-md);
+  background: var(--tone-gold);
+}
+
+.editorial--allevamento {
+  padding: clamp(1.5rem, 3vw, 2.5rem);
+  border-radius: var(--radius-md);
+  background: var(--tone-sky);
+}
+
+/* --------------------------------------------------------------------------
    Intro
    -------------------------------------------------------------------------- */
 
@@ -875,14 +927,14 @@ html.font-newsreader .site-footer__claim {
 
 @media (min-width: 900px) {
   .intro__grid {
-    grid-template-columns: 1.3fr 0.9fr;
-    align-items: end;
+    grid-template-columns: 1.25fr 1fr;
+    align-items: start;
   }
 }
 
 .intro__copy h2 {
   font-size: var(--text-2xl);
-  max-width: 18ch;
+  max-width: 16ch;
   margin-bottom: 1.25rem;
   --font-display-opsz: 72;
   --font-display-soft: 48;
@@ -890,8 +942,8 @@ html.font-newsreader .site-footer__claim {
 }
 
 .intro__aside {
-  padding: clamp(1.5rem, 3vw, 2.25rem);
-  background: var(--color-cream);
+  padding: clamp(1.25rem, 2.5vw, 1.75rem);
+  background: rgba(255, 253, 249, 0.72);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
 }
@@ -957,11 +1009,6 @@ html.font-newsreader .site-footer__claim {
 /* --------------------------------------------------------------------------
    Filiera
    -------------------------------------------------------------------------- */
-
-.filiera {
-  background:
-    linear-gradient(180deg, transparent, rgba(235, 227, 214, 0.55) 20%, rgba(235, 227, 214, 0.55) 80%, transparent);
-}
 
 .filiera__steps {
   display: grid;
@@ -1073,6 +1120,11 @@ html.font-newsreader .site-footer__claim {
   background: var(--color-beige);
 }
 
+.media-frame .photo-slot {
+  min-height: 16rem;
+  height: 100%;
+}
+
 .media-frame--tall {
   aspect-ratio: 4 / 5;
 }
@@ -1127,6 +1179,10 @@ html.font-newsreader .site-footer__claim {
   background: linear-gradient(145deg, #d9cfc0, #b7c2b0 50%, #c9a089);
 }
 
+.media-placeholder--seasonal {
+  background: linear-gradient(145deg, #e2c9b8, #c9a089 45%, #b7c2b0);
+}
+
 .media-placeholder--table {
   background:
     linear-gradient(180deg, rgba(47, 44, 40, 0.15), rgba(47, 44, 40, 0.35)),
@@ -1144,6 +1200,10 @@ html.font-newsreader .site-footer__claim {
 /* --------------------------------------------------------------------------
    Products
    -------------------------------------------------------------------------- */
+
+.products__feature {
+  margin-bottom: clamp(1.75rem, 4vw, 2.75rem);
+}
 
 .products__grid {
   display: grid;
@@ -1173,6 +1233,14 @@ html.font-newsreader .site-footer__claim {
   .products__item--accent {
     grid-column: span 6;
   }
+}
+
+.products__item--accent {
+  border-color: rgba(141, 154, 134, 0.28);
+}
+
+.products__item--accent .products__copy h3 {
+  color: var(--color-bordeaux);
 }
 
 .products__item {
@@ -1224,7 +1292,6 @@ html.font-newsreader .site-footer__claim {
 .agriturismo {
   position: relative;
   padding-block: clamp(5rem, 12vw, 9rem);
-  color: var(--color-anthracite);
   overflow: hidden;
 }
 
@@ -1233,7 +1300,7 @@ html.font-newsreader .site-footer__claim {
   inset: 0;
 }
 
-.agriturismo__bg .media-placeholder {
+.agriturismo__bg .photo-slot {
   min-height: 100%;
   height: 100%;
 }
@@ -1243,14 +1310,16 @@ html.font-newsreader .site-footer__claim {
   z-index: 1;
   max-width: 36rem;
   padding: clamp(2rem, 4vw, 3rem);
-  background: rgba(251, 248, 242, 0.92);
+  background: rgba(110, 47, 61, 0.88);
+  border: 1px solid rgba(251, 248, 242, 0.14);
   border-radius: var(--radius-md);
-  backdrop-filter: blur(4px);
+  color: var(--color-cream);
 }
 
 .agriturismo__content h2 {
   font-size: var(--text-2xl);
   margin-bottom: 1rem;
+  color: var(--color-cream);
   --font-display-opsz: 72;
   --font-display-soft: 50;
   --font-display-wonk: 0.5;
@@ -1258,6 +1327,7 @@ html.font-newsreader .site-footer__claim {
 
 .agriturismo__content .lede {
   margin-bottom: 1.75rem;
+  color: rgba(251, 248, 242, 0.86);
 }
 
 /* --------------------------------------------------------------------------
@@ -1318,28 +1388,19 @@ html.font-newsreader .site-footer__claim {
    Stagionalità
    -------------------------------------------------------------------------- */
 
-.season {
-  background: var(--color-beige);
+.season__inner {
+  max-width: 40rem;
 }
 
-.season__placeholder {
-  max-width: 44rem;
-  padding: clamp(1.5rem, 3vw, 2.25rem);
-  border: 1px dashed rgba(110, 47, 61, 0.28);
-  border-radius: var(--radius-md);
-  background: rgba(251, 248, 242, 0.7);
+.season__inner h2 {
+  font-size: var(--text-2xl);
+  margin-bottom: 1rem;
+  --font-display-opsz: 68;
+  --font-display-soft: 48;
+  --font-display-wonk: 0.45;
 }
 
-.season__label {
-  display: inline-block;
-  margin-bottom: 0.75rem;
-  font-size: var(--text-xs);
-  letter-spacing: var(--tracking-wide);
-  text-transform: uppercase;
-  color: var(--color-bordeaux-soft);
-}
-
-.season__placeholder p:last-child {
+.season__inner .lede {
   color: var(--color-muted);
 }
 
@@ -1354,7 +1415,7 @@ html.font-newsreader .site-footer__claim {
 
 @media (min-width: 800px) {
   .contact__grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1.1fr 0.9fr;
     align-items: start;
   }
 }
@@ -1370,38 +1431,28 @@ html.font-newsreader .site-footer__claim {
 .contact__intro > p {
   color: var(--color-muted);
   margin-bottom: 1.75rem;
-  max-width: 30rem;
+  max-width: 32rem;
 }
 
-.contact__list {
-  display: grid;
-  gap: 1.25rem;
-  padding: clamp(1.5rem, 3vw, 2rem);
-  background: var(--color-cream);
+.contact__panel {
+  padding: clamp(1.5rem, 3vw, 2.25rem);
+  background: rgba(255, 253, 249, 0.85);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
 }
 
-.contact__list dt {
-  font-size: var(--text-xs);
-  letter-spacing: var(--tracking-wide);
-  text-transform: uppercase;
-  color: var(--color-muted);
-  margin-bottom: 0.25rem;
+.contact__panel-title {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  font-weight: var(--font-display-weight);
+  color: var(--color-anthracite);
+  margin-bottom: 0.75rem;
 }
 
-.contact__list dd {
-  margin: 0;
+.contact__panel-text {
   font-size: var(--text-sm);
-}
-
-.contact__list a {
-  text-decoration: none;
-}
-
-.contact__list a[aria-disabled="true"] {
-  pointer-events: none;
   color: var(--color-muted);
+  margin: 0;
 }
 
 /* --------------------------------------------------------------------------
