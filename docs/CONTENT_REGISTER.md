@@ -25,11 +25,11 @@ Stati ammessi:
 | Prodotti | Titolo e testo filiera | Brief fase 2 | riscritto provvisorio | Sì | Testo pagina prodotti |
 | Prodotti | Categorie: Formaggi, Carni, Gelato, Forno, Idee regalo, Produzioni stagionali | Brief fase 2 | riscritto provvisorio | Sì | Elenco ufficiale categorie |
 | Prodotti | Categoria Salumi | Rimossa dal pubblico; nota interna nel codice | da confermare | Sì | Conferma se reinserire |
-| Prodotti | Immagine di sezione | Fallback CSS | asset temporaneo | Sì | `html/assets/img/home/prodotti-rio-storto.webp` |
+| Prodotti | Immagine atmosferica (`prodotti-rio-storto.webp` / `.jpg`) | Asset temporaneo in `html/assets/img/home/` | asset temporaneo | Sì | Fotografia reale Rio Storto (stesso nome file) |
 | Agriturismo | Soprattitolo, titolo, testo | Brief fase 2 | riscritto provvisorio | Sì | Testo pagina agriturismo (senza menu/orari inventati) |
-| Agriturismo | Immagine | Fallback CSS | asset temporaneo | Sì | `html/assets/img/home/agriturismo-rio-storto.webp` |
+| Agriturismo | Immagine atmosferica (`agriturismo-rio-storto.webp` / `.jpg`) | Asset temporaneo in `html/assets/img/home/` | asset temporaneo | Sì | Fotografia reale Rio Storto (stesso nome file) |
 | Fattoria didattica | Titolo e testo | Brief fase 2 | riscritto provvisorio | Sì | Attività e modalità reali |
-| Fattoria didattica | Immagine | Fallback CSS | asset temporaneo | Sì | `html/assets/img/home/fattoria-didattica-rio-storto.webp` |
+| Fattoria didattica | Immagine atmosferica (`fattoria-didattica-rio-storto.webp` / `.jpg`) | Asset temporaneo in `html/assets/img/home/` | asset temporaneo | Sì | Fotografia reale Rio Storto (stesso nome file) |
 | Stagionalità | Testo editoriale generico | Brief fase 2 | riscritto provvisorio | Sì | Eventi/prodotti solo se confermati |
 | Contatti | Messaggio pubblico senza dati inventati | Brief fase 2 | riscritto provvisorio | Sì | Indirizzo, telefono, email, orari, mappa, social |
 | Contatti | Campi strutturali (indirizzo, tel, email, orari, mappa, social) | Commento HTML interno | da confermare | Sì | Valori reali da inserire nel markup |

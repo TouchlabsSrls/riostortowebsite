@@ -332,7 +332,7 @@
 
     <!-- 5. PRODOTTI -->
     <!-- CONTENT STATUS: categorie provvisorie; salumi da reinserire o confermare dopo verifica con il cliente -->
-    <!-- IMAGE STATUS: sostituire con fotografia reale del cliente — /assets/img/home/prodotti-rio-storto.webp -->
+    <!-- IMAGE STATUS: fotografia atmosferica temporanea; sostituire con fotografia reale Rio Storto -->
     <section class="section products" aria-labelledby="prodotti-title">
       <div class="container">
         <header class="section-header section-header--center reveal">
@@ -341,9 +341,20 @@
           <p class="section-header__lede">Formaggi, carni, gelato e produzioni stagionali nascono all’interno della stessa filiera. Un percorso diretto, seguito dall’azienda dal campo fino al banco.</p>
         </header>
 
-        <div class="products__feature reveal">
-          <div class="photo-slot photo-slot--prodotti" role="img" aria-label="Produzioni di Rio Storto"></div>
-        </div>
+        <figure class="products__feature reveal">
+          <picture>
+            <source srcset="/assets/img/home/prodotti-rio-storto.webp" type="image/webp">
+            <img
+              class="products__feature-image"
+              src="/assets/img/home/prodotti-rio-storto.jpg"
+              alt="Formaggi artigianali, latte e pane disposti su una tavola in legno"
+              width="1672"
+              height="941"
+              loading="lazy"
+              decoding="async"
+            >
+          </picture>
+        </figure>
 
         <ul class="products__grid">
           <li class="products__item products__item--lg reveal">
@@ -399,27 +410,51 @@
 
     <!-- 6. AGRITURISMO -->
     <!-- CONTENT STATUS: testo provvisorio da confermare -->
-    <!-- IMAGE STATUS: sostituire con fotografia reale del cliente — /assets/img/home/agriturismo-rio-storto.webp -->
-    <section class="section agriturismo tone-bordeaux" aria-labelledby="agriturismo-title">
-      <div class="agriturismo__bg" aria-hidden="true">
-        <div class="photo-slot photo-slot--agriturismo"></div>
-      </div>
-      <div class="container agriturismo__content reveal">
-        <p class="eyebrow eyebrow--on-bordeaux">Dal campo alla tavola</p>
-        <h2 id="agriturismo-title">La nostra azienda continua a <span class="title-accent">tavola</span>.</h2>
-        <p class="lede">La cucina di Rio Storto nasce dalle stagioni, dalle materie prime aziendali e da un modo semplice e curato di accogliere. Non un ristorante separato, ma il naturale punto di arrivo della nostra filiera.</p>
-        <a class="btn btn--on-dark" href="/agriturismo/">Scopri l’agriturismo</a>
+    <!-- IMAGE STATUS: fotografia atmosferica temporanea; sostituire con fotografia reale Rio Storto -->
+    <section class="section agriturismo" aria-labelledby="agriturismo-title">
+      <div class="container agriturismo__layout">
+        <div class="agriturismo__media reveal">
+          <picture>
+            <source srcset="/assets/img/home/agriturismo-rio-storto.webp" type="image/webp">
+            <img
+              class="agriturismo__image"
+              src="/assets/img/home/agriturismo-rio-storto.jpg"
+              alt="Sala da pranzo rustica con tavoli apparecchiati e luce naturale"
+              width="1536"
+              height="1024"
+              loading="lazy"
+              decoding="async"
+            >
+          </picture>
+        </div>
+        <div class="agriturismo__content reveal">
+          <p class="eyebrow eyebrow--on-bordeaux">Dal campo alla tavola</p>
+          <h2 id="agriturismo-title">La nostra azienda continua a <span class="title-accent">tavola</span>.</h2>
+          <p class="lede">La cucina di Rio Storto nasce dalle stagioni, dalle materie prime aziendali e da un modo semplice e curato di accogliere. Non un ristorante separato, ma il naturale punto di arrivo della nostra filiera.</p>
+          <a class="btn btn--on-dark" href="/agriturismo/">Scopri l’agriturismo</a>
+        </div>
       </div>
     </section>
 
     <!-- 7. FATTORIA DIDATTICA -->
     <!-- CONTENT STATUS: testo provvisorio da confermare -->
-    <!-- IMAGE STATUS: sostituire con fotografia reale del cliente — /assets/img/home/fattoria-didattica-rio-storto.webp -->
+    <!-- IMAGE STATUS: fotografia atmosferica temporanea; sostituire con fotografia reale Rio Storto -->
     <section class="section didattica" aria-labelledby="didattica-title">
       <div class="container didattica__grid">
         <div class="didattica__media reveal">
-          <figure class="media-frame">
-            <div class="photo-slot photo-slot--didattica" role="img" aria-label="Fattoria didattica Rio Storto"></div>
+          <figure class="media-frame media-frame--didattica">
+            <picture>
+              <source srcset="/assets/img/home/fattoria-didattica-rio-storto.webp" type="image/webp">
+              <img
+                class="media-frame__image"
+                src="/assets/img/home/fattoria-didattica-rio-storto.jpg"
+                alt="Bambini accarezzano una capra durante un’attività in fattoria"
+                width="1672"
+                height="941"
+                loading="lazy"
+                decoding="async"
+              >
+            </picture>
           </figure>
         </div>
         <div class="didattica__copy reveal">
