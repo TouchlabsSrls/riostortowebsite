@@ -702,7 +702,7 @@ html.font-newsreader .site-footer__claim {
 .hero__fallback,
 .photo-slot {
   width: 100%;
-  height: 100%;
+  height: auto;
   object-fit: cover;
 }
 
@@ -756,11 +756,13 @@ html.font-newsreader .site-footer__claim {
 }
 
 .photo-slot--storia {
+  height: auto;
   min-height: 12rem;
+  aspect-ratio: 4 / 3;
   border-radius: var(--radius-md);
   margin-bottom: 1.25rem;
+  /* Nessun file WebP ancora disponibile: solo fallback cromatico (evita 404 in console) */
   background-image:
-    url("/assets/img/home/storia-rio-storto.webp"),
     radial-gradient(circle at 30% 40%, rgba(255, 253, 249, 0.35), transparent 45%),
     linear-gradient(145deg, #d9cfc0 0%, #c4b89a 50%, #b7c2b0 100%);
 }
@@ -894,6 +896,9 @@ html.font-newsreader .site-footer__claim {
 .intro__path {
   display: grid;
   gap: 0;
+  margin: 0;
+  /* Spazio interno per i marker sulla linea, evita spill fuori dal pannello */
+  padding-left: 0.35rem;
 }
 
 .intro__path li {
@@ -918,12 +923,13 @@ html.font-newsreader .site-footer__claim {
 .intro__path li::before {
   content: "";
   position: absolute;
-  left: -0.3rem;
-  top: 1.25rem;
+  left: 0;
+  top: 1.35rem;
   width: 0.55rem;
   height: 0.55rem;
   border-radius: 50%;
   background: var(--color-bordeaux);
+  transform: translate(-50%, -50%);
 }
 
 .intro__path li:last-child {
@@ -947,6 +953,51 @@ html.font-newsreader .site-footer__claim {
   color: var(--color-sage-soft);
   opacity: 0.7;
   height: 2rem;
+}
+
+/* Timeline intro: flusso documento sotto i 768px, niente marker assoluti */
+@media (max-width: 767px) {
+  .intro {
+    padding-bottom: clamp(3.25rem, 9vw, 4.75rem);
+  }
+
+  .intro__path {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.85rem 1.25rem;
+    padding-left: 0;
+  }
+
+  .intro__path li {
+    position: static;
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+    padding: 0.35rem 0;
+    border-left: 0;
+    font-size: clamp(1.05rem, 4.2vw, 1.2rem);
+  }
+
+  .intro__path li::before {
+    position: static;
+    transform: none;
+    flex-shrink: 0;
+    width: 0.45rem;
+    height: 0.45rem;
+    margin: 0;
+  }
+
+  .intro__aside-note {
+    margin-top: 1.25rem;
+  }
+
+  .river-line--intro {
+    margin-top: clamp(1.75rem, 5vw, 2.5rem);
+    margin-bottom: 0.25rem;
+  }
+
+  .filiera {
+    padding-top: clamp(3.5rem, 10vw, 5.25rem);
+  }
 }
 
 /* --------------------------------------------------------------------------
@@ -1132,7 +1183,8 @@ html.font-newsreader .site-footer__claim {
 
 .media-placeholder {
   width: 100%;
-  height: 100%;
+  max-width: 100%;
+  height: auto;
   min-height: 16rem;
   background-size: cover;
   background-position: center;
@@ -1221,17 +1273,19 @@ html.font-newsreader .site-footer__claim {
 .products__grid {
   display: grid;
   gap: 1.25rem;
+  width: 100%;
+  max-width: 100%;
 }
 
 @media (min-width: 640px) {
   .products__grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
 @media (min-width: 1024px) {
   .products__grid {
-    grid-template-columns: repeat(12, 1fr);
+    grid-template-columns: repeat(12, minmax(0, 1fr));
     gap: 1.5rem;
   }
 
@@ -1244,17 +1298,18 @@ html.font-newsreader .site-footer__claim {
   }
 
   .products__item--accent {
-  grid-column: span 6;
-}
+    grid-column: span 6;
+  }
 }
 
 .products__item {
   display: grid;
-  grid-template-rows: 1fr auto;
+  grid-template-rows: auto auto;
   background: var(--color-cream);
   border: 1px solid transparent;
   border-radius: var(--radius-md);
   overflow: hidden;
+  min-width: 0;
   transition: border-color 0.25s var(--ease), transform 0.25s var(--ease);
 }
 
@@ -1264,6 +1319,9 @@ html.font-newsreader .site-footer__claim {
 }
 
 .products__item .media-placeholder {
+  /* height:auto evita che aspect-ratio + height:100% espanda oltre la colonna */
+  height: auto;
+  max-width: 100%;
   min-height: 11rem;
   aspect-ratio: 4 / 3;
 }
@@ -1616,17 +1674,112 @@ html.font-newsreader .site-footer__claim {
 }
 
 /* --------------------------------------------------------------------------
-   Small screens
+   Small screens / mobile audit fixes
    -------------------------------------------------------------------------- */
 
-@media (max-width: 389px) {
+@media (max-width: 767px) {
   .hero__actions {
     flex-direction: column;
     align-items: stretch;
+    gap: 0.75rem;
+  }
+
+  .hero__actions .btn {
+    width: 100%;
+    min-height: 2.75rem;
+  }
+
+  .hero__content {
+    max-width: none;
+    padding-bottom: clamp(3.5rem, 12vw, 5rem);
+  }
+
+  .hero__content h1 {
+    max-width: 12ch;
+  }
+
+  .section-header,
+  .section-header--center {
+    margin-bottom: clamp(1.75rem, 5vw, 2.5rem);
+  }
+
+  .editorial + .editorial {
+    margin-top: clamp(2.75rem, 8vw, 4rem);
+  }
+
+  .products__grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .products__item--lg .media-placeholder,
+  .products__item .media-placeholder {
+    min-height: 9.5rem;
+    aspect-ratio: 16 / 10;
+  }
+
+  .agriturismo__layout {
+    gap: 0;
+  }
+
+  .agriturismo__media {
+    border-radius: var(--radius-md) var(--radius-md) 0 0;
+    aspect-ratio: 4 / 3;
+  }
+
+  .agriturismo__content {
+    border-radius: 0 0 var(--radius-md) var(--radius-md);
+    padding: clamp(1.5rem, 5vw, 2rem);
+  }
+
+  .didattica__copy h2 {
+    font-size: clamp(1.55rem, 6.5vw, 2rem);
+    line-height: 1.22;
+    max-width: none;
   }
 
   .didattica__list {
     grid-template-columns: 1fr;
+    gap: 0.65rem;
+    margin: 1.35rem 0 1.75rem;
+  }
+
+  .didattica__list li {
+    padding-left: 1.1rem;
+    min-height: 1.5rem;
+  }
+
+  .season__inner h2,
+  .contact__intro h2 {
+    font-size: clamp(1.55rem, 6.5vw, 2rem);
+    line-height: 1.22;
+  }
+
+  .site-footer__nav a,
+  .site-footer__legal a,
+  .text-link {
+    min-height: 2.75rem;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .site-footer__nav ul {
+    gap: 0.15rem;
+  }
+
+  .btn--header {
+    display: none;
+  }
+}
+
+@media (max-width: 389px) {
+  .hero__content h1 {
+    max-width: none;
+  }
+
+  .intro__path {
+    grid-template-columns: 1fr;
+    gap: 0.55rem;
   }
 }
 
@@ -1636,6 +1789,6 @@ html.font-newsreader .site-footer__claim {
   }
 
   .hero__content h1 {
-    font-size: 2rem;
+    font-size: 1.85rem;
   }
 }

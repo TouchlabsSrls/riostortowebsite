@@ -1,0 +1,23 @@
+{
+  "name": "riostortowebsite",
+  "version": "1.0.0",
+  "description": "Sito statico HTML, CSS e JavaScript. In sviluppo locale viene servito tramite Docker/Nginx.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TouchlabsSrls/riostortowebsite.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TouchlabsSrls/riostortowebsite/issues"
+  },
+  "homepage": "https://github.com/TouchlabsSrls/riostortowebsite#readme"
+}
