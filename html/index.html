@@ -156,25 +156,28 @@
 
   <main id="contenuto-principale">
     <!-- 1. HERO -->
-    <!-- IMAGE STATUS: sostituire con fotografia reale del cliente — /assets/img/home/hero-rio-storto.webp -->
+    <!-- IMAGE STATUS: fotografia atmosferica temporanea; sostituire con asset reale del cliente -->
     <section class="hero" aria-labelledby="hero-title">
       <div class="hero__media" data-hero-media>
         <!-- Predisposizione video: sostituire con <video> MP4/WebM + poster -->
         <!--
-        <video class="hero__video" autoplay muted loop playsinline poster="/assets/img/home/hero-rio-storto.webp">
+        <video class="hero__video" autoplay muted loop playsinline poster="/assets/img/home/hero-rio-storto.jpg">
           <source src="/assets/img/hero.webm" type="video/webm">
           <source src="/assets/img/hero.mp4" type="video/mp4">
         </video>
         -->
-        <div class="photo-slot photo-slot--hero" role="img" aria-label="Campagna e paesaggio di Rio Storto">
-          <div class="photo-slot__organic" aria-hidden="true">
-            <div class="photo-slot__sky"></div>
-            <div class="photo-slot__field"></div>
-            <svg class="photo-slot__river" viewBox="0 0 1440 200" preserveAspectRatio="none" focusable="false">
-              <path d="M0 120 C 240 40, 480 180, 720 100 S 1200 40, 1440 110 L 1440 200 L 0 200 Z" fill="currentColor"/>
-            </svg>
-          </div>
-        </div>
+        <picture class="hero__picture">
+          <source srcset="/assets/img/home/hero-rio-storto.webp" type="image/webp">
+          <img
+            class="hero__image"
+            src="/assets/img/home/hero-rio-storto.jpg"
+            alt="Campagna al tramonto con corso d’acqua e animali al pascolo"
+            width="1672"
+            height="941"
+            decoding="async"
+            fetchpriority="high"
+          >
+        </picture>
       </div>
       <div class="hero__overlay" aria-hidden="true"></div>
       <div class="hero__content">
@@ -195,7 +198,7 @@
     <!-- 2. INTRODUZIONE / STORIA -->
     <!-- CONTENT STATUS: testo provvisorio da confermare — storia quattro generazioni / rio di risorgiva -->
     <!-- IMAGE STATUS: sostituire con fotografia reale del cliente — /assets/img/home/storia-rio-storto.webp -->
-    <section class="section intro tone-cream" id="introduzione" aria-labelledby="intro-title">
+    <section class="section intro" id="introduzione" aria-labelledby="intro-title">
       <div class="container intro__grid">
         <div class="intro__copy reveal">
           <p class="eyebrow">Una storia di famiglia e territorio</p>
@@ -225,7 +228,7 @@
     </section>
 
     <!-- 3. FILIERA -->
-    <section class="section filiera tone-sage" aria-labelledby="filiera-title">
+    <section class="section filiera" aria-labelledby="filiera-title">
       <div class="container">
         <header class="section-header reveal">
           <p class="eyebrow">La filiera Rio Storto</p>
@@ -262,11 +265,22 @@
       <h2 id="terra-title" class="visually-hidden">Agricoltura e allevamento</h2>
       <div class="container">
         <!-- CONTENT STATUS: testo provvisorio da confermare -->
-        <!-- IMAGE STATUS: sostituire con fotografia reale del cliente — /assets/img/home/agricoltura-rio-storto.webp -->
-        <article class="editorial editorial--image-right editorial--agricoltura reveal" aria-labelledby="agricoltura-title">
+        <!-- IMAGE STATUS: fotografia atmosferica temporanea; sostituire con asset reale del cliente -->
+        <article class="editorial editorial--image-right reveal" aria-labelledby="agricoltura-title">
           <div class="editorial__media">
             <figure class="media-frame media-frame--tall">
-              <div class="photo-slot photo-slot--agricoltura" role="img" aria-label="Campi e agricoltura di Rio Storto"></div>
+              <picture>
+                <source srcset="/assets/img/home/agricoltura-rio-storto.webp" type="image/webp">
+                <img
+                  class="media-frame__image"
+                  src="/assets/img/home/agricoltura-rio-storto.jpg"
+                  alt="Campi coltivati attraversati da un corso d’acqua nella luce del tramonto"
+                  width="1672"
+                  height="941"
+                  loading="lazy"
+                  decoding="async"
+                >
+              </picture>
             </figure>
           </div>
           <div class="editorial__body">
@@ -283,11 +297,22 @@
         </article>
 
         <!-- CONTENT STATUS: testo provvisorio da confermare -->
-        <!-- IMAGE STATUS: sostituire con fotografia reale del cliente — /assets/img/home/allevamento-rio-storto.webp -->
-        <article class="editorial editorial--image-left editorial--allevamento reveal" aria-labelledby="allevamento-title">
+        <!-- IMAGE STATUS: fotografia atmosferica temporanea; sostituire con asset reale del cliente -->
+        <article class="editorial editorial--image-left reveal" aria-labelledby="allevamento-title">
           <div class="editorial__media">
             <figure class="media-frame media-frame--wide">
-              <div class="photo-slot photo-slot--allevamento" role="img" aria-label="Allevamento di Rio Storto"></div>
+              <picture>
+                <source srcset="/assets/img/home/allevamento-rio-storto.webp" type="image/webp">
+                <img
+                  class="media-frame__image"
+                  src="/assets/img/home/allevamento-rio-storto.jpg"
+                  alt="Bovini al pascolo accanto alla stalla nella luce del tramonto"
+                  width="1672"
+                  height="941"
+                  loading="lazy"
+                  decoding="async"
+                >
+              </picture>
             </figure>
           </div>
           <div class="editorial__body">
@@ -308,7 +333,7 @@
     <!-- 5. PRODOTTI -->
     <!-- CONTENT STATUS: categorie provvisorie; salumi da reinserire o confermare dopo verifica con il cliente -->
     <!-- IMAGE STATUS: sostituire con fotografia reale del cliente — /assets/img/home/prodotti-rio-storto.webp -->
-    <section class="section products tone-ivory" aria-labelledby="prodotti-title">
+    <section class="section products" aria-labelledby="prodotti-title">
       <div class="container">
         <header class="section-header section-header--center reveal">
           <p class="eyebrow">I nostri prodotti</p>
@@ -390,7 +415,7 @@
     <!-- 7. FATTORIA DIDATTICA -->
     <!-- CONTENT STATUS: testo provvisorio da confermare -->
     <!-- IMAGE STATUS: sostituire con fotografia reale del cliente — /assets/img/home/fattoria-didattica-rio-storto.webp -->
-    <section class="section didattica tone-mint" aria-labelledby="didattica-title">
+    <section class="section didattica" aria-labelledby="didattica-title">
       <div class="container didattica__grid">
         <div class="didattica__media reveal">
           <figure class="media-frame">
@@ -414,7 +439,7 @@
 
     <!-- 8. STAGIONALITÀ -->
     <!-- CONTENT STATUS: testo editoriale generico provvisorio — non inventare eventi o date -->
-    <section class="section season tone-peach" aria-labelledby="stagionalita-title">
+    <section class="section season" aria-labelledby="stagionalita-title">
       <div class="container season__inner reveal">
         <p class="eyebrow">Seguire le stagioni</p>
         <h2 id="stagionalita-title">Ogni periodo dell’anno porta qualcosa di <span class="title-accent">nuovo</span>.</h2>
@@ -424,7 +449,7 @@
 
     <!-- 9. CONTATTI -->
     <!-- CONTENT STATUS: messaggio pubblico senza dati inventati; campi strutturali pronti quando confermati -->
-    <section class="section contact tone-contact" id="contatti" aria-labelledby="contatti-title">
+    <section class="section contact" id="contatti" aria-labelledby="contatti-title">
       <div class="container contact__grid">
         <div class="contact__intro reveal">
           <p class="eyebrow">Contatti</p>

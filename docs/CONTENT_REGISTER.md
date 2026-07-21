@@ -14,14 +14,14 @@ Stati ammessi:
 | Sezione | Testo o immagine | Fonte | Stato | Conferma cliente necessaria | File definitivo richiesto |
 | --- | --- | --- | --- | --- | --- |
 | Hero | Titolo e lead | Brief creativo / bozza approvata | verificato da materiale precedente | No (salvo rifiniture) | — |
-| Hero | Immagine / video | Fallback CSS + percorso predisposto | asset temporaneo | Sì | `html/assets/img/home/hero-rio-storto.webp` (+ eventuale video) |
+| Hero | Immagine atmosferica (`hero-rio-storto.webp` / `.jpg`) | Asset temporaneo in `html/assets/img/home/` | asset temporaneo | Sì | Fotografia reale Rio Storto (sostituzione futura) |
 | Introduzione / Storia | Soprattitolo, titolo, testo (quattro generazioni, rio di risorgiva, prima del 1930) | Brief cliente (fase dimostrativa) | riscritto provvisorio | Sì | Testo definitivo storia |
 | Introduzione / Storia | Immagine | Fallback CSS | asset temporaneo | Sì | `html/assets/img/home/storia-rio-storto.webp` |
 | Filiera | Quattro momenti (Coltiviamo… Accogliamo) | Bozza homepage | riscritto provvisorio | Sì (tono e dettaglio) | — |
 | Agricoltura | Titolo e testo | Brief fase 2 | riscritto provvisorio | Sì | Testo pagina agricoltura |
-| Agricoltura | Immagine | Fallback CSS | asset temporaneo | Sì | `html/assets/img/home/agricoltura-rio-storto.webp` |
+| Agricoltura | Immagine atmosferica (`agricoltura-rio-storto.webp` / `.jpg`) | Asset temporaneo in `html/assets/img/home/` | asset temporaneo | Sì | Fotografia reale Rio Storto (sostituzione futura) |
 | Allevamento | Titolo e testo | Brief fase 2 | riscritto provvisorio | Sì | Testo pagina allevamento |
-| Allevamento | Immagine | Fallback CSS | asset temporaneo | Sì | `html/assets/img/home/allevamento-rio-storto.webp` |
+| Allevamento | Immagine atmosferica (`allevamento-rio-storto.webp` / `.jpg`) | Asset temporaneo in `html/assets/img/home/` | asset temporaneo | Sì | Fotografia reale Rio Storto (sostituzione futura) |
 | Prodotti | Titolo e testo filiera | Brief fase 2 | riscritto provvisorio | Sì | Testo pagina prodotti |
 | Prodotti | Categorie: Formaggi, Carni, Gelato, Forno, Idee regalo, Produzioni stagionali | Brief fase 2 | riscritto provvisorio | Sì | Elenco ufficiale categorie |
 | Prodotti | Categoria Salumi | Rimossa dal pubblico; nota interna nel codice | da confermare | Sì | Conferma se reinserire |
