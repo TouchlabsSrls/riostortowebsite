@@ -50,6 +50,7 @@ Stati ammessi:
 | Citazione editoriale | Frase non attribuita | Brief pagina storia | riscritto provvisorio | Sì | Non è una testimonianza personale |
 | CTA | Link ad agricoltura / allevamento | Brief | riscritto provvisorio | — | Destinazioni 404 fino al prossimo ciclo |
 | Immagini | Nessuna fotografia dedicata in pagina | — | — | Sì | Mancanti: fotografia storica della famiglia e dell’azienda |
+| Media editoriale sotto hero | `hero-rio-storto.webp/.jpg` riusata come atmosfera | Asset homepage | asset temporaneo | Sì | Sostituire con foto storica dedicata; contenitore `.editorial-media` con fallback CSS |
 | Nomi e date | Non presenti | — | da confermare | Sì | Non ancora forniti dal cliente |
 | OG image | `hero-rio-storto.jpg` (provvisoria) | Asset homepage | asset temporaneo | Sì | Sostituire con visual dedicato quando disponibile |
 
