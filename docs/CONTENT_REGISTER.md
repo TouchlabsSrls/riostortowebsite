@@ -58,6 +58,7 @@ Stati ammessi:
 | Sezione | Testo o immagine | Fonte | Stato | Conferma cliente necessaria | Note |
 | --- | --- | --- | --- | --- | --- |
 | Hero | H1, intro, foto `agricoltura-rio-storto` | Brief | riscritto provvisorio / asset temporaneo | Sì | Foto atmosferica temporanea |
+| Media secondaria | `hero-rio-storto.webp/.jpg` tra intro terra e ciclo stagionale | Asset homepage | asset temporaneo | Sì | Funzione: ampia atmosfera di campi/corso d’acqua; crop distinto dalla hero home (sinistra/centro, non destra) |
 | Lavoro nei campi | Due paragrafi editoriali | Brief | riscritto provvisorio | Sì | — |
 | Sequenza stagionale | Osservare / Coltivare / Raccogliere / Ricominciare | Brief | riscritto provvisorio | Sì | Volutamente generica, senza mesi/colture |
 | Filiera collegata | Testo + foraggi per mucche | Brief + sito precedente | recuperato dal sito precedente — da confermare con il cliente | Sì | Foraggi, destinazione, formulazione |
@@ -72,6 +73,7 @@ Stati ammessi:
 | Presenza quotidiana | Due paragrafi | Brief | riscritto provvisorio | Sì | Nessuna certificazione |
 | Tre principi | Alimentazione, attenzione, origine | Brief | riscritto provvisorio | Sì | Relazione foraggi/mucche da confermare |
 | Latte e carne | Materie prime | Sito precedente | recuperato dal sito precedente — da confermare con il cliente | Sì | Disponibilità e formulazione |
+| Media secondaria (origine → prodotto) | `prodotti-rio-storto.webp/.jpg` nel blocco “Dall’origine al prodotto” | Asset homepage | asset temporaneo | Sì | Funzione: ponte narrativo verso trasformazione/lavorazioni; non documentazione dei prodotti reali; layout split (immagine sopra su mobile, affiancata su desktop). Non riusa `hero-rio-storto` |
 | Mucche in allevamento | Presenza implicita nei testi foraggi/foto | Sito precedente | recuperato dal sito precedente — da confermare con il cliente | Sì | Non inventare razze o quantità |
 | Campi e animali | Collegamento ad agricoltura | Brief | riscritto provvisorio | Sì | — |
 | CTA | Prodotti + Storia | Brief | riscritto provvisorio | — | `/prodotti/` ancora 404 |

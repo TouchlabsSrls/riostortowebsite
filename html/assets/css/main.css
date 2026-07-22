@@ -1922,19 +1922,27 @@ html.font-newsreader .site-footer__claim {
   min-height: 11rem;
 }
 
-.editorial-media--intimate {
-  padding-block: 0 clamp(1.5rem, 3.5vw, 2.25rem);
+/* Agricoltura: crop verso campi + corso d’acqua (sinistra/centro), diverso dalla hero home (destra) */
+.page-agricoltura .editorial-media--wide .editorial-media__image {
+  object-position: 34% 58%;
 }
 
-.editorial-media--intimate .editorial-media__frame {
-  width: min(100%, 36rem);
-  margin-inline: auto;
-  aspect-ratio: 5 / 4;
-  min-height: 14rem;
+@media (max-width: 1024px) {
+  .page-agricoltura .editorial-media--wide .editorial-media__image {
+    object-position: 32% 56%;
+  }
 }
 
-.editorial-media--intimate .editorial-media__image {
-  object-position: 72% 55%;
+@media (max-width: 768px) {
+  .page-agricoltura .editorial-media--wide .editorial-media__image {
+    object-position: 30% 54%;
+  }
+}
+
+@media (max-width: 390px) {
+  .page-agricoltura .editorial-media--wide .editorial-media__image {
+    object-position: 28% 52%;
+  }
 }
 
 .page-agricoltura .land-start {
@@ -1943,14 +1951,6 @@ html.font-newsreader .site-footer__claim {
 
 .page-agricoltura .season-cycle-section {
   padding-top: clamp(1.75rem, 4vw, 2.75rem);
-}
-
-.page-allevamento .daily-presence {
-  padding-bottom: clamp(1.75rem, 4vw, 2.5rem);
-}
-
-.page-allevamento .daily-principles-section {
-  padding-top: clamp(1.5rem, 3.5vw, 2.5rem);
 }
 
 @media (max-width: 767px) {
@@ -1966,12 +1966,6 @@ html.font-newsreader .site-footer__claim {
   .editorial-media--wide .editorial-media__frame {
     aspect-ratio: 16 / 10;
     min-height: 10.5rem;
-  }
-
-  .editorial-media--intimate .editorial-media__frame {
-    width: 100%;
-    aspect-ratio: 4 / 3;
-    min-height: 12rem;
   }
 }
 
@@ -2811,6 +2805,66 @@ html.font-newsreader .site-footer__claim {
 
 .origin-bridge__inner {
   max-width: min(100%, 40rem);
+}
+
+.origin-bridge__split {
+  display: grid;
+  gap: clamp(1.5rem, 3vw, 2.25rem);
+  align-items: center;
+}
+
+.origin-bridge__media {
+  margin: 0;
+  overflow: hidden;
+  border-radius: var(--radius-md);
+  background: var(--color-beige);
+  aspect-ratio: 4 / 3;
+}
+
+.origin-bridge__media picture,
+.origin-bridge__image {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.origin-bridge__image {
+  object-fit: cover;
+  object-position: 48% 46%;
+}
+
+.origin-bridge__split .origin-bridge__inner {
+  max-width: none;
+}
+
+@media (min-width: 900px) {
+  .origin-bridge__split {
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+    gap: clamp(2rem, 4vw, 3.25rem);
+  }
+
+  .origin-bridge__media {
+    order: 2;
+    aspect-ratio: 5 / 4;
+  }
+
+  .origin-bridge__inner {
+    order: 1;
+  }
+
+  .origin-bridge__image {
+    object-position: 52% 44%;
+  }
+}
+
+@media (max-width: 390px) {
+  .origin-bridge__media {
+    aspect-ratio: 5 / 4;
+  }
+
+  .origin-bridge__image {
+    object-position: 46% 48%;
+  }
 }
 
 .origin-bridge h2 {
