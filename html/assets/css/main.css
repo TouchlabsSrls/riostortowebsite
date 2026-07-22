@@ -48,8 +48,10 @@
   --tracking-wide: 0.12em;
 
   /* Layout */
-  --container: 72rem;
+  --container: 72rem; /* ~1152px — container principale */
+  --container-wide: 80rem; /* ~1280px — composizioni ampie */
   --container-narrow: 42rem;
+  --content-measure: 64ch; /* misura del testo, non del wrapper */
   --gutter: clamp(1.25rem, 4vw, 2.5rem);
   --section-space: clamp(4.5rem, 8vw, 8rem);
   --header-height: 4.5rem;
@@ -233,6 +235,15 @@ html.font-newsreader .site-footer__claim {
 .container {
   width: min(100% - (var(--gutter) * 2), var(--container));
   margin-inline: auto;
+}
+
+.container--wide {
+  width: min(100% - (var(--gutter) * 2), var(--container-wide));
+  margin-inline: auto;
+}
+
+.content-measure {
+  max-width: var(--content-measure);
 }
 
 .section {
@@ -2782,89 +2793,19 @@ html.font-newsreader .site-footer__claim {
   }
 }
 
-/* --- Origin bridge (shared, two tones) --- */
+/* --- Origin bridge (shared tones) + wide layouts --- */
 
 .origin-bridge {
-  padding-block: clamp(2.5rem, 5vw, 3.75rem);
+  padding-block: clamp(2.75rem, 5.5vw, 4.25rem);
 }
 
 .origin-bridge--open {
-  background:
-    linear-gradient(
-      180deg,
-      transparent,
-      rgba(232, 239, 228, 0.4) 18%,
-      rgba(232, 239, 228, 0.4) 82%,
-      transparent
-    );
+  background: var(--color-ivory);
+  border-block: 1px solid rgba(141, 154, 134, 0.28);
 }
 
 .origin-bridge--dense {
   background: var(--color-cream);
-}
-
-.origin-bridge__inner {
-  max-width: min(100%, 40rem);
-}
-
-.origin-bridge__split {
-  display: grid;
-  gap: clamp(1.5rem, 3vw, 2.25rem);
-  align-items: center;
-}
-
-.origin-bridge__media {
-  margin: 0;
-  overflow: hidden;
-  border-radius: var(--radius-md);
-  background: var(--color-beige);
-  aspect-ratio: 4 / 3;
-}
-
-.origin-bridge__media picture,
-.origin-bridge__image {
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-
-.origin-bridge__image {
-  object-fit: cover;
-  object-position: 48% 46%;
-}
-
-.origin-bridge__split .origin-bridge__inner {
-  max-width: none;
-}
-
-@media (min-width: 900px) {
-  .origin-bridge__split {
-    grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
-    gap: clamp(2rem, 4vw, 3.25rem);
-  }
-
-  .origin-bridge__media {
-    order: 2;
-    aspect-ratio: 5 / 4;
-  }
-
-  .origin-bridge__inner {
-    order: 1;
-  }
-
-  .origin-bridge__image {
-    object-position: 52% 44%;
-  }
-}
-
-@media (max-width: 390px) {
-  .origin-bridge__media {
-    aspect-ratio: 5 / 4;
-  }
-
-  .origin-bridge__image {
-    object-position: 46% 48%;
-  }
 }
 
 .origin-bridge h2 {
@@ -2896,6 +2837,105 @@ html.font-newsreader .site-footer__claim {
 
 .origin-bridge__links .text-link {
   margin-top: 0;
+}
+
+/* Agricoltura: fascia finale asimmetrica larga */
+
+.agriculture-bridge__layout {
+  display: grid;
+  gap: clamp(1.5rem, 3.5vw, 2.5rem);
+  align-items: start;
+}
+
+@media (min-width: 900px) {
+  .agriculture-bridge__layout {
+    grid-template-columns: minmax(0, 0.42fr) minmax(0, 0.48fr);
+    justify-content: space-between;
+    column-gap: clamp(3rem, 9vw, 7rem);
+    align-items: end;
+  }
+}
+
+.agriculture-bridge__lead h2 {
+  margin-bottom: 0;
+  max-width: 14ch;
+  font-size: clamp(1.85rem, 1.4rem + 1.5vw, 2.65rem);
+  --font-display-opsz: 72;
+  --font-display-soft: 46;
+  --font-display-wonk: 0.45;
+}
+
+.agriculture-bridge__body .related-navigation {
+  margin-top: clamp(1.25rem, 2.5vw, 1.75rem);
+}
+
+/* Allevamento: immagine + testo (opposto alla hero: foto a sinistra) */
+
+.origin-bridge__layout {
+  display: grid;
+  gap: clamp(1.5rem, 3vw, 2.25rem);
+  align-items: center;
+}
+
+.origin-bridge__media {
+  margin: 0;
+  overflow: hidden;
+  border-radius: var(--radius-md);
+  background: var(--color-beige);
+  aspect-ratio: 4 / 3;
+}
+
+.origin-bridge__media picture,
+.origin-bridge__image {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.origin-bridge__image {
+  object-fit: cover;
+  object-position: 48% 46%;
+}
+
+.origin-bridge__copy {
+  min-width: 0;
+}
+
+.origin-bridge__copy .content-measure {
+  max-width: min(100%, 62ch);
+}
+
+@media (min-width: 900px) {
+  .origin-bridge__layout {
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+    gap: clamp(2.25rem, 5vw, 4rem);
+  }
+
+  .editorial-split--reverse.origin-bridge__layout {
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+  }
+
+  .origin-bridge__media {
+    aspect-ratio: 5 / 4;
+  }
+
+  .origin-bridge__image {
+    object-position: 52% 44%;
+  }
+
+  .origin-bridge__copy h2 {
+    max-width: 16ch;
+  }
+}
+
+@media (max-width: 390px) {
+  .origin-bridge__media {
+    aspect-ratio: 5 / 4;
+  }
+
+  .origin-bridge__image {
+    object-position: 46% 48%;
+  }
 }
 
 /* Related navigation — chiusura contestuale compatta */
@@ -2954,27 +2994,36 @@ html.font-newsreader .site-footer__claim {
 /* --- Daily presence (Allevamento) --- */
 
 .daily-presence {
-  padding-block: clamp(2.5rem, 5vw, 4rem);
+  padding-block: clamp(2.75rem, 6vw, 4.5rem);
 }
 
 .daily-presence__layout {
   display: grid;
-  gap: clamp(1rem, 3vw, 2rem);
-  max-width: min(100%, 40rem);
+  gap: clamp(1.25rem, 3vw, 2.5rem);
+  align-items: end;
+  border-top: 1px solid rgba(110, 47, 61, 0.14);
+  padding-top: clamp(1.75rem, 4vw, 2.5rem);
+}
+
+@media (min-width: 800px) {
+  .daily-presence__layout {
+    grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+    column-gap: clamp(2rem, 5vw, 4rem);
+  }
 }
 
 .daily-presence__mark {
   margin: 0;
   font-family: var(--font-display);
   font-weight: var(--font-display-weight);
-  font-size: clamp(2.4rem, 1.6rem + 3.5vw, 4.25rem);
-  line-height: 0.95;
+  font-size: clamp(2.75rem, 1.6rem + 5vw, 6.25rem);
+  line-height: 0.88;
   letter-spacing: var(--font-display-tracking);
   text-transform: uppercase;
-  color: rgba(110, 47, 61, 0.18);
-  --font-display-opsz: 84;
-  --font-display-soft: 52;
-  --font-display-wonk: 0.5;
+  color: rgba(110, 47, 61, 0.16);
+  --font-display-opsz: 96;
+  --font-display-soft: 56;
+  --font-display-wonk: 0.55;
   font-variation-settings:
     "SOFT" var(--font-display-soft),
     "WONK" var(--font-display-wonk),
@@ -3007,19 +3056,20 @@ html.font-newsreader .site-footer__claim {
     "opsz" var(--font-display-opsz);
 }
 
-.daily-presence__copy p:last-child {
+.daily-presence__copy .content-measure {
   margin: 0;
   color: var(--color-text);
-  max-width: 34rem;
+  max-width: min(100%, 62ch);
 }
 
-/* --- Daily principles --- */
+/* --- Daily principles: tre capitoli orizzontali --- */
 
 .daily-principles-section {
-  padding-block: clamp(2rem, 4.5vw, 3.5rem) clamp(2.5rem, 5vw, 4rem);
+  padding-block: clamp(2rem, 4.5vw, 3.5rem) clamp(2.75rem, 5.5vw, 4.25rem);
 }
 
-.daily-principles {
+.daily-principles,
+.daily-principles__grid {
   display: grid;
   gap: 0;
   margin: 0;
@@ -3040,12 +3090,6 @@ html.font-newsreader .site-footer__claim {
 
 .daily-principles__item:last-child {
   border-bottom: 0;
-}
-
-@media (min-width: 900px) {
-  .daily-principles__item--shift {
-    padding-left: clamp(2rem, 8vw, 6rem);
-  }
 }
 
 .daily-principles__index {
@@ -3076,4 +3120,44 @@ html.font-newsreader .site-footer__claim {
   margin: 0;
   color: var(--color-muted);
   max-width: 28rem;
+}
+
+@media (min-width: 768px) {
+  .daily-principles__grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    border-top: 1px solid var(--color-sage-soft);
+    border-bottom: 0;
+  }
+
+  .daily-principles__grid .daily-principles__item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+    padding: 1.5rem clamp(1rem, 2vw, 1.75rem);
+    border-bottom: 0;
+    border-right: 1px solid var(--color-border);
+  }
+
+  .daily-principles__grid .daily-principles__item:first-child {
+    padding-left: 0;
+  }
+
+  .daily-principles__grid .daily-principles__item:last-child {
+    border-right: 0;
+    padding-right: 0;
+  }
+
+  .daily-principles__grid .daily-principles__index {
+    font-size: clamp(2.25rem, 1.6rem + 2vw, 3.35rem);
+  }
+
+  .daily-principles__grid .daily-principles__body p {
+    max-width: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .daily-principles__grid {
+    border-top: 1px solid var(--color-border);
+  }
 }
