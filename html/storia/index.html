@@ -60,7 +60,7 @@
   }
   </script>
 </head>
-<body class="page-internal">
+<body class="page-internal page-storia">
   <a class="skip-link" href="#contenuto-principale">Vai al contenuto</a>
 
   <header class="site-header is-scrolled" data-header data-header-solid>
@@ -170,11 +170,13 @@
           </ol>
         </nav>
 
-        <p class="eyebrow">La nostra storia</p>
-        <h1 id="page-title">Una storia che scorre da <span class="title-accent">quattro generazioni</span>.</h1>
-        <p class="page-hero__lead">Da prima del 1930, la famiglia Rio Storto coltiva, alleva e trasforma seguendo un percorso che unisce terra, lavoro e territorio.</p>
+        <div class="page-hero__copy reveal">
+          <p class="eyebrow">La nostra storia</p>
+          <h1 id="page-title">Una storia che scorre da <span class="title-accent">quattro generazioni</span>.</h1>
+          <p class="page-hero__lead">Da prima del 1930, la famiglia Rio Storto coltiva, alleva e trasforma seguendo un percorso che unisce terra, lavoro e territorio.</p>
+        </div>
 
-        <svg class="page-hero__river" viewBox="0 0 640 28" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+        <svg class="page-hero__river" data-draw-line viewBox="0 0 640 28" preserveAspectRatio="none" aria-hidden="true" focusable="false">
           <path d="M0 16 C 80 6, 160 24, 240 14 S 400 4, 480 16 S 580 22, 640 12" fill="none" stroke="currentColor" stroke-width="1.4"/>
           <circle cx="312" cy="12" r="2.4" fill="currentColor"/>
         </svg>
@@ -182,7 +184,7 @@
     </header>
 
     <!-- IMAGE STATUS: atmosfera temporanea — sostituire con fotografia storica famiglia/azienda -->
-    <figure class="editorial-media reveal">
+    <figure class="editorial-media reveal reveal-media">
       <div class="editorial-media__frame">
         <picture>
           <source srcset="/assets/img/home/hero-rio-storto.webp" type="image/webp">
@@ -200,14 +202,14 @@
     </figure>
 
     <div class="container">
-      <ul class="story-facts reveal" aria-label="Punti chiave della storia">
-        <li class="story-facts__item">
+      <ul class="story-facts" aria-label="Punti chiave della storia">
+        <li class="story-facts__item reveal" data-reveal-delay="0">
           <span class="story-facts__label">Prima del 1930</span>
         </li>
-        <li class="story-facts__item">
+        <li class="story-facts__item reveal" data-reveal-delay="90">
           <span class="story-facts__label">Quattro generazioni</span>
         </li>
-        <li class="story-facts__item">
+        <li class="story-facts__item reveal" data-reveal-delay="180">
           <span class="story-facts__label">Un’unica filiera</span>
         </li>
       </ul>
@@ -223,15 +225,15 @@
         </div>
         <div class="editorial-section__aside reveal" aria-hidden="true">
           <div class="story-mark">
-            <svg class="story-mark__line story-mark__line--desktop" viewBox="0 0 120 220" preserveAspectRatio="xMidYMid meet" focusable="false">
+            <svg class="story-mark__line story-mark__line--desktop" data-draw-line viewBox="0 0 120 220" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false">
               <path d="M58 8 C 42 48, 78 72, 52 118 S 70 168, 60 212" fill="none" stroke="currentColor" stroke-width="1.5"/>
               <circle cx="58" cy="8" r="3.2" fill="currentColor"/>
-              <circle cx="60" cy="212" r="3.2" fill="currentColor"/>
+              <circle class="story-mark__accent" cx="60" cy="212" r="3.2" fill="currentColor"/>
             </svg>
-            <svg class="story-mark__line story-mark__line--mobile" viewBox="0 0 320 40" preserveAspectRatio="none" focusable="false">
+            <svg class="story-mark__line story-mark__line--mobile" data-draw-line viewBox="0 0 320 40" preserveAspectRatio="none" aria-hidden="true" focusable="false">
               <path d="M8 22 C 60 8, 110 30, 160 16 S 250 8, 312 22" fill="none" stroke="currentColor" stroke-width="1.5"/>
               <circle cx="8" cy="22" r="2.8" fill="currentColor"/>
-              <circle cx="312" cy="22" r="2.8" fill="currentColor"/>
+              <circle class="story-mark__accent" cx="312" cy="22" r="2.8" fill="currentColor"/>
             </svg>
             <p class="story-mark__caption">Risorgiva</p>
           </div>
@@ -246,36 +248,42 @@
           <h2 id="generazioni-title">Quattro generazioni</h2>
         </header>
 
-        <ol class="story-timeline">
-          <li class="story-timeline__item reveal">
-            <span class="story-timeline__index" aria-hidden="true">01</span>
-            <div class="story-timeline__body">
-              <h3>Le radici</h3>
-              <p>Prima del 1930 inizia una storia familiare costruita sul lavoro agricolo e sul rapporto quotidiano con la terra.</p>
-            </div>
-          </li>
-          <li class="story-timeline__item reveal">
-            <span class="story-timeline__index" aria-hidden="true">02</span>
-            <div class="story-timeline__body">
-              <h3>La continuità</h3>
-              <p>Generazione dopo generazione, conoscenze, responsabilità e attenzione per l’azienda vengono tramandate e rinnovate.</p>
-            </div>
-          </li>
-          <li class="story-timeline__item reveal">
-            <span class="story-timeline__index" aria-hidden="true">03</span>
-            <div class="story-timeline__body">
-              <h3>La filiera cresce</h3>
-              <p>Agricoltura, allevamento e trasformazione si uniscono progressivamente in un percorso seguito direttamente dall’azienda.</p>
-            </div>
-          </li>
-          <li class="story-timeline__item reveal">
-            <span class="story-timeline__index" aria-hidden="true">04</span>
-            <div class="story-timeline__body">
-              <h3>Rio Storto oggi</h3>
-              <p>Prodotti, accoglienza e attività didattiche raccontano oggi la stessa origine: conoscere ciò che si coltiva, si alleva e si porta in tavola.</p>
-            </div>
-          </li>
-        </ol>
+        <div class="story-timeline-wrap">
+          <svg class="story-timeline__river" data-draw-line viewBox="0 0 1000 24" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+            <path d="M20 14 C 140 6, 260 20, 380 12 S 620 6, 740 14 S 880 20, 980 10" fill="none" stroke="currentColor" stroke-width="1.5"/>
+            <circle cx="380" cy="12" r="2.5" fill="currentColor"/>
+          </svg>
+          <ol class="story-timeline">
+            <li class="story-timeline__item reveal" data-reveal-delay="0">
+              <span class="story-timeline__index" aria-hidden="true">01</span>
+              <div class="story-timeline__body">
+                <h3>Le radici</h3>
+                <p>Prima del 1930 inizia una storia familiare costruita sul lavoro agricolo e sul rapporto quotidiano con la terra.</p>
+              </div>
+            </li>
+            <li class="story-timeline__item reveal" data-reveal-delay="90">
+              <span class="story-timeline__index" aria-hidden="true">02</span>
+              <div class="story-timeline__body">
+                <h3>La continuità</h3>
+                <p>Generazione dopo generazione, conoscenze, responsabilità e attenzione per l’azienda vengono tramandate e rinnovate.</p>
+              </div>
+            </li>
+            <li class="story-timeline__item reveal" data-reveal-delay="180">
+              <span class="story-timeline__index" aria-hidden="true">03</span>
+              <div class="story-timeline__body">
+                <h3>La filiera cresce</h3>
+                <p>Agricoltura, allevamento e trasformazione si uniscono progressivamente in un percorso seguito direttamente dall’azienda.</p>
+              </div>
+            </li>
+            <li class="story-timeline__item reveal" data-reveal-delay="270">
+              <span class="story-timeline__index" aria-hidden="true">04</span>
+              <div class="story-timeline__body">
+                <h3>Rio Storto oggi</h3>
+                <p>Prodotti, accoglienza e attività didattiche raccontano oggi la stessa origine: conoscere ciò che si coltiva, si alleva e si porta in tavola.</p>
+              </div>
+            </li>
+          </ol>
+        </div>
       </div>
     </section>
 

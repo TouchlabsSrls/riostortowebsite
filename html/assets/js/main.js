@@ -1,6 +1,6 @@
 /**
  * Rio Storto — site interactions
- * Vanilla JS only: header scroll state, accessible nav, reveal on scroll.
+ * Vanilla JS only: header scroll state, accessible nav, shared reveal/draw motion.
  * Pagine interne: header con data-header-solid resta sempre in stato solido.
  */
 (function () {
@@ -144,20 +144,32 @@
     });
   });
 
-  /* ---- Reveal on scroll ---- */
-  const revealEls = document.querySelectorAll(".reveal");
+  /* ---- Shared motion: reveal + draw-line (single IntersectionObserver) ---- */
+  document.querySelectorAll("[data-reveal-delay]").forEach(function (el) {
+    const delay = el.getAttribute("data-reveal-delay");
+    if (delay !== null && delay !== "") {
+      el.style.setProperty("--reveal-delay", /ms$|s$/.test(delay) ? delay : delay + "ms");
+    }
+  });
 
-  if (revealEls.length) {
+  function activateMotion(el) {
+    el.classList.add("is-visible");
+    if (el.hasAttribute("data-draw-line") || el.classList.contains("discovery-river")) {
+      el.classList.add("is-drawn");
+    }
+  }
+
+  const motionEls = document.querySelectorAll(".reveal, [data-draw-line], .discovery-river");
+
+  if (motionEls.length) {
     if (reduceMotion || !("IntersectionObserver" in window)) {
-      revealEls.forEach(function (el) {
-        el.classList.add("is-visible");
-      });
+      motionEls.forEach(activateMotion);
     } else {
       const observer = new IntersectionObserver(
         function (entries) {
           entries.forEach(function (entry) {
             if (entry.isIntersecting) {
-              entry.target.classList.add("is-visible");
+              activateMotion(entry.target);
               observer.unobserve(entry.target);
             }
           });
@@ -165,32 +177,9 @@
         { rootMargin: "0px 0px -8% 0px", threshold: 0.12 }
       );
 
-      revealEls.forEach(function (el) {
+      motionEls.forEach(function (el) {
         observer.observe(el);
       });
-    }
-  }
-
-  /* ---- Fattoria didattica: linea Rio Storto (una sola volta) ---- */
-  const river = document.querySelector(".page-fattoria-didattica .discovery-river");
-
-  if (river) {
-    if (reduceMotion || !("IntersectionObserver" in window)) {
-      river.classList.add("is-drawn");
-    } else {
-      const riverObserver = new IntersectionObserver(
-        function (entries) {
-          entries.forEach(function (entry) {
-            if (entry.isIntersecting) {
-              river.classList.add("is-drawn");
-              riverObserver.unobserve(river);
-            }
-          });
-        },
-        { rootMargin: "0px 0px -10% 0px", threshold: 0.2 }
-      );
-
-      riverObserver.observe(river);
     }
   }
 })();

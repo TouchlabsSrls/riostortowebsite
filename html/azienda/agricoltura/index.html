@@ -176,7 +176,7 @@
 
       <!-- IMAGE STATUS: fotografia atmosferica temporanea; sostituire con fotografia reale Rio Storto -->
       <div class="page-hero__photo-bleed">
-        <figure class="page-hero__photo">
+        <figure class="page-hero__photo reveal reveal-media">
           <picture>
             <source srcset="/assets/img/home/agricoltura-rio-storto.webp" type="image/webp">
             <img
@@ -191,7 +191,7 @@
             >
           </picture>
         </figure>
-        <div class="page-hero__caption-panel">
+        <div class="page-hero__caption-panel reveal">
           <p class="page-hero__lead">La terra è il primo passaggio del percorso Rio Storto. Nei campi seguiamo i ritmi dell’anno e coltiviamo mantenendo un legame diretto con l’allevamento e le produzioni aziendali.</p>
         </div>
       </div>
@@ -209,7 +209,7 @@
     </section>
 
     <!-- IMAGE STATUS: atmosfera temporanea secondaria; sostituire con fotografia reale Rio Storto (campi/foraggi) -->
-    <figure class="editorial-media editorial-media--wide reveal">
+    <figure class="editorial-media editorial-media--wide reveal reveal-media">
       <div class="editorial-media__frame">
         <picture>
           <source srcset="/assets/img/home/hero-rio-storto.webp" type="image/webp">
@@ -232,33 +232,40 @@
           <h2 id="stagioni-title">Un lavoro che cambia durante l’anno.</h2>
         </header>
 
-        <ol class="season-cycle">
-          <li class="season-cycle__item reveal">
-            <span class="season-cycle__index" aria-hidden="true">01</span>
-            <h3>Osservare</h3>
-            <p>Leggere il terreno e il momento dell’anno prima di ogni intervento.</p>
-          </li>
-          <li class="season-cycle__item reveal">
-            <span class="season-cycle__index" aria-hidden="true">02</span>
-            <h3>Coltivare</h3>
-            <p>Seguire la crescita con attenzione e continuità.</p>
-          </li>
-          <li class="season-cycle__item reveal">
-            <span class="season-cycle__index" aria-hidden="true">03</span>
-            <h3>Raccogliere</h3>
-            <p>Riconoscere quando il lavoro dei campi diventa risorsa per l’azienda.</p>
-          </li>
-          <li class="season-cycle__item reveal">
-            <span class="season-cycle__index" aria-hidden="true">04</span>
-            <h3>Ricominciare</h3>
-            <p>Preparare un nuovo ciclo, conservando esperienza e conoscenza.</p>
-          </li>
-        </ol>
+        <div class="season-cycle-wrap">
+          <svg class="season-cycle__river" data-draw-line viewBox="0 0 1000 48" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+            <path class="graphic-river__stroke" d="M30 28 C 160 10, 280 38, 420 22 S 680 8, 820 26 S 920 40, 970 18" fill="none" stroke="currentColor" stroke-width="1.6"/>
+            <circle cx="420" cy="22" r="3" fill="currentColor"/>
+          </svg>
+          <ol class="season-cycle">
+            <li class="season-cycle__item reveal" data-reveal-delay="0">
+              <span class="season-cycle__index" aria-hidden="true">01</span>
+              <h3>Osservare</h3>
+              <p>Leggere il terreno e il momento dell’anno prima di ogni intervento.</p>
+            </li>
+            <li class="season-cycle__item reveal" data-reveal-delay="90">
+              <span class="season-cycle__index" aria-hidden="true">02</span>
+              <h3>Coltivare</h3>
+              <p>Seguire la crescita con attenzione e continuità.</p>
+            </li>
+            <li class="season-cycle__item reveal" data-reveal-delay="180">
+              <span class="season-cycle__index" aria-hidden="true">03</span>
+              <h3>Raccogliere</h3>
+              <p>Riconoscere quando il lavoro dei campi diventa risorsa per l’azienda.</p>
+            </li>
+            <li class="season-cycle__item reveal" data-reveal-delay="270">
+              <span class="season-cycle__index" aria-hidden="true">04</span>
+              <h3>Ricominciare</h3>
+              <p>Preparare un nuovo ciclo, conservando esperienza e conoscenza.</p>
+            </li>
+          </ol>
+        </div>
       </div>
     </section>
 
     <section class="section origin-bridge origin-bridge--open agriculture-bridge" aria-labelledby="filiera-agri-title">
       <div class="container container--wide agriculture-bridge__layout editorial-split reveal">
+        <span class="graphic-accent graphic-accent--sage agriculture-bridge__accent" aria-hidden="true"></span>
         <header class="agriculture-bridge__lead">
           <p class="eyebrow">Dai campi all’azienda</p>
           <h2 id="filiera-agri-title">Ciò che cresce qui continua nel resto del percorso.</h2>

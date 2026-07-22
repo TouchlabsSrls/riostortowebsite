@@ -187,7 +187,7 @@
 
       <!-- IMAGE STATUS: fotografia atmosferica temporanea; sostituire con fotografia reale Rio Storto -->
       <div class="page-hero__products-stage">
-        <figure class="page-hero__products-photo">
+        <figure class="page-hero__products-photo reveal reveal-media">
           <picture>
             <source srcset="/assets/img/home/prodotti-rio-storto.webp" type="image/webp">
             <img
@@ -202,7 +202,7 @@
             >
           </picture>
         </figure>
-        <div class="page-hero__products-panel">
+        <div class="page-hero__products-panel reveal">
           <p class="eyebrow">I nostri prodotti</p>
           <h1 id="page-title">Dalla materia prima al prodotto finito.</h1>
           <p class="page-hero__lead">Le produzioni Rio Storto nascono dal rapporto diretto tra campi, allevamento, lavorazioni e stagioni.</p>
@@ -227,9 +227,9 @@
         <h2 id="categorie-title" class="visually-hidden">Categorie di produzione</h2>
         <!-- CONTENT STATUS: categorie provvisorie da confermare; Salumi esclusi (da confermare, non pubblicati) -->
         <ul class="products-mosaic">
-          <li class="products-mosaic__item products-mosaic__item--feature products-mosaic__item--with-media reveal">
+          <li class="products-mosaic__item products-mosaic__item--feature products-mosaic__item--with-media reveal" data-reveal-delay="0">
             <!-- IMAGE STATUS: fotografia atmosferica temporanea; non rappresenta prodotti reali specifici Rio Storto -->
-            <figure class="products-mosaic__media">
+            <figure class="products-mosaic__media products-mosaic__media--reveal-left">
               <picture>
                 <source srcset="/assets/img/prodotti/formaggi-rio-storto-temporanea.webp" type="image/webp">
                 <img
@@ -251,7 +251,7 @@
               </div>
             </div>
           </li>
-          <li class="products-mosaic__item products-mosaic__item--pair reveal">
+          <li class="products-mosaic__item products-mosaic__item--pair reveal" data-reveal-delay="80">
             <span class="products-mosaic__index" aria-hidden="true">02</span>
             <div class="products-mosaic__body">
               <h3>Carni</h3>
@@ -259,16 +259,16 @@
               <p>Una materia prima legata direttamente all’allevamento e valorizzata attraverso preparazioni attente.</p>
             </div>
           </li>
-          <li class="products-mosaic__item products-mosaic__item--pair products-mosaic__item--sage reveal">
+          <li class="products-mosaic__item products-mosaic__item--pair products-mosaic__item--sage reveal" data-reveal-delay="80">
             <span class="products-mosaic__index" aria-hidden="true">03</span>
             <div class="products-mosaic__body">
               <h3>Gelato</h3>
               <p>Una produzione fresca che parte dal latte e completa il racconto delle lavorazioni aziendali.</p>
             </div>
           </li>
-          <li class="products-mosaic__item products-mosaic__item--wide products-mosaic__item--with-media products-mosaic__item--media-reverse reveal">
+          <li class="products-mosaic__item products-mosaic__item--wide products-mosaic__item--with-media products-mosaic__item--media-reverse reveal" data-reveal-delay="160">
             <!-- IMAGE STATUS: fotografia atmosferica temporanea; non rappresenta prodotti reali specifici Rio Storto -->
-            <figure class="products-mosaic__media">
+            <figure class="products-mosaic__media products-mosaic__media--reveal-right">
               <picture>
                 <source srcset="/assets/img/prodotti/prodotti-da-forno-rio-storto-temporanea.webp" type="image/webp">
                 <img
@@ -290,14 +290,14 @@
               </div>
             </div>
           </li>
-          <li class="products-mosaic__item products-mosaic__item--compact reveal">
+          <li class="products-mosaic__item products-mosaic__item--compact reveal" data-reveal-delay="240">
             <span class="products-mosaic__index" aria-hidden="true">05</span>
             <div class="products-mosaic__body">
               <h3>Idee regalo</h3>
               <p>Selezioni pensate per riunire più produzioni Rio Storto in un’unica proposta.</p>
             </div>
           </li>
-          <li class="products-mosaic__item products-mosaic__item--compact reveal">
+          <li class="products-mosaic__item products-mosaic__item--compact reveal" data-reveal-delay="240">
             <span class="products-mosaic__index" aria-hidden="true">06</span>
             <div class="products-mosaic__body">
               <h3>Produzioni stagionali</h3>
@@ -314,28 +314,33 @@
           <p class="eyebrow">Dal lavoro al prodotto</p>
           <h2 id="percorso-title">Ogni trasformazione comincia dalla conoscenza della materia prima.</h2>
         </header>
-        <ol class="products-path">
-          <li class="products-path__item reveal">
-            <span class="products-path__index" aria-hidden="true">01</span>
-            <h3>Origine</h3>
-            <p>Campi e allevamento costituiscono il punto di partenza.</p>
-          </li>
-          <li class="products-path__item reveal">
-            <span class="products-path__index" aria-hidden="true">02</span>
-            <h3>Cura</h3>
-            <p>Ogni materia prima richiede attenzione, tempi e lavorazioni specifiche.</p>
-          </li>
-          <li class="products-path__item reveal">
-            <span class="products-path__index" aria-hidden="true">03</span>
-            <h3>Trasformazione</h3>
-            <p>Il lavoro dà forma a prodotti diversi, preservandone il legame con l’azienda.</p>
-          </li>
-          <li class="products-path__item reveal">
-            <span class="products-path__index" aria-hidden="true">04</span>
-            <h3>Stagionalità</h3>
-            <p>Produzioni e disponibilità seguono il ritmo dell’anno e l’organizzazione aziendale.</p>
-          </li>
-        </ol>
+        <div class="products-path-wrap">
+          <svg class="products-path__line" data-draw-line viewBox="0 0 1000 8" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+            <path d="M0 4 H1000" fill="none" stroke="currentColor" stroke-width="1.5"/>
+          </svg>
+          <ol class="products-path">
+            <li class="products-path__item reveal" data-reveal-delay="0">
+              <span class="products-path__index" aria-hidden="true">01</span>
+              <h3>Origine</h3>
+              <p>Campi e allevamento costituiscono il punto di partenza.</p>
+            </li>
+            <li class="products-path__item reveal" data-reveal-delay="80">
+              <span class="products-path__index" aria-hidden="true">02</span>
+              <h3>Cura</h3>
+              <p>Ogni materia prima richiede attenzione, tempi e lavorazioni specifiche.</p>
+            </li>
+            <li class="products-path__item reveal" data-reveal-delay="160">
+              <span class="products-path__index" aria-hidden="true">03</span>
+              <h3>Trasformazione</h3>
+              <p>Il lavoro dà forma a prodotti diversi, preservandone il legame con l’azienda.</p>
+            </li>
+            <li class="products-path__item reveal" data-reveal-delay="240">
+              <span class="products-path__index" aria-hidden="true">04</span>
+              <h3>Stagionalità</h3>
+              <p>Produzioni e disponibilità seguono il ritmo dell’anno e l’organizzazione aziendale.</p>
+            </li>
+          </ol>
+        </div>
       </div>
     </section>
 

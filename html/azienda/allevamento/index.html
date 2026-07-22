@@ -177,7 +177,7 @@
         </div>
 
         <!-- IMAGE STATUS: fotografia atmosferica temporanea; sostituire con fotografia reale Rio Storto -->
-        <figure class="page-hero__portrait">
+        <figure class="page-hero__portrait reveal reveal-media" style="--media-reveal-scale: 1.018">
           <picture>
             <source srcset="/assets/img/home/allevamento-rio-storto.webp" type="image/webp">
             <img
@@ -196,9 +196,9 @@
     </header>
 
     <section class="section daily-presence" aria-labelledby="presenza-title">
-      <div class="container container--wide daily-presence__layout reveal">
-        <p class="daily-presence__mark" aria-hidden="true">Ogni giorno</p>
-        <div class="daily-presence__copy">
+      <div class="container container--wide daily-presence__layout">
+        <p class="daily-presence__mark reveal" aria-hidden="true" data-reveal-delay="0">Ogni giorno</p>
+        <div class="daily-presence__copy reveal" data-reveal-delay="80">
           <h2 id="presenza-title">La cura nasce dalla presenza.</h2>
           <p class="daily-presence__highlight">Un lavoro che richiede presenza ogni giorno.</p>
           <p class="content-measure">L’allevamento richiede continuità, osservazione e responsabilità. Ogni giorno il lavoro dell’azienda passa attraverso l’attenzione agli animali, agli ambienti e alle esigenze che cambiano nel tempo: un rapporto costruito sulla conoscenza diretta, parte fondamentale della filiera Rio Storto.</p>
@@ -210,7 +210,7 @@
       <div class="container container--wide">
         <h2 id="principi-title" class="visually-hidden">Tre principi del lavoro in allevamento</h2>
         <ol class="daily-principles daily-principles__grid">
-          <li class="daily-principles__item reveal">
+          <li class="daily-principles__item reveal" data-reveal-delay="0">
             <span class="daily-principles__index" aria-hidden="true">01</span>
             <div class="daily-principles__body">
               <h3>Nutrire</h3>
@@ -218,14 +218,14 @@
               <p>Collegare ciò che cresce nei campi alle necessità dell’allevamento.</p>
             </div>
           </li>
-          <li class="daily-principles__item reveal">
+          <li class="daily-principles__item reveal" data-reveal-delay="90">
             <span class="daily-principles__index" aria-hidden="true">02</span>
             <div class="daily-principles__body">
               <h3>Osservare</h3>
               <p>Seguire gli animali con attenzione, continuità e responsabilità.</p>
             </div>
           </li>
-          <li class="daily-principles__item reveal">
+          <li class="daily-principles__item reveal" data-reveal-delay="180">
             <span class="daily-principles__index" aria-hidden="true">03</span>
             <div class="daily-principles__body">
               <h3>Conoscere</h3>
@@ -237,9 +237,10 @@
     </section>
 
     <section class="section origin-bridge origin-bridge--dense" aria-labelledby="origine-title">
-      <div class="container container--wide origin-bridge__layout editorial-split editorial-split--reverse reveal">
+      <div class="container container--wide origin-bridge__layout editorial-split editorial-split--reverse">
         <!-- IMAGE STATUS: fotografia atmosferica temporanea; sostituire con fotografia reale Rio Storto -->
-        <figure class="origin-bridge__media">
+        <figure class="origin-bridge__media reveal reveal-media">
+          <span class="graphic-accent graphic-accent--bordeaux-soft origin-bridge__blob" aria-hidden="true"></span>
           <picture>
             <source srcset="/assets/img/home/prodotti-rio-storto.webp" type="image/webp">
             <img
@@ -253,7 +254,7 @@
             >
           </picture>
         </figure>
-        <div class="origin-bridge__copy">
+        <div class="origin-bridge__copy reveal" data-reveal-delay="90">
           <p class="eyebrow">Dall’origine al prodotto</p>
           <h2 id="origine-title">Conoscere da dove nasce una materia prima cambia il modo di trasformarla.</h2>
           <!-- CONTENT STATUS: produzione aziendale di latte e carne recuperata dal vecchio sito; confermare disponibilità e formulazione con il cliente -->

@@ -92,9 +92,11 @@ html {
     transition-duration: 0.01ms !important;
   }
 
-  .reveal {
+  .reveal,
+  .reveal-media {
     opacity: 1 !important;
     transform: none !important;
+    clip-path: none !important;
   }
 }
 
@@ -1710,7 +1712,9 @@ html.font-newsreader .site-footer__claim {
 .reveal {
   opacity: 1;
   transform: none;
-  transition: opacity var(--reveal-duration) var(--ease), transform var(--reveal-duration) var(--ease);
+  transition:
+    opacity var(--reveal-duration) var(--ease) var(--reveal-delay, 0ms),
+    transform var(--reveal-duration) var(--ease) var(--reveal-delay, 0ms);
 }
 
 .js-ready .reveal:not(.is-visible) {
@@ -1721,6 +1725,145 @@ html.font-newsreader .site-footer__claim {
 .js-ready .reveal.is-visible {
   opacity: 1;
   transform: none;
+}
+
+/* Media reveal — clip + lieve scale sull’immagine (una sola volta) */
+.reveal-media {
+  --media-reveal-scale: 1.02;
+  --media-reveal-clip: inset(3.5% 2.5%);
+  overflow: hidden;
+}
+
+.reveal-media img,
+.reveal-media .page-hero__image,
+.reveal-media .editorial-media__image,
+.reveal-media .products-mosaic__image,
+.reveal-media .origin-bridge__image {
+  transform: scale(1);
+  transition:
+    transform calc(var(--reveal-duration) + 0.1s) var(--ease) var(--reveal-delay, 0ms);
+}
+
+.js-ready .reveal-media:not(.is-visible) {
+  clip-path: var(--media-reveal-clip);
+  transition:
+    opacity var(--reveal-duration) var(--ease) var(--reveal-delay, 0ms),
+    transform var(--reveal-duration) var(--ease) var(--reveal-delay, 0ms),
+    clip-path calc(var(--reveal-duration) + 0.15s) var(--ease) var(--reveal-delay, 0ms);
+}
+
+.js-ready .reveal-media:not(.is-visible) img,
+.js-ready .reveal-media:not(.is-visible) .page-hero__image,
+.js-ready .reveal-media:not(.is-visible) .editorial-media__image,
+.js-ready .reveal-media:not(.is-visible) .products-mosaic__image,
+.js-ready .reveal-media:not(.is-visible) .origin-bridge__image {
+  transform: scale(var(--media-reveal-scale));
+}
+
+.js-ready .reveal-media.is-visible {
+  clip-path: inset(0);
+  transition:
+    opacity var(--reveal-duration) var(--ease) var(--reveal-delay, 0ms),
+    transform var(--reveal-duration) var(--ease) var(--reveal-delay, 0ms),
+    clip-path calc(var(--reveal-duration) + 0.15s) var(--ease) var(--reveal-delay, 0ms);
+}
+
+.js-ready .reveal-media.is-visible img,
+.js-ready .reveal-media.is-visible .page-hero__image,
+.js-ready .reveal-media.is-visible .editorial-media__image,
+.js-ready .reveal-media.is-visible .products-mosaic__image,
+.js-ready .reveal-media.is-visible .origin-bridge__image {
+  transform: scale(1);
+}
+
+.reveal-media--from-left {
+  --media-reveal-clip: inset(3% 8% 3% 0);
+}
+
+.reveal-media--from-right {
+  --media-reveal-clip: inset(3% 0 3% 8%);
+}
+
+/* Draw line — SVG stroke una sola volta (visibile senza JS) */
+svg[data-draw-line] path,
+[data-draw-line] .graphic-river__stroke {
+  stroke-dasharray: 1200;
+  stroke-dashoffset: 0;
+  transition: stroke-dashoffset 1.25s var(--ease);
+}
+
+.js-ready svg[data-draw-line]:not(.is-drawn) path,
+.js-ready [data-draw-line]:not(.is-drawn) .graphic-river__stroke {
+  stroke-dashoffset: 1200;
+}
+
+.js-ready svg[data-draw-line].is-drawn path,
+.js-ready [data-draw-line].is-drawn .graphic-river__stroke,
+.js-ready .discovery-river.is-drawn .discovery-river__stroke {
+  stroke-dashoffset: 0;
+}
+
+svg[data-draw-line] circle {
+  opacity: 1;
+  transition: opacity 0.45s var(--ease) 0.55s;
+}
+
+.js-ready svg[data-draw-line]:not(.is-drawn) circle {
+  opacity: 0;
+}
+
+.js-ready svg[data-draw-line].is-drawn circle {
+  opacity: 1;
+}
+
+.graphic-accent {
+  position: absolute;
+  pointer-events: none;
+  border-radius: 58% 42% 48% 52% / 45% 55% 45% 55%;
+}
+
+.graphic-accent--sage {
+  background: rgba(141, 154, 134, 0.28);
+}
+
+.graphic-accent--ocra {
+  background: rgba(230, 212, 166, 0.55);
+}
+
+.graphic-accent--bordeaux-soft {
+  background: rgba(110, 47, 61, 0.1);
+}
+
+.graphic-accent--cream {
+  background: rgba(217, 207, 192, 0.55);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .reveal-media,
+  .reveal-media img,
+  .reveal-media .page-hero__image,
+  .reveal-media .editorial-media__image,
+  .reveal-media .products-mosaic__image,
+  .reveal-media .origin-bridge__image {
+    opacity: 1 !important;
+    transform: none !important;
+    clip-path: none !important;
+    transition: none !important;
+  }
+
+  svg[data-draw-line] path,
+  [data-draw-line] .graphic-river__stroke,
+  .discovery-river__stroke {
+    stroke-dasharray: none !important;
+    stroke-dashoffset: 0 !important;
+    transition: none !important;
+  }
+
+  svg[data-draw-line] circle {
+    opacity: 1 !important;
+    transition: none !important;
+  }
 }
 
 /* --------------------------------------------------------------------------
@@ -4340,8 +4483,12 @@ html.font-newsreader .site-footer__claim {
 
 .page-fattoria-didattica .discovery-river__stroke {
   stroke-dasharray: 1400;
-  stroke-dashoffset: 1400;
+  stroke-dashoffset: 0;
   transition: stroke-dashoffset 1.4s var(--ease);
+}
+
+.page-fattoria-didattica.js-ready .discovery-river:not(.is-drawn) .discovery-river__stroke {
+  stroke-dashoffset: 1400;
 }
 
 .page-fattoria-didattica .discovery-river.is-drawn .discovery-river__stroke {
@@ -4808,5 +4955,240 @@ html.font-newsreader .site-footer__claim {
 
   .page-fattoria-didattica.js-ready .discovery-path__item.reveal {
     transition-delay: 0ms !important;
+  }
+}
+
+/* ==========================================================================
+   Shared visual language — scoped page refinements (not Fattoria energy)
+   ========================================================================== */
+
+.page-storia,
+.page-agricoltura,
+.page-allevamento,
+.page-prodotti {
+  --reveal-distance: 1.125rem; /* ~18px */
+  --reveal-duration: 0.75s;
+}
+
+/* ---- Storia ---- */
+
+.page-storia .page-hero__copy {
+  max-width: 40rem;
+}
+
+.page-storia .page-hero__river {
+  color: var(--color-sage);
+}
+
+.page-storia .page-hero__river circle {
+  fill: var(--color-terracotta);
+}
+
+.page-storia .story-mark {
+  color: var(--color-sage);
+}
+
+.page-storia .story-mark__accent {
+  fill: var(--didactic-terracotta, var(--color-terracotta));
+}
+
+.page-storia .story-timeline-wrap {
+  position: relative;
+}
+
+.page-storia .story-timeline__river {
+  display: none;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0.15rem;
+  width: 100%;
+  height: 1.5rem;
+  color: var(--color-sage-soft);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.page-storia .story-timeline__river circle {
+  fill: var(--color-terracotta);
+}
+
+.page-storia .story-timeline {
+  position: relative;
+  z-index: 1;
+}
+
+@media (min-width: 900px) {
+  .page-storia .story-timeline__river {
+    display: block;
+  }
+
+  .page-storia .story-timeline__item {
+    border-top-color: transparent;
+  }
+}
+
+/* ---- Agricoltura ---- */
+
+.page-agricoltura .season-cycle-wrap {
+  position: relative;
+}
+
+.page-agricoltura .season-cycle__river {
+  display: none;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0.35rem;
+  width: 100%;
+  height: 3rem;
+  color: var(--color-sage);
+  opacity: 0.7;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.page-agricoltura .season-cycle__river circle {
+  fill: #d9c48a;
+}
+
+.page-agricoltura .season-cycle {
+  position: relative;
+  z-index: 1;
+}
+
+@media (min-width: 900px) {
+  .page-agricoltura .season-cycle__river {
+    display: block;
+  }
+
+  .page-agricoltura .season-cycle {
+    border-top-color: transparent;
+  }
+
+  .page-agricoltura .season-cycle::before {
+    display: none;
+  }
+}
+
+.page-agricoltura .agriculture-bridge__layout {
+  position: relative;
+}
+
+.page-agricoltura .agriculture-bridge__accent {
+  width: clamp(5rem, 10vw, 8rem);
+  height: clamp(5rem, 10vw, 8rem);
+  right: 2%;
+  bottom: 8%;
+  z-index: 0;
+}
+
+.page-agricoltura .agriculture-bridge__lead,
+.page-agricoltura .agriculture-bridge__body {
+  position: relative;
+  z-index: 1;
+}
+
+/* ---- Allevamento ---- */
+
+.page-allevamento .page-hero__portrait.reveal-media {
+  --media-reveal-scale: 1.018;
+  --media-reveal-clip: inset(2.5% 2%);
+}
+
+.page-allevamento .origin-bridge__media {
+  position: relative;
+}
+
+.page-allevamento .origin-bridge__blob {
+  width: clamp(4.5rem, 12vw, 8rem);
+  height: clamp(4.5rem, 12vw, 8rem);
+  left: -6%;
+  bottom: -8%;
+  z-index: 0;
+}
+
+.page-allevamento .origin-bridge__media picture,
+.page-allevamento .origin-bridge__image {
+  position: relative;
+  z-index: 1;
+}
+
+/* ---- Prodotti ---- */
+
+.page-prodotti.js-ready .products-mosaic__item:not(.is-visible) .products-mosaic__media {
+  clip-path: inset(4% 3%);
+}
+
+.page-prodotti.js-ready .products-mosaic__item:not(.is-visible) .products-mosaic__media--reveal-left {
+  clip-path: inset(3% 10% 3% 0);
+}
+
+.page-prodotti.js-ready .products-mosaic__item:not(.is-visible) .products-mosaic__media--reveal-right {
+  clip-path: inset(3% 0 3% 10%);
+}
+
+.page-prodotti.js-ready .products-mosaic__item:not(.is-visible) .products-mosaic__image {
+  transform: scale(1.02);
+}
+
+.page-prodotti .products-mosaic__media {
+  overflow: hidden;
+  transition: clip-path calc(var(--reveal-duration) + 0.12s) var(--ease);
+}
+
+.page-prodotti .products-mosaic__image {
+  transition: transform calc(var(--reveal-duration) + 0.12s) var(--ease);
+}
+
+.page-prodotti.js-ready .products-mosaic__item.is-visible .products-mosaic__media {
+  clip-path: inset(0);
+}
+
+.page-prodotti.js-ready .products-mosaic__item.is-visible .products-mosaic__image {
+  transform: scale(1);
+}
+
+.page-prodotti .products-path-wrap {
+  position: relative;
+}
+
+.page-prodotti .products-path__line {
+  display: none;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  width: 100%;
+  height: 0.5rem;
+  color: var(--color-sage-soft);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.page-prodotti .products-path {
+  position: relative;
+  z-index: 1;
+}
+
+@media (min-width: 900px) {
+  .page-prodotti .products-path__line {
+    display: block;
+  }
+
+  .page-prodotti .products-path {
+    border-top-color: transparent;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page-prodotti.js-ready .products-mosaic__item:not(.is-visible) .products-mosaic__media,
+  .page-prodotti.js-ready .products-mosaic__item.is-visible .products-mosaic__media {
+    clip-path: none !important;
+  }
+
+  .page-prodotti.js-ready .products-mosaic__item:not(.is-visible) .products-mosaic__image,
+  .page-prodotti.js-ready .products-mosaic__item.is-visible .products-mosaic__image {
+    transform: none !important;
   }
 }
