@@ -41,6 +41,8 @@ html/
 ├── 404.html
 ├── storia/
 │   └── index.html              → /storia/
+├── prodotti/
+│   └── index.html              → /prodotti/
 ├── azienda/
 │   ├── agricoltura/
 │   │   └── index.html          → /azienda/agricoltura/

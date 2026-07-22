@@ -63,7 +63,7 @@ Stati ammessi:
 | Sequenza stagionale | Osservare / Coltivare / Raccogliere / Ricominciare | Brief | riscritto provvisorio | Sì | Volutamente generica, senza mesi/colture |
 | Filiera collegata | Testo + foraggi per mucche | Brief + sito precedente | recuperato dal sito precedente — da confermare con il cliente | Sì | Foraggi, destinazione, formulazione |
 | Continuità | Fascia breve | Brief | riscritto provvisorio | Sì | — |
-| CTA | Link allevamento + prodotti | Brief | riscritto provvisorio | — | `/prodotti/` ancora 404 |
+| CTA | Link allevamento + prodotti | Brief | riscritto provvisorio | — | `/prodotti/` attiva |
 
 ## Pagina `/azienda/allevamento/`
 
@@ -76,7 +76,24 @@ Stati ammessi:
 | Media secondaria (origine → prodotto) | `prodotti-rio-storto.webp/.jpg` nel blocco “Dall’origine al prodotto” | Asset homepage | asset temporaneo | Sì | Funzione: ponte narrativo verso trasformazione/lavorazioni; non documentazione dei prodotti reali; layout split (immagine sopra su mobile, affiancata su desktop). Non riusa `hero-rio-storto` |
 | Mucche in allevamento | Presenza implicita nei testi foraggi/foto | Sito precedente | recuperato dal sito precedente — da confermare con il cliente | Sì | Non inventare razze o quantità |
 | Campi e animali | Collegamento ad agricoltura | Brief | riscritto provvisorio | Sì | — |
-| CTA | Prodotti + Storia | Brief | riscritto provvisorio | — | `/prodotti/` ancora 404 |
+| CTA | Prodotti + Storia | Brief | riscritto provvisorio | — | `/prodotti/` attiva |
+
+## Pagina `/prodotti/`
+
+| Sezione | Testo o immagine | Fonte | Stato | Conferma cliente necessaria | Note |
+| --- | --- | --- | --- | --- | --- |
+| Hero | H1, intro, foto `prodotti-rio-storto` | Brief pagina prodotti | riscritto provvisorio / asset temporaneo | Sì | Fotografia atmosferica temporanea (tavola); non documentazione catalogo |
+| Introduzione | Due colonne editoriali | Brief | riscritto provvisorio | Sì | — |
+| Categorie pubbliche | Formaggi, Carni, Gelato, Prodotti da forno, Idee regalo, Produzioni stagionali | Brief + homepage | riscritto provvisorio | Sì | Mosaico editoriale, non schede e-commerce; senza link a pagine categoria |
+| Categoria Salumi | Non pubblicata | Materiale progettuale | da confermare | Sì | Salumificio non stabilmente in produzione; non annunciare aperture o disponibilità |
+| Latte | Menzionato in testi Formaggi/Gelato e percorso | Sito precedente | recuperato dal sito precedente — da confermare con il cliente | Sì | Non elencare varietà |
+| Carne | Menzionata in categoria Carni | Sito precedente | recuperato dal sito precedente — da confermare con il cliente | Sì | Nessun taglio/specie inventato |
+| Percorso produzione | Origine / Cura / Trasformazione / Stagionalità | Brief | riscritto provvisorio | Sì | Compatto; distinto dalla timeline homepage |
+| Disponibilità | Fascia stagionale + link Contatti | Brief | riscritto provvisorio | Sì | Formulazione neutra; assortimento da definire con il cliente |
+| Idee regalo / confezioni | Solo testo editoriale | Brief | riscritto / da documentare | Sì | Documentare proposte e confezioni reali quando disponibili |
+| Foto per categoria | Non presenti | — | — | Sì | Servono fotografie reali dedicate per ciascuna categoria |
+| Navigazione correlata | Agricoltura + Allevamento | Brief | — | — | Componente `.related-navigation` |
+| OG image | `prodotti-rio-storto.jpg` | Asset homepage | asset temporaneo | Sì | — |
 
 ### Informazioni recuperate dal sito precedente (da confermare)
 
