@@ -113,7 +113,9 @@ Stati ammessi:
 | WhatsApp | Non pubblicato | — | da verificare | Sì | Non inventare canale |
 | Social Instagram / Facebook | Non pubblicati | — | da confermare | Sì | URL non presenti nel progetto; non inventati |
 | Indicazioni | Link Google Maps search (no iframe) | Brief | — | — | Via Pila 27/C Camposampiero |
-| Temi informativi | Prodotti (link), Fattoria/Agriturismo (testo), Azienda (link agri+alle) | Brief | riscritto provvisorio | Sì | Link Fattoria didattica e Agriturismo da attivare quando le pagine esistono |
+| Temi informativi | Rimossi nella semplificazione strutturale | — | — | — | La pagina Contatti non elenca più i motivi di contatto |
+| Come raggiungerci (pannello) | Rimosso | — | — | — | Indicazioni Maps integrate nella riga Indirizzo |
+| Struttura pagina | Hero + directory + riga legale | Brief semplificazione | — | — | Contenuto utile immediato; senza sezioni narrative aggiuntive |
 | Modulo di contatto | Non inserito | — | rimandato | Sì | Richiede definizione del destinatario, gestione SMTP/API, privacy e protezione antispam |
 | Form | — | — | — | — | Modulo di contatto non inserito: richiede definizione del destinatario, gestione SMTP/API, privacy e protezione antispam |
 
