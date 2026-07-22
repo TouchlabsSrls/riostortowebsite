@@ -55,7 +55,7 @@
   }
   </script>
 </head>
-<body>
+<body class="page-home">
   <a class="skip-link" href="#contenuto-principale">Vai al contenuto</a>
 
   <header class="site-header" data-header>
@@ -158,7 +158,7 @@
     <!-- 1. HERO -->
     <!-- IMAGE STATUS: fotografia atmosferica temporanea; sostituire con asset reale del cliente -->
     <section class="hero" aria-labelledby="hero-title">
-      <div class="hero__media" data-hero-media>
+      <div class="hero__media reveal reveal-media" data-hero-media style="--media-reveal-scale: 1.02; --media-reveal-clip: inset(0)">
         <!-- Predisposizione video: sostituire con <video> MP4/WebM + poster -->
         <!--
         <video class="hero__video" autoplay muted loop playsinline poster="/assets/img/home/hero-rio-storto.jpg">
@@ -181,11 +181,11 @@
       </div>
       <div class="hero__overlay" aria-hidden="true"></div>
       <div class="hero__content">
-        <p class="eyebrow eyebrow--on-dark">Azienda Agricola</p>
+        <p class="eyebrow eyebrow--on-dark reveal" data-reveal-delay="0">Azienda Agricola</p>
         <!-- CONTENT STATUS: testo hero approvato in bozza -->
-        <h1 id="hero-title">Dalla nostra terra, il <span class="title-accent">sapore di casa</span>.</h1>
-        <p class="hero__lead">Coltiviamo, alleviamo e trasformiamo ogni giorno ciò che portiamo sulla vostra tavola.</p>
-        <div class="hero__actions">
+        <h1 id="hero-title" class="reveal" data-reveal-delay="70">Dalla nostra terra, il <span class="title-accent">sapore di casa</span>.</h1>
+        <p class="hero__lead reveal" data-reveal-delay="130">Coltiviamo, alleviamo e trasformiamo ogni giorno ciò che portiamo sulla vostra tavola.</p>
+        <div class="hero__actions reveal" data-reveal-delay="190">
           <a class="btn btn--primary" href="#introduzione">Scopri Rio Storto</a>
           <a class="btn btn--secondary" href="/contatti/">Vieni a trovarci</a>
         </div>
@@ -200,7 +200,7 @@
     <!-- IMAGE STATUS: sostituire con fotografia reale del cliente — /assets/img/home/storia-rio-storto.webp -->
     <section class="section intro" id="introduzione" aria-labelledby="intro-title">
       <div class="container intro__grid">
-        <div class="intro__copy reveal">
+        <div class="intro__copy reveal" data-reveal-delay="0">
           <p class="eyebrow">Una storia di famiglia e territorio</p>
           <h2 id="intro-title">Una storia che scorre da <span class="title-accent">quattro generazioni</span>.</h2>
           <p class="lede">Rio Storto prende il nome dal piccolo corso d’acqua di risorgiva che accompagna i terreni della famiglia. Da prima del 1930, generazione dopo generazione, coltivazione, allevamento e trasformazione fanno parte di un unico percorso.</p>
@@ -211,7 +211,7 @@
             </svg>
           </a>
         </div>
-        <aside class="intro__aside reveal" aria-label="Il percorso Rio Storto">
+        <aside class="intro__aside reveal" aria-label="Il percorso Rio Storto" data-reveal-delay="90">
           <div class="photo-slot photo-slot--storia" role="img" aria-label="Territori e storia di Rio Storto"></div>
           <ol class="intro__path">
             <li><span>Terra</span></li>
@@ -222,7 +222,7 @@
           <p class="intro__aside-note">Un’unica filiera interna, seguita giorno dopo giorno dalla stessa famiglia.</p>
         </aside>
       </div>
-      <svg class="river-line river-line--intro" viewBox="0 0 1200 40" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+      <svg class="river-line river-line--intro" data-draw-line viewBox="0 0 1200 40" preserveAspectRatio="none" aria-hidden="true" focusable="false">
         <path d="M0 22 C 200 8, 400 34, 600 18 S 1000 8, 1200 24" fill="none" stroke="currentColor" stroke-width="1.2"/>
       </svg>
     </section>
@@ -236,22 +236,22 @@
         </header>
 
         <ol class="filiera__steps">
-          <li class="filiera__step reveal">
+          <li class="filiera__step reveal" data-reveal-delay="0">
             <span class="filiera__num" aria-hidden="true">01</span>
             <h3>Coltiviamo</h3>
             <p>Seguiamo le stagioni nei campi, coltivando ciò che serve alle nostre produzioni e alla nostra tavola.</p>
           </li>
-          <li class="filiera__step reveal">
+          <li class="filiera__step reveal" data-reveal-delay="80">
             <span class="filiera__num" aria-hidden="true">02</span>
             <h3>Alleviamo</h3>
             <p>Ci prendiamo cura ogni giorno dei nostri animali, con rispetto e presenza costante.</p>
           </li>
-          <li class="filiera__step reveal">
+          <li class="filiera__step reveal" data-reveal-delay="160">
             <span class="filiera__num" aria-hidden="true">03</span>
             <h3>Trasformiamo</h3>
             <p>Nei laboratori aziendali diamo forma a formaggi, carni, gelato e prodotti da forno.</p>
           </li>
-          <li class="filiera__step reveal">
+          <li class="filiera__step reveal" data-reveal-delay="240">
             <span class="filiera__num" aria-hidden="true">04</span>
             <h3>Accogliamo</h3>
             <p>Nell’agriturismo e in fattoria didattica condividiamo il sapore di casa e il lavoro della terra.</p>
@@ -266,8 +266,8 @@
       <div class="container">
         <!-- CONTENT STATUS: testo provvisorio da confermare -->
         <!-- IMAGE STATUS: fotografia atmosferica temporanea; sostituire con asset reale del cliente -->
-        <article class="editorial editorial--image-right reveal" aria-labelledby="agricoltura-title">
-          <div class="editorial__media">
+        <article class="editorial editorial--image-right" aria-labelledby="agricoltura-title">
+          <div class="editorial__media reveal reveal-media reveal-media--from-left" data-reveal-delay="0">
             <figure class="media-frame media-frame--tall">
               <picture>
                 <source srcset="/assets/img/home/agricoltura-rio-storto.webp" type="image/webp">
@@ -283,7 +283,7 @@
               </picture>
             </figure>
           </div>
-          <div class="editorial__body">
+          <div class="editorial__body reveal" data-reveal-delay="90">
             <p class="eyebrow">Agricoltura</p>
             <h2 id="agricoltura-title">Ogni stagione ha il suo <span class="title-accent">lavoro</span>.</h2>
             <p>Nei campi seguiamo i tempi della natura e coltiviamo ciò che alimenta la nostra azienda, i nostri animali e le produzioni che portiamo in tavola.</p>
@@ -298,8 +298,8 @@
 
         <!-- CONTENT STATUS: testo provvisorio da confermare -->
         <!-- IMAGE STATUS: fotografia atmosferica temporanea; sostituire con asset reale del cliente -->
-        <article class="editorial editorial--image-left reveal" aria-labelledby="allevamento-title">
-          <div class="editorial__media">
+        <article class="editorial editorial--image-left" aria-labelledby="allevamento-title">
+          <div class="editorial__media reveal reveal-media reveal-media--from-right" data-reveal-delay="0" style="--media-reveal-scale: 1.018">
             <figure class="media-frame media-frame--wide">
               <picture>
                 <source srcset="/assets/img/home/allevamento-rio-storto.webp" type="image/webp">
@@ -315,7 +315,7 @@
               </picture>
             </figure>
           </div>
-          <div class="editorial__body">
+          <div class="editorial__body reveal" data-reveal-delay="90">
             <p class="eyebrow">Allevamento</p>
             <h2 id="allevamento-title">Il benessere comincia dalla <span class="title-accent">cura quotidiana</span>.</h2>
             <p>Conosciamo i nostri animali, li seguiamo ogni giorno e lavoriamo perché qualità delle materie prime e rispetto dell’allevamento procedano insieme.</p>
@@ -341,7 +341,7 @@
           <p class="section-header__lede">Formaggi, carni, gelato e produzioni stagionali nascono all’interno della stessa filiera. Un percorso diretto, seguito dall’azienda dal campo fino al banco.</p>
         </header>
 
-        <figure class="products__feature reveal">
+        <figure class="products__feature reveal reveal-media" data-reveal-delay="0">
           <picture>
             <source srcset="/assets/img/home/prodotti-rio-storto.webp" type="image/webp">
             <img
@@ -357,42 +357,42 @@
         </figure>
 
         <ul class="products__grid">
-          <li class="products__item products__item--lg reveal">
+          <li class="products__item products__item--lg reveal" data-reveal-delay="80">
             <div class="media-placeholder media-placeholder--cheese" role="img" aria-hidden="true"></div>
             <div class="products__copy">
               <h3>Formaggi</h3>
               <p>Latte e tempo, trasformati con gesti artigianali.</p>
             </div>
           </li>
-          <li class="products__item reveal">
+          <li class="products__item reveal" data-reveal-delay="80">
             <div class="media-placeholder media-placeholder--meat" role="img" aria-hidden="true"></div>
             <div class="products__copy">
               <h3>Carni</h3>
               <p>Provenienza nota, lavorazione attenta.</p>
             </div>
           </li>
-          <li class="products__item reveal">
+          <li class="products__item reveal" data-reveal-delay="80">
             <div class="media-placeholder media-placeholder--gelato" role="img" aria-hidden="true"></div>
             <div class="products__copy">
               <h3>Gelato</h3>
               <p>Freschezza e ingredienti della nostra terra.</p>
             </div>
           </li>
-          <li class="products__item reveal">
+          <li class="products__item reveal" data-reveal-delay="160">
             <div class="media-placeholder media-placeholder--bakery" role="img" aria-hidden="true"></div>
             <div class="products__copy">
               <h3>Prodotti da forno</h3>
               <p>Il profumo del forno, nelle stagioni.</p>
             </div>
           </li>
-          <li class="products__item reveal">
+          <li class="products__item reveal" data-reveal-delay="240">
             <div class="media-placeholder media-placeholder--gift" role="img" aria-hidden="true"></div>
             <div class="products__copy">
               <h3>Idee regalo</h3>
               <p>Selezioni per portare a casa un pezzo di Rio Storto.</p>
             </div>
           </li>
-          <li class="products__item products__item--accent reveal">
+          <li class="products__item products__item--accent reveal" data-reveal-delay="240">
             <div class="media-placeholder media-placeholder--seasonal" role="img" aria-hidden="true"></div>
             <div class="products__copy">
               <h3>Produzioni stagionali</h3>
@@ -413,7 +413,7 @@
     <!-- IMAGE STATUS: fotografia atmosferica temporanea; sostituire con fotografia reale Rio Storto -->
     <section class="section agriturismo" aria-labelledby="agriturismo-title">
       <div class="container agriturismo__layout">
-        <div class="agriturismo__media reveal">
+        <div class="agriturismo__media reveal reveal-media" data-reveal-delay="0">
           <picture>
             <source srcset="/assets/img/home/agriturismo-rio-storto.webp" type="image/webp">
             <img
@@ -427,7 +427,7 @@
             >
           </picture>
         </div>
-        <div class="agriturismo__content reveal">
+        <div class="agriturismo__content reveal" data-reveal-delay="100">
           <p class="eyebrow eyebrow--on-bordeaux">Dal campo alla tavola</p>
           <h2 id="agriturismo-title">La nostra azienda continua a <span class="title-accent">tavola</span>.</h2>
           <p class="lede">La cucina di Rio Storto nasce dalle stagioni, dalle materie prime aziendali e da un modo semplice e curato di accogliere. Non un ristorante separato, ma il naturale punto di arrivo della nostra filiera.</p>
@@ -441,7 +441,7 @@
     <!-- IMAGE STATUS: fotografia atmosferica temporanea; sostituire con fotografia reale Rio Storto -->
     <section class="section didattica" aria-labelledby="didattica-title">
       <div class="container didattica__grid">
-        <div class="didattica__media reveal">
+        <div class="didattica__media reveal reveal-media" data-reveal-delay="0">
           <figure class="media-frame media-frame--didattica">
             <picture>
               <source srcset="/assets/img/home/fattoria-didattica-rio-storto.webp" type="image/webp">
@@ -457,7 +457,7 @@
             </picture>
           </figure>
         </div>
-        <div class="didattica__copy reveal">
+        <div class="didattica__copy reveal" data-reveal-delay="80">
           <p class="eyebrow">Fattoria didattica</p>
           <h2 id="didattica-title">Scoprire da vicino ciò che normalmente si vede soltanto da <span class="title-accent">lontano</span>.</h2>
           <p>Percorsi, incontri con gli animali e attività dedicate aiutano bambini, famiglie e scuole a conoscere il lavoro agricolo attraverso un’esperienza concreta.</p>

@@ -47,6 +47,8 @@ html/
 │   └── index.html              → /contatti/
 ├── fattoria-didattica/
 │   └── index.html              → /fattoria-didattica/
+├── agriturismo/
+│   └── index.html              → /agriturismo/
 ├── azienda/
 │   ├── agricoltura/
 │   │   └── index.html          → /azienda/agricoltura/

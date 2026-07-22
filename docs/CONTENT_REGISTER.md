@@ -145,6 +145,32 @@ Stati ammessi:
 | Fotografie reali | Solo atmosfera temporanea in hero | Asset temporaneo | asset temporaneo | Sì | Servono foto reali di attività + eventuali dettagli ravvicinati |
 | OG image | `fattoria-didattica-rio-storto.jpg` | Asset homepage | asset temporaneo | Sì | — |
 
+## Pagina `/agriturismo/`
+
+| Sezione | Testo o immagine | Fonte | Stato | Conferma cliente necessaria | Note |
+| --- | --- | --- | --- | --- | --- |
+| Hero | Soprattitolo, H1, intro, anchor #atmosfera | Brief pagina agriturismo | riscritto provvisorio | Sì | Nessun menu/orario/prezzo |
+| Hero media | `agriturismo-rio-storto.webp/.jpg` | Asset homepage | asset temporaneo | Sì | Fotografia atmosferica temporanea; non documenta necessariamente l’ambiente reale definitivo |
+| Introduzione | Titolo + testo + accento tipografico | Brief | riscritto provvisorio | Sì | — |
+| Dalla terra alla tavola | Testo + foto `prodotti-rio-storto` + link agricoltura/allevamento | Brief | riscritto / asset temporaneo | Sì | Ponte narrativo; non documentazione menu |
+| Fascia scura | “Il gusto ha bisogno di tempo” + Terra/Attesa/Cura/Condivisione | Brief | riscritto provvisorio | Sì | — |
+| La tavola | Testo + `formaggi-rio-storto-temporanea` + link prodotti | Brief | riscritto / asset temporaneo | Sì | Non rappresenta menu o prodotti specifici garantiti |
+| Atmosfera | Titolo tipografico a tre frasi | Brief | riscritto provvisorio | Sì | Nessuna nuova fotografia |
+| Informazioni | Telefono + email + link Contatti | Contatti / materiali pubblici | dato pubblico recuperato — da confermare | Sì | Nessun form, calendario o prenotazione online |
+| Aperture / orari / giorni | Non pubblicati | — | da confermare | Sì | — |
+| Modalità di prenotazione | Solo contatto diretto | Brief | da confermare | Sì | Prenotazione online non implementata |
+| Menu | Non pubblicato | — | da acquisire | Sì | — |
+| Prezzi | Non pubblicati | — | da acquisire | Sì | — |
+| Allergeni | Non pubblicati | — | da acquisire | Sì | — |
+| Numero di coperti | Non pubblicato | — | da confermare | Sì | — |
+| Accessibilità | Non dichiarata | — | da confermare | Sì | — |
+| Eventi privati | Non pubblicati | — | da confermare | Sì | — |
+| Camere / pernottamento | Non pubblicati | — | escluso | Sì | Non inventare |
+| Schema Restaurant / FoodEstablishment | Non usato | — | rinviato | Sì | Richiede dati certi (orari, cucina, prenotazioni) |
+| Video autentico | Non inserito | — | da produrre | Sì | Futuro clip 10–18 s: ambiente, tavola, preparazione, prodotti, convivialità, luce naturale/serale; muto di default; poster; playsinline; no autoplay se prefers-reduced-motion; compresso; non sostituisce testi |
+| Fotografie autentiche | Solo atmosfere temporanee | Asset temporanei | asset temporaneo | Sì | Servono foto reali dell’ambiente e della tavola Rio Storto |
+| OG image | `agriturismo-rio-storto.jpg` | Asset homepage | asset temporaneo | Sì | — |
+
 ### Informazioni recuperate dal sito precedente (da confermare)
 
 1. Produzione di latte — `recuperato dal sito precedente — da confermare con il cliente`
