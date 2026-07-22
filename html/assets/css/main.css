@@ -2393,57 +2393,54 @@ html.font-newsreader .site-footer__claim {
 }
 
 /* ==========================================================================
-   Pagine azienda — componenti condivisi
+   Pagine azienda — componenti editoriali differenziati
    ========================================================================== */
 
-.page-hero--split {
-  padding-bottom: clamp(2rem, 4vw, 3rem);
+/* Nav section highlight already above */
+
+/* --- Hero Agricoltura: panoramica ampia --- */
+
+.page-hero--agriculture {
+  padding: calc(var(--header-height) + clamp(1.75rem, 4vw, 2.75rem)) 0 0;
+  background: linear-gradient(180deg, var(--color-cream) 0%, var(--color-ivory) 100%);
 }
 
-.page-hero--split .page-hero__layout {
-  display: grid;
-  gap: clamp(1.75rem, 4vw, 3rem);
-  align-items: end;
+.page-hero--agriculture .page-hero__top {
+  max-width: min(100%, 44rem);
+  margin-bottom: clamp(1.5rem, 3vw, 2.25rem);
 }
 
-@media (min-width: 900px) {
-  .page-hero--split .page-hero__layout {
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
-    align-items: center;
-    gap: clamp(2rem, 4vw, 3.5rem);
-  }
-}
-
-.page-hero--split .page-hero__copy {
-  max-width: 36rem;
-}
-
-.page-hero--split .page-hero__copy h1 {
+.page-hero--agriculture h1 {
+  font-size: clamp(2.1rem, 1.5rem + 2.4vw, 3.5rem);
   max-width: 14ch;
+  margin-bottom: 0;
+  --font-display-opsz: 88;
+  --font-display-soft: 50;
+  --font-display-wonk: 0.5;
 }
 
-.page-hero--compact .page-hero__copy h1 {
-  max-width: 15ch;
-}
-
-.page-hero__media {
-  margin: 0;
-  min-width: 0;
-}
-
-.page-hero__frame {
+.page-hero__photo-bleed {
   position: relative;
+  width: min(100% - (var(--gutter) * 0.35), calc(var(--container) + 4rem));
+  margin-inline: auto;
+  padding-inline: clamp(0.35rem, 1.5vw, 0.75rem);
+}
+
+.page-hero__photo {
+  margin: 0;
   overflow: hidden;
   border-radius: var(--radius-md);
-  aspect-ratio: 16 / 10;
-  min-height: 12rem;
+  aspect-ratio: 21 / 9;
+  min-height: 13rem;
   background:
     radial-gradient(ellipse 65% 70% at 30% 40%, rgba(255, 253, 249, 0.28), transparent 55%),
     linear-gradient(145deg, #d9cfc0 0%, #c4b89a 45%, #a8b090 100%);
 }
 
-.page-hero__frame picture,
-.page-hero__image {
+.page-hero__photo picture,
+.page-hero__photo .page-hero__image,
+.page-hero__portrait picture,
+.page-hero__portrait .page-hero__image {
   display: block;
   width: 100%;
   height: 100%;
@@ -2451,299 +2448,485 @@ html.font-newsreader .site-footer__claim {
 
 .page-hero__image {
   object-fit: cover;
-  object-position: center;
+  object-position: center 45%;
 }
 
-.page-allevamento .page-hero__frame {
-  aspect-ratio: 4 / 3;
+.page-hero__caption-panel {
+  width: min(100% - var(--gutter), 34rem);
+  margin: -2.75rem auto 0;
+  position: relative;
+  z-index: 1;
+  padding: clamp(1.15rem, 2.5vw, 1.5rem) clamp(1.15rem, 2.5vw, 1.65rem);
+  background: var(--color-cream);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-soft);
+}
+
+.page-hero__caption-panel .page-hero__lead {
+  margin: 0;
+  font-size: var(--text-base);
+  color: var(--color-muted);
+  max-width: none;
 }
 
 @media (max-width: 767px) {
-  .page-hero--split .page-hero__copy h1,
-  .page-hero--compact .page-hero__copy h1 {
+  .page-hero--agriculture h1 {
     max-width: none;
   }
 
-  .page-hero__frame,
-  .page-allevamento .page-hero__frame {
+  .page-hero__photo {
     aspect-ratio: 16 / 10;
     min-height: 11rem;
   }
+
+  .page-hero__caption-panel {
+    margin-top: -1.5rem;
+    width: min(100% - (var(--gutter) * 1.5), 34rem);
+  }
 }
 
-/* Company intro */
+/* --- Hero Allevamento: raccolta, pannello + ritratto --- */
 
-.company-intro {
-  padding-block: clamp(2.75rem, 5.5vw, 4.5rem);
+.page-hero--livestock {
+  padding: calc(var(--header-height) + clamp(1.5rem, 3.5vw, 2.25rem)) 0 clamp(1.5rem, 3vw, 2.25rem);
+  background: var(--color-ivory);
 }
 
-.company-intro--compact {
-  padding-block: clamp(2.25rem, 4.5vw, 3.5rem);
+.page-hero__stage {
+  display: grid;
+  gap: 0;
+  align-items: stretch;
 }
 
-.company-intro__inner {
-  max-width: min(100%, 42rem);
+@media (min-width: 900px) {
+  .page-hero__stage {
+    grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+    gap: 0;
+  }
 }
 
-.company-intro h2 {
-  font-size: var(--text-2xl);
-  max-width: 16ch;
-  margin-bottom: 1.1rem;
-  --font-display-opsz: 68;
+.page-hero__panel {
+  background: var(--color-cream);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: clamp(1.35rem, 3vw, 2rem);
+  position: relative;
+  z-index: 2;
+}
+
+@media (min-width: 900px) {
+  .page-hero__panel {
+    margin-right: -2.5rem;
+    align-self: center;
+  }
+}
+
+.page-hero--livestock h1 {
+  font-size: clamp(1.95rem, 1.4rem + 2vw, 3rem);
+  max-width: 13ch;
+  margin-bottom: 1rem;
+  --font-display-opsz: 78;
   --font-display-soft: 46;
   --font-display-wonk: 0.45;
 }
 
-.company-intro p {
-  max-width: 40rem;
-  color: var(--color-text);
-}
-
-.company-intro p + p {
-  margin-top: 1rem;
-}
-
-/* Editorial sequence (cicli / stagioni) */
-
-.editorial-sequence-section {
-  padding-block: clamp(2.75rem, 5.5vw, 4.5rem);
-  background:
-    linear-gradient(
-      180deg,
-      transparent,
-      rgba(232, 239, 228, 0.38) 16%,
-      rgba(232, 239, 228, 0.38) 84%,
-      transparent
-    );
-}
-
-.editorial-sequence-section .section-header {
-  margin-bottom: clamp(1.75rem, 4vw, 2.75rem);
-}
-
-.editorial-sequence {
-  display: grid;
-  gap: 0;
+.page-hero--livestock .page-hero__lead {
   margin: 0;
-  padding: 0;
-  list-style: none;
-  border-top: 1px solid var(--color-border);
-}
-
-@media (min-width: 700px) {
-  .editorial-sequence {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-
-@media (min-width: 1100px) {
-  .editorial-sequence {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-  }
-}
-
-.editorial-sequence__item {
-  min-width: 0;
-  padding: 1.25rem 0 1.35rem;
-  border-bottom: 1px solid var(--color-border);
-}
-
-@media (min-width: 700px) {
-  .editorial-sequence__item {
-    padding: 1.35rem 1.25rem 1.5rem 0;
-  }
-
-  .editorial-sequence__item:nth-child(even) {
-    padding-left: 1.35rem;
-    border-left: 1px solid var(--color-border);
-  }
-}
-
-@media (min-width: 1100px) {
-  .editorial-sequence__item {
-    padding: 1.35rem 1.15rem 1.5rem 0;
-    border-bottom: 0;
-    border-left: 0;
-  }
-
-  .editorial-sequence__item + .editorial-sequence__item {
-    padding-left: 1.35rem;
-    border-left: 1px solid var(--color-sage-soft);
-  }
-}
-
-.editorial-sequence__item h3 {
-  font-size: var(--text-xl);
-  margin-bottom: 0.45rem;
-  --font-display-opsz: 40;
-  --font-display-soft: 38;
-  --font-display-wonk: 0.35;
-}
-
-.editorial-sequence__item p {
-  margin: 0;
-  color: var(--color-muted);
   font-size: var(--text-base);
+  max-width: 30rem;
 }
 
-@media (max-width: 389px) {
-  .editorial-sequence {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* Principles list */
-
-.principles-section {
-  padding-block: clamp(2.5rem, 5vw, 4rem);
-}
-
-.principles-section .section-header {
-  margin-bottom: 0;
-}
-
-.principles-list {
-  display: grid;
-  gap: 0;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  border-top: 1px solid var(--color-border);
-}
-
-@media (min-width: 900px) {
-  .principles-list {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-}
-
-.principles-list__item {
-  min-width: 0;
-  padding: 1.25rem 0 1.4rem;
-  border-bottom: 1px solid var(--color-border);
-}
-
-@media (min-width: 900px) {
-  .principles-list__item {
-    padding: 1.35rem 1.25rem 1.5rem 0;
-    border-bottom: 0;
-  }
-
-  .principles-list__item + .principles-list__item {
-    padding-left: 1.5rem;
-    border-left: 1px solid var(--color-border);
-  }
-}
-
-.principles-list__item h3 {
-  font-size: var(--text-xl);
-  margin-bottom: 0.5rem;
-  --font-display-opsz: 40;
-  --font-display-soft: 38;
-  --font-display-wonk: 0.35;
-}
-
-.page-allevamento .principles-list__item h3 {
+.page-hero--livestock .eyebrow {
   color: var(--color-bordeaux);
 }
 
-.principles-list__item p {
+.page-hero__portrait {
   margin: 0;
-  color: var(--color-muted);
+  overflow: hidden;
+  border-radius: var(--radius-md);
+  aspect-ratio: 4 / 5;
+  max-height: 34rem;
+  background:
+    radial-gradient(ellipse 60% 60% at 55% 40%, rgba(255, 253, 249, 0.2), transparent 55%),
+    linear-gradient(160deg, #cfc4b2 0%, #b5a894 50%, #8d9a86 100%);
+  border: 1px solid transparent;
+  box-shadow: inset 0 0 0 1px rgba(110, 47, 61, 0.08);
 }
 
-@media (max-width: 389px) {
-  .principles-list {
-    grid-template-columns: 1fr;
+@media (max-width: 899px) {
+  .page-hero__portrait {
+    aspect-ratio: 5 / 4;
+    max-height: none;
+    order: -1;
+    margin-bottom: 0;
+  }
+
+  .page-hero__stage {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .page-hero__panel {
+    margin-top: -1.75rem;
+    margin-inline: var(--gutter);
+    width: auto;
+  }
+
+  .page-hero--livestock h1 {
+    max-width: none;
   }
 }
 
-/* Related paths / cross links */
+/* --- Land start (Agricoltura intro) --- */
 
-.related-paths {
-  padding-block: clamp(2.75rem, 5.5vw, 4.25rem);
-  background:
-    linear-gradient(
-      180deg,
-      transparent,
-      rgba(232, 239, 228, 0.35) 20%,
-      rgba(232, 239, 228, 0.35) 80%,
-      transparent
-    );
+.land-start {
+  padding-block: clamp(2.75rem, 6vw, 4.5rem);
 }
 
-.related-paths--warm {
-  background:
-    linear-gradient(
-      180deg,
-      transparent,
-      rgba(251, 248, 242, 0.9) 18%,
-      rgba(251, 248, 242, 0.9) 82%,
-      transparent
-    );
+.land-start__layout {
+  display: grid;
+  gap: clamp(1.25rem, 3vw, 2.5rem);
+  align-items: end;
+  border-top: 1px solid var(--color-sage-soft);
+  padding-top: clamp(1.75rem, 4vw, 2.5rem);
 }
 
-.related-paths__inner {
-  max-width: min(100%, 42rem);
+@media (min-width: 800px) {
+  .land-start__layout {
+    grid-template-columns: minmax(0, 0.7fr) minmax(0, 1.3fr);
+  }
 }
 
-.related-paths h2 {
+.land-start__mark {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: var(--font-display-weight);
+  font-size: clamp(3.5rem, 2.2rem + 6vw, 7rem);
+  line-height: 0.85;
+  letter-spacing: var(--font-display-tracking);
+  text-transform: uppercase;
+  color: rgba(141, 154, 134, 0.28);
+  --font-display-opsz: 96;
+  --font-display-soft: 60;
+  --font-display-wonk: 0.55;
+  font-variation-settings:
+    "SOFT" var(--font-display-soft),
+    "WONK" var(--font-display-wonk),
+    "opsz" var(--font-display-opsz);
+}
+
+.land-start__copy {
+  max-width: 38rem;
+}
+
+.land-start__copy h2 {
   font-size: var(--text-2xl);
-  max-width: 18ch;
+  max-width: 14ch;
   margin-bottom: 1rem;
   --font-display-opsz: 68;
   --font-display-soft: 46;
   --font-display-wonk: 0.45;
 }
 
-.related-paths p {
-  max-width: 40rem;
+.land-start__copy p {
+  margin: 0;
   color: var(--color-text);
 }
 
-.related-paths p + p {
-  margin-top: 1rem;
+/* --- Season cycle --- */
+
+.season-cycle-section {
+  padding-block: clamp(2.5rem, 5.5vw, 4.25rem);
 }
 
-.cross-link {
-  margin-top: 1.35rem !important;
+.season-cycle-section .section-header {
+  margin-bottom: clamp(1.75rem, 4vw, 2.75rem);
 }
 
-.cross-link .text-link {
-  margin-top: 0;
+.season-cycle {
+  display: grid;
+  gap: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: relative;
 }
 
-/* Continuity band */
+@media (min-width: 900px) {
+  .season-cycle {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--color-sage-soft);
+  }
 
-.continuity-band {
+  .season-cycle::before {
+    content: "";
+    position: absolute;
+    top: -0.2rem;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--color-sage-soft), transparent 8%, transparent 92%, var(--color-sage-soft));
+    opacity: 0.55;
+    pointer-events: none;
+  }
+}
+
+.season-cycle__item {
+  min-width: 0;
+  padding: 1.15rem 0 1.25rem 1rem;
+  border-left: 2px solid var(--color-sage-soft);
+  position: static;
+}
+
+@media (min-width: 900px) {
+  .season-cycle__item {
+    padding: 0.35rem 0.5rem 0 0;
+    border-left: 0;
+  }
+
+  .season-cycle__item::before {
+    content: "";
+    display: block;
+    width: 0.55rem;
+    height: 0.55rem;
+    border-radius: 50%;
+    background: var(--color-bordeaux);
+    margin-bottom: 1rem;
+  }
+}
+
+.season-cycle__index {
+  display: block;
+  font-family: var(--font-display);
+  font-weight: var(--font-display-weight);
+  font-size: clamp(1.5rem, 1.2rem + 1vw, 2.1rem);
+  letter-spacing: var(--font-display-tracking);
+  line-height: 1;
+  color: var(--color-bordeaux);
+  margin-bottom: 0.45rem;
+  --font-display-opsz: 44;
+  --font-display-soft: 40;
+  --font-display-wonk: 0.35;
+  font-variation-settings:
+    "SOFT" var(--font-display-soft),
+    "WONK" var(--font-display-wonk),
+    "opsz" var(--font-display-opsz);
+}
+
+.season-cycle__item h3 {
+  font-size: clamp(1.35rem, 1.15rem + 0.8vw, 1.75rem);
+  margin-bottom: 0.4rem;
+  --font-display-opsz: 40;
+  --font-display-soft: 38;
+  --font-display-wonk: 0.35;
+}
+
+.season-cycle__item p {
+  margin: 0;
+  color: var(--color-muted);
+  font-size: var(--text-sm);
+  max-width: 18rem;
+}
+
+@media (max-width: 899px) {
+  .season-cycle__item:last-child {
+    padding-bottom: 0;
+  }
+}
+
+/* --- Origin bridge (shared, two tones) --- */
+
+.origin-bridge {
   padding-block: clamp(2.5rem, 5vw, 3.75rem);
 }
 
-.continuity-band__inner {
-  max-width: min(100%, 38rem);
-  padding-top: 1.25rem;
-  border-top: 1px solid var(--color-sage-soft);
+.origin-bridge--open {
+  background:
+    linear-gradient(
+      180deg,
+      transparent,
+      rgba(232, 239, 228, 0.4) 18%,
+      rgba(232, 239, 228, 0.4) 82%,
+      transparent
+    );
 }
 
-.continuity-band h2 {
-  font-size: clamp(1.55rem, 1.25rem + 1vw, 2.1rem);
-  max-width: 16ch;
-  margin-bottom: 0.85rem;
-  --font-display-opsz: 56;
+.origin-bridge--dense {
+  background: var(--color-cream);
+}
+
+.origin-bridge__inner {
+  max-width: min(100%, 40rem);
+}
+
+.origin-bridge h2 {
+  font-size: clamp(1.65rem, 1.3rem + 1.2vw, 2.35rem);
+  max-width: 18ch;
+  margin-bottom: 1rem;
+  --font-display-opsz: 64;
   --font-display-soft: 44;
   --font-display-wonk: 0.4;
 }
 
-.continuity-band p {
+.origin-bridge p {
+  margin: 0 0 1rem;
+  color: var(--color-text);
+}
+
+.origin-bridge .text-link {
+  margin-top: 0.35rem;
+}
+
+.origin-bridge__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.5rem;
+  margin: 1.25rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.origin-bridge__links .text-link {
+  margin-top: 0;
+}
+
+/* --- Daily presence (Allevamento) --- */
+
+.daily-presence {
+  padding-block: clamp(2.5rem, 5vw, 4rem);
+}
+
+.daily-presence__layout {
+  display: grid;
+  gap: clamp(1rem, 3vw, 2rem);
+  max-width: min(100%, 40rem);
+}
+
+.daily-presence__mark {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: var(--font-display-weight);
+  font-size: clamp(2.4rem, 1.6rem + 3.5vw, 4.25rem);
+  line-height: 0.95;
+  letter-spacing: var(--font-display-tracking);
+  text-transform: uppercase;
+  color: rgba(110, 47, 61, 0.18);
+  --font-display-opsz: 84;
+  --font-display-soft: 52;
+  --font-display-wonk: 0.5;
+  font-variation-settings:
+    "SOFT" var(--font-display-soft),
+    "WONK" var(--font-display-wonk),
+    "opsz" var(--font-display-opsz);
+}
+
+.daily-presence__copy h2 {
+  font-size: var(--text-2xl);
+  max-width: 14ch;
+  margin-bottom: 0.85rem;
+  --font-display-opsz: 68;
+  --font-display-soft: 46;
+  --font-display-wonk: 0.45;
+}
+
+.daily-presence__highlight {
+  margin: 0 0 1rem;
+  font-family: var(--font-display);
+  font-weight: var(--font-display-weight);
+  font-size: clamp(1.15rem, 1rem + 0.6vw, 1.4rem);
+  letter-spacing: var(--font-display-tracking);
+  color: var(--color-bordeaux);
+  font-style: italic;
+  --font-display-opsz: 40;
+  --font-display-soft: 48;
+  --font-display-wonk: 0.5;
+  font-variation-settings:
+    "SOFT" var(--font-display-soft),
+    "WONK" var(--font-display-wonk),
+    "opsz" var(--font-display-opsz);
+}
+
+.daily-presence__copy p:last-child {
+  margin: 0;
+  color: var(--color-text);
+  max-width: 34rem;
+}
+
+/* --- Daily principles --- */
+
+.daily-principles-section {
+  padding-block: clamp(2rem, 4.5vw, 3.5rem) clamp(2.5rem, 5vw, 4rem);
+}
+
+.daily-principles {
+  display: grid;
+  gap: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid var(--color-border);
+}
+
+.daily-principles__item {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 0.85rem 1.15rem;
+  align-items: start;
+  padding: 1.35rem 0;
+  border-bottom: 1px solid var(--color-border);
+  min-width: 0;
+}
+
+.daily-principles__item:last-child {
+  border-bottom: 0;
+}
+
+@media (min-width: 900px) {
+  .daily-principles__item--shift {
+    padding-left: clamp(2rem, 8vw, 6rem);
+  }
+}
+
+.daily-principles__index {
+  font-family: var(--font-display);
+  font-weight: var(--font-display-weight);
+  font-size: clamp(2rem, 1.5rem + 1.8vw, 3rem);
+  line-height: 1;
+  letter-spacing: var(--font-display-tracking);
+  color: var(--color-bordeaux);
+  --font-display-opsz: 56;
+  --font-display-soft: 42;
+  --font-display-wonk: 0.4;
+  font-variation-settings:
+    "SOFT" var(--font-display-soft),
+    "WONK" var(--font-display-wonk),
+    "opsz" var(--font-display-opsz);
+}
+
+.daily-principles__body h3 {
+  font-size: var(--text-xl);
+  margin-bottom: 0.4rem;
+  --font-display-opsz: 40;
+  --font-display-soft: 38;
+  --font-display-wonk: 0.35;
+}
+
+.daily-principles__body p {
   margin: 0;
   color: var(--color-muted);
-  max-width: 36rem;
+  max-width: 28rem;
 }
 
-.page-agricoltura .continuity-band__inner {
-  border-top-color: var(--color-sage);
+/* Compact page sections on azienda pages */
+.page-agricoltura .page-cta--compact,
+.page-allevamento .page-cta--compact {
+  padding-block: clamp(2.25rem, 4.5vw, 3.25rem) clamp(3rem, 6vw, 4.5rem);
 }
 
-.page-allevamento .company-intro--compact + .page-cta {
-  margin-top: 0;
+.page-agricoltura .page-cta--compact h2,
+.page-allevamento .page-cta--compact h2 {
+  margin-bottom: 1rem;
 }

@@ -161,87 +161,91 @@
 
   <main id="contenuto-principale">
     <!-- CONTENT STATUS: pagina agricoltura — testi riscritti provvisori da confermare -->
-    <header class="page-hero page-hero--split">
-      <div class="container page-hero__layout">
-        <div class="page-hero__copy">
-          <nav class="breadcrumbs" aria-label="Breadcrumb">
-            <ol class="breadcrumbs__list">
-              <li class="breadcrumbs__item"><a href="/">Home</a></li>
-              <li class="breadcrumbs__item"><span>L’azienda</span></li>
-              <li class="breadcrumbs__item"><span aria-current="page">Agricoltura</span></li>
-            </ol>
-          </nav>
+    <header class="page-hero page-hero--agriculture">
+      <div class="container page-hero__top">
+        <nav class="breadcrumbs" aria-label="Breadcrumb">
+          <ol class="breadcrumbs__list">
+            <li class="breadcrumbs__item"><a href="/">Home</a></li>
+            <li class="breadcrumbs__item"><span>L’azienda</span></li>
+            <li class="breadcrumbs__item"><span aria-current="page">Agricoltura</span></li>
+          </ol>
+        </nav>
+        <p class="eyebrow">Agricoltura</p>
+        <h1 id="page-title">Ogni stagione ha il suo <span class="title-accent">lavoro</span>.</h1>
+      </div>
 
-          <p class="eyebrow">Agricoltura</p>
-          <h1 id="page-title">Ogni stagione ha il suo <span class="title-accent">lavoro</span>.</h1>
+      <!-- IMAGE STATUS: fotografia atmosferica temporanea; sostituire con fotografia reale Rio Storto -->
+      <div class="page-hero__photo-bleed">
+        <figure class="page-hero__photo">
+          <picture>
+            <source srcset="/assets/img/home/agricoltura-rio-storto.webp" type="image/webp">
+            <img
+              class="page-hero__image"
+              src="/assets/img/home/agricoltura-rio-storto.jpg"
+              alt="Campi coltivati attraversati da un corso d’acqua nella luce del tramonto"
+              width="1672"
+              height="941"
+              loading="eager"
+              fetchpriority="high"
+              decoding="async"
+            >
+          </picture>
+        </figure>
+        <div class="page-hero__caption-panel">
           <p class="page-hero__lead">La terra è il primo passaggio del percorso Rio Storto. Nei campi seguiamo i ritmi dell’anno e coltiviamo mantenendo un legame diretto con l’allevamento e le produzioni aziendali.</p>
         </div>
-
-        <!-- IMAGE STATUS: fotografia atmosferica temporanea; sostituire con fotografia reale Rio Storto -->
-        <figure class="page-hero__media">
-          <div class="page-hero__frame">
-            <picture>
-              <source srcset="/assets/img/home/agricoltura-rio-storto.webp" type="image/webp">
-              <img
-                class="page-hero__image"
-                src="/assets/img/home/agricoltura-rio-storto.jpg"
-                alt="Campi coltivati attraversati da un corso d’acqua nella luce del tramonto"
-                width="1672"
-                height="941"
-                loading="eager"
-                fetchpriority="high"
-                decoding="async"
-              >
-            </picture>
-          </div>
-        </figure>
       </div>
     </header>
 
-    <section class="section company-intro" aria-labelledby="terra-title">
-      <div class="container company-intro__inner reveal">
-        <p class="eyebrow">Il nostro lavoro nei campi</p>
-        <h2 id="terra-title">Tutto comincia dalla terra.</h2>
-        <p>L’agricoltura non è un’attività separata dal resto dell’azienda. Ciò che viene coltivato contribuisce al lavoro quotidiano di Rio Storto e mette in relazione campi, animali, materie prime e produzioni. In un’azienda agricola familiare, questo legame resta visibile e concreto.</p>
-        <p>Osservare il terreno, rispettare i tempi delle colture e adattarsi alle stagioni significa lavorare con continuità, sapendo che ogni fase prepara quella successiva. È un modo di coltivare che tiene insieme territorio, responsabilità e cura del percorso produttivo.</p>
+    <section class="section land-start" aria-labelledby="terra-title">
+      <div class="container land-start__layout reveal">
+        <p class="land-start__mark" aria-hidden="true">Terra</p>
+        <div class="land-start__copy">
+          <p class="eyebrow">01 — Il punto di partenza</p>
+          <h2 id="terra-title">Tutto comincia dalla terra.</h2>
+          <p>L’agricoltura non è un’attività separata dal resto dell’azienda. Ciò che viene coltivato contribuisce al lavoro quotidiano di Rio Storto e mette in relazione campi, animali, materie prime e produzioni, con continuità e rispetto dei tempi della campagna.</p>
+        </div>
       </div>
     </section>
 
-    <section class="section editorial-sequence-section" aria-labelledby="stagioni-title">
+    <section class="section season-cycle-section" aria-labelledby="stagioni-title">
       <div class="container">
         <header class="section-header reveal">
           <h2 id="stagioni-title">Un lavoro che cambia durante l’anno.</h2>
         </header>
 
-        <ol class="editorial-sequence">
-          <li class="editorial-sequence__item reveal">
+        <ol class="season-cycle">
+          <li class="season-cycle__item reveal">
+            <span class="season-cycle__index" aria-hidden="true">01</span>
             <h3>Osservare</h3>
-            <p>Leggere il terreno e il momento dell’anno prima di ogni intervento, con attenzione ai segnali della campagna.</p>
+            <p>Leggere il terreno e il momento dell’anno prima di ogni intervento.</p>
           </li>
-          <li class="editorial-sequence__item reveal">
+          <li class="season-cycle__item reveal">
+            <span class="season-cycle__index" aria-hidden="true">02</span>
             <h3>Coltivare</h3>
-            <p>Seguire la crescita con attenzione e continuità, accompagnando il lavoro dei campi nel tempo.</p>
+            <p>Seguire la crescita con attenzione e continuità.</p>
           </li>
-          <li class="editorial-sequence__item reveal">
+          <li class="season-cycle__item reveal">
+            <span class="season-cycle__index" aria-hidden="true">03</span>
             <h3>Raccogliere</h3>
-            <p>Riconoscere il momento in cui il lavoro dei campi diventa risorsa per l’azienda e per le fasi successive.</p>
+            <p>Riconoscere quando il lavoro dei campi diventa risorsa per l’azienda.</p>
           </li>
-          <li class="editorial-sequence__item reveal">
+          <li class="season-cycle__item reveal">
+            <span class="season-cycle__index" aria-hidden="true">04</span>
             <h3>Ricominciare</h3>
-            <p>Preparare un nuovo ciclo, conservando esperienza, conoscenza e rispetto per i ritmi del territorio.</p>
+            <p>Preparare un nuovo ciclo, conservando esperienza e conoscenza.</p>
           </li>
         </ol>
       </div>
     </section>
 
-    <section class="section related-paths" aria-labelledby="filiera-agri-title">
-      <div class="container related-paths__inner reveal">
-        <p class="eyebrow">Una filiera collegata</p>
-        <h2 id="filiera-agri-title">Ciò che cresce nei campi continua nell’azienda.</h2>
-        <p>Il rapporto tra agricoltura e allevamento è uno degli elementi che definiscono Rio Storto: i campi non sono soltanto paesaggio, ma parte concreta del lavoro aziendale. Da questo legame nasce una filiera più chiara e coerente.</p>
+    <section class="section origin-bridge origin-bridge--open" aria-labelledby="filiera-agri-title">
+      <div class="container origin-bridge__inner reveal">
+        <p class="eyebrow">Dai campi all’azienda</p>
+        <h2 id="filiera-agri-title">Ciò che cresce qui continua nel resto del percorso.</h2>
         <!-- CONTENT STATUS: informazione recuperata dal sito precedente; confermare foraggi, destinazione e formulazione con il cliente -->
-        <p>Una parte delle coltivazioni è destinata ai foraggi utilizzati per l’alimentazione delle mucche, creando un legame diretto tra la terra, l’allevamento e la qualità delle materie prime.</p>
-        <p class="cross-link">
+        <p>Il rapporto tra agricoltura e allevamento è uno degli elementi che definiscono Rio Storto. Una parte delle coltivazioni è destinata ai foraggi utilizzati per l’alimentazione delle mucche, collegando direttamente la terra, gli animali e le materie prime.</p>
+        <p>
           <a class="text-link" href="/azienda/allevamento/">
             Scopri l’allevamento
             <svg width="18" height="12" viewBox="0 0 18 12" aria-hidden="true" focusable="false">
@@ -252,17 +256,9 @@
       </div>
     </section>
 
-    <section class="section continuity-band" aria-labelledby="continuita-title">
-      <div class="container continuity-band__inner reveal">
-        <h2 id="continuita-title">Coltivare significa conoscere il tempo.</h2>
-        <p>Ogni stagione presenta condizioni diverse. La continuità del lavoro permette all’azienda di imparare, adattarsi e mantenere vivo il rapporto tra territorio e produzioni. È in questo ritmo che l’agricoltura di Rio Storto conserva senso e direzione.</p>
-      </div>
-    </section>
-
     <section class="section page-cta page-cta--compact" aria-labelledby="cta-title">
       <div class="container page-cta__inner reveal">
         <h2 id="cta-title">Dalla terra nasce il resto del percorso.</h2>
-        <p class="page-cta__lead">Scopri come il lavoro nei campi continua nell’allevamento e nelle produzioni Rio Storto, lungo un percorso seguito direttamente dall’azienda.</p>
         <div class="page-cta__actions">
           <a class="btn btn--primary" href="/azienda/allevamento/">Scopri l’allevamento</a>
           <a class="btn btn--secondary" href="/prodotti/">I nostri prodotti</a>
