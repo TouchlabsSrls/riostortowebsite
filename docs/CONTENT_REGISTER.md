@@ -120,6 +120,31 @@ Stati ammessi:
 | Modulo di contatto | Non inserito | — | rimandato | Sì | Richiede definizione del destinatario, gestione SMTP/API, privacy e protezione antispam |
 | Form | — | — | — | — | Modulo di contatto non inserito: richiede definizione del destinatario, gestione SMTP/API, privacy e protezione antispam |
 
+## Pagina `/fattoria-didattica/`
+
+| Sezione | Testo o immagine | Fonte | Stato | Conferma cliente necessaria | Note |
+| --- | --- | --- | --- | --- | --- |
+| Hero | Soprattitolo, H1, intro, link Contatti | Brief pagina fattoria | riscritto provvisorio | Sì | Nessuna durata, prezzo o prenotazione |
+| Hero media | `fattoria-didattica-rio-storto.webp/.jpg` | Asset homepage | asset temporaneo | Sì | Fotografia atmosferica temporanea; non documenta un’attività specifica Rio Storto |
+| Introduzione | Titolo + testo + accento tipografico | Brief | riscritto provvisorio | Sì | — |
+| Percorso scoperta | Tre momenti (animali / natura e campi / origine del cibo) | Brief | riscritto provvisorio | Sì | Concetti generali; non elenco laboratori |
+| Fascia sensoriale | “Vedere. Toccare. Ascoltare. Domandare.” | Brief | riscritto provvisorio | Sì | — |
+| Per chi | Famiglie / Scuole / Gruppi + nota modalità | Brief | riscritto provvisorio | Sì | Nessun pacchetto, programma o tariffa |
+| Contatto | Conversazione → Contatti + link agricoltura/allevamento | Brief | riscritto provvisorio | — | Nessun form, calendario o prenotazione online |
+| Attività / laboratori specifici | Non pubblicati | — | da confermare | Sì | Elenco laboratori da confermare |
+| Fasce d’età | Non pubblicate | — | da confermare | Sì | — |
+| Prezzi | Non pubblicati | — | da confermare | Sì | — |
+| Durata e calendario | Non pubblicati | — | da confermare | Sì | Disponibilità da definire con l’azienda |
+| Modalità scuole e gruppi | Solo testo generico | Brief | da confermare | Sì | Dettaglio operativo da definire |
+| Accessibilità | Non dichiarata | — | da confermare | Sì | Non inventare accessibilità completa |
+| Prenotazione | Non implementata | — | rimandato | Sì | Solo contatto diretto |
+| Percorsi naturalistici | Non descritti come completati | — | evoluzione futura | Sì | Non presentare come servizio esistente |
+| QR code | Non presenti | — | evoluzione futura | Sì | — |
+| Virtual tour | Non presente | — | evoluzione futura | Sì | — |
+| Video autentico | Non inserito | — | da produrre | Sì | Futuro clip 8–15 s: bambini e adulti in esperienza, animali, campi/natura, gesti reali, luce naturale; muto o audio opzionale; con poster; non autoplay se prefers-reduced-motion; compresso; non sostituisce testi |
+| Fotografie reali | Solo atmosfera temporanea in hero | Asset temporaneo | asset temporaneo | Sì | Servono foto reali di attività + eventuali dettagli ravvicinati |
+| OG image | `fattoria-didattica-rio-storto.jpg` | Asset homepage | asset temporaneo | Sì | — |
+
 ### Informazioni recuperate dal sito precedente (da confermare)
 
 1. Produzione di latte — `recuperato dal sito precedente — da confermare con il cliente`

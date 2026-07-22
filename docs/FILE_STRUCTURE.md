@@ -45,6 +45,8 @@ html/
 │   └── index.html              → /prodotti/
 ├── contatti/
 │   └── index.html              → /contatti/
+├── fattoria-didattica/
+│   └── index.html              → /fattoria-didattica/
 ├── azienda/
 │   ├── agricoltura/
 │   │   └── index.html          → /azienda/agricoltura/

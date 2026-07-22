@@ -170,4 +170,27 @@
       });
     }
   }
+
+  /* ---- Fattoria didattica: linea Rio Storto (una sola volta) ---- */
+  const river = document.querySelector(".page-fattoria-didattica .discovery-river");
+
+  if (river) {
+    if (reduceMotion || !("IntersectionObserver" in window)) {
+      river.classList.add("is-drawn");
+    } else {
+      const riverObserver = new IntersectionObserver(
+        function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              river.classList.add("is-drawn");
+              riverObserver.unobserve(river);
+            }
+          });
+        },
+        { rootMargin: "0px 0px -10% 0px", threshold: 0.2 }
+      );
+
+      riverObserver.observe(river);
+    }
+  }
 })();
