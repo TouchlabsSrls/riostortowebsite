@@ -5337,7 +5337,7 @@ svg[data-draw-line] circle {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: 48% 42%;
+  object-position: 52% 40%;
 }
 
 .page-agriturismo .agriturismo-hero__veil {
@@ -5346,12 +5346,16 @@ svg[data-draw-line] circle {
   pointer-events: none;
   background:
     linear-gradient(
+      105deg,
+      rgba(42, 24, 28, 0.14) 0%,
+      rgba(42, 24, 28, 0.05) 36%,
+      transparent 52%
+    ),
+    linear-gradient(
       180deg,
-      rgba(42, 24, 28, 0.18) 0%,
-      rgba(42, 24, 28, 0.08) 38%,
-      rgba(42, 24, 28, 0.42) 100%
+      transparent 48%,
+      rgba(42, 24, 28, 0.16) 100%
     );
-  box-shadow: inset 0 0 0 1px rgba(110, 47, 61, 0.18);
 }
 
 .page-agriturismo.js-ready .agriturismo-hero__media.reveal:not(.is-visible) {
@@ -5362,17 +5366,20 @@ svg[data-draw-line] circle {
 .page-agriturismo .agriturismo-hero__content {
   position: relative;
   z-index: 2;
-  width: 100%;
-  padding-bottom: clamp(2rem, 5vw, 3.5rem);
-  padding-top: calc(var(--header-height) + 1.5rem);
+  padding-bottom: clamp(2.5rem, 4.5vw, 4.5rem);
+  padding-top: calc(var(--header-height) + 1.25rem);
 }
 
 .page-agriturismo .agriturismo-hero__panel {
-  max-width: min(34rem, 92%);
-  padding: clamp(1.35rem, 2.8vw, 2.25rem) clamp(1.2rem, 2.4vw, 2rem);
-  background: rgba(251, 248, 242, 0.9);
-  border: 1px solid rgba(251, 248, 242, 0.55);
-  backdrop-filter: blur(2px);
+  width: min(42%, 38rem);
+  max-width: 38rem;
+  padding: clamp(1.25rem, 2.4vw, 2rem) clamp(1.15rem, 2.2vw, 1.85rem);
+  background: rgba(251, 248, 242, 0.96);
+  border: 0;
+  border-radius: 0;
+  border-top: 2px solid var(--color-bordeaux);
+  box-shadow: none;
+  backdrop-filter: none;
 }
 
 .page-agriturismo .agriturismo-hero__panel .breadcrumbs {
@@ -5404,14 +5411,63 @@ svg[data-draw-line] circle {
   color: var(--color-bordeaux);
 }
 
+@media (max-width: 1024px) and (min-width: 768px) {
+  .page-agriturismo .agriturismo-hero__panel {
+    width: min(56%, 34rem);
+  }
+
+  .page-agriturismo .agriturismo-hero__panel h1 {
+    font-size: clamp(1.95rem, 3.2vw, 2.65rem);
+  }
+
+  .page-agriturismo .agriturismo-hero__image {
+    object-position: 58% 42%;
+  }
+}
+
 @media (max-width: 767px) {
+  .page-agriturismo .agriturismo-hero {
+    background: var(--color-ivory);
+  }
+
   .page-agriturismo .agriturismo-hero__stage {
-    min-height: min(72vh, 640px);
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    min-height: 0;
+  }
+
+  .page-agriturismo .agriturismo-hero__media {
+    position: relative;
+    inset: auto;
+    width: 100%;
+    min-height: min(58vw, 340px);
+    aspect-ratio: 4 / 3;
+  }
+
+  .page-agriturismo .agriturismo-hero__media picture,
+  .page-agriturismo .agriturismo-hero__image {
+    min-height: 100%;
+    object-position: 55% 40%;
+  }
+
+  .page-agriturismo .agriturismo-hero__veil {
+    display: none;
+  }
+
+  .page-agriturismo .agriturismo-hero__content {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 0;
   }
 
   .page-agriturismo .agriturismo-hero__panel {
+    width: 100%;
     max-width: none;
-    padding: 1.2rem 1rem 1.35rem;
+    margin: 0;
+    padding: 1.35rem 0 1.75rem;
+    background: var(--color-ivory);
+    border-top: 2px solid var(--color-bordeaux);
   }
 
   .page-agriturismo .agriturismo-hero__panel h1 {
