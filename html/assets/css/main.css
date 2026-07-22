@@ -3802,15 +3802,21 @@ html.font-newsreader .site-footer__claim {
 /* Directory contatti */
 
 .page-contatti .contact-directory {
-  padding-block: clamp(2.5rem, 5.5vw, 3.75rem) clamp(2.15rem, 4.25vw, 3rem);
+  padding-block: clamp(2.75rem, 6vw, 4rem) clamp(2.15rem, 4.25vw, 3rem);
+  background:
+    linear-gradient(
+      180deg,
+      rgba(251, 248, 242, 0.55) 0%,
+      transparent 4.5rem
+    );
 }
 
 .page-contatti .contact-directory__layout {
   display: grid;
   gap: clamp(1.75rem, 3.5vw, 2.75rem);
   align-items: start;
-  border-top: 1px solid var(--color-sage-soft);
-  padding-top: clamp(1.5rem, 3.5vw, 2.25rem);
+  border-top: 0;
+  padding-top: 0;
 }
 
 @media (min-width: 900px) {
@@ -3839,12 +3845,17 @@ html.font-newsreader .site-footer__claim {
   margin: 0;
   padding: 0;
   list-style: none;
-  border-top: 1px solid var(--color-border);
+  border-top: 0;
 }
 
 .page-contatti .contact-directory__item {
   padding: clamp(1.15rem, 2.5vw, 1.5rem) 0;
-  border-bottom: 1px solid var(--color-border);
+  border-bottom: 1px solid rgba(47, 44, 40, 0.08);
+}
+
+.page-contatti .contact-directory__item:first-child {
+  padding-top: 0;
+  border-top: 0;
 }
 
 .page-contatti .contact-directory__item:last-child {
