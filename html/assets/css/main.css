@@ -1913,6 +1913,46 @@ html.font-newsreader .site-footer__claim {
   object-position: center 45%;
 }
 
+.editorial-media--wide {
+  padding-block: 0 clamp(1.5rem, 3.5vw, 2.25rem);
+}
+
+.editorial-media--wide .editorial-media__frame {
+  aspect-ratio: 21 / 9;
+  min-height: 11rem;
+}
+
+.editorial-media--intimate {
+  padding-block: 0 clamp(1.5rem, 3.5vw, 2.25rem);
+}
+
+.editorial-media--intimate .editorial-media__frame {
+  width: min(100%, 36rem);
+  margin-inline: auto;
+  aspect-ratio: 5 / 4;
+  min-height: 14rem;
+}
+
+.editorial-media--intimate .editorial-media__image {
+  object-position: 72% 55%;
+}
+
+.page-agricoltura .land-start {
+  padding-bottom: clamp(1.75rem, 4vw, 2.75rem);
+}
+
+.page-agricoltura .season-cycle-section {
+  padding-top: clamp(1.75rem, 4vw, 2.75rem);
+}
+
+.page-allevamento .daily-presence {
+  padding-bottom: clamp(1.75rem, 4vw, 2.5rem);
+}
+
+.page-allevamento .daily-principles-section {
+  padding-top: clamp(1.5rem, 3.5vw, 2.5rem);
+}
+
 @media (max-width: 767px) {
   .editorial-media {
     padding-inline: var(--gutter);
@@ -1921,6 +1961,17 @@ html.font-newsreader .site-footer__claim {
   .editorial-media__frame {
     aspect-ratio: 16 / 10;
     min-height: 11rem;
+  }
+
+  .editorial-media--wide .editorial-media__frame {
+    aspect-ratio: 16 / 10;
+    min-height: 10.5rem;
+  }
+
+  .editorial-media--intimate .editorial-media__frame {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    min-height: 12rem;
   }
 }
 
