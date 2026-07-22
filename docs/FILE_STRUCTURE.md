@@ -40,16 +40,21 @@ html/
 ├── index.html
 ├── 404.html
 ├── storia/
-│   └── index.html          → /storia/
+│   └── index.html              → /storia/
+├── azienda/
+│   ├── agricoltura/
+│   │   └── index.html          → /azienda/agricoltura/
+│   └── allevamento/
+│       └── index.html          → /azienda/allevamento/
 └── assets/
     ├── css/main.css
     ├── js/main.js
     ├── img/
     │   ├── logo-rio-storto-96.png
     │   ├── logo-rio-storto-192.png
-    │   └── home/             → fotografie homepage (webp/jpg)
+    │   └── home/               → fotografie homepage (webp/jpg)
     ├── icons/favicon.svg
-    └── fonts/                (vuota — font ancora da CDN in prototipo)
+    └── fonts/                  (vuota — font ancora da CDN in prototipo)
 ```
 
 ## Cosa resta fuori dalla document root

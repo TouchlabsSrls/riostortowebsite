@@ -45,14 +45,45 @@ Stati ammessi:
 | Hero interna | Soprattitolo, H1, introduzione | Brief pagina storia | riscritto provvisorio | Sì | — |
 | Origine del nome | Titolo e testo sul corso d’acqua di risorgiva | Brief pagina storia | riscritto provvisorio | Sì | Origine del nome: da verificare definitivamente con il cliente |
 | Timeline | Quattro tappe (radici → oggi), senza anni inventati | Brief pagina storia | riscritto provvisorio | Sì | “Prima del 1930” e “quattro generazioni”: da verificare definitivamente con il cliente |
-| Filiera narrativa | Terra → Accoglienza + testo | Brief pagina storia | riscritto provvisorio | Sì | — |
-| Valori | Genuinità, Stagionalità, Cura, Accoglienza | Brief pagina storia | riscritto provvisorio | Sì | — |
-| Citazione editoriale | Frase non attribuita | Brief pagina storia | riscritto provvisorio | Sì | Non è una testimonianza personale |
-| CTA | Link ad agricoltura / allevamento | Brief | riscritto provvisorio | — | Destinazioni 404 fino al prossimo ciclo |
+| Rio Storto oggi | Sezione breve: testo filiera + riga valori | Brief semplificazione | riscritto provvisorio | Sì | Sostituisce percorso a 5 passaggi e griglia valori |
+| Valori | Riga editoriale Genuinità · Stagionalità · Cura · Accoglienza | Brief semplificazione | riscritto provvisorio | Sì | Lista semantica `.values-line` |
+| CTA | Titolo da citazione + link agricoltura/allevamento | Brief semplificazione | riscritto provvisorio | — | Destinazioni /azienda/agricoltura/ e /azienda/allevamento/ attive |
 | Immagini | Nessuna fotografia dedicata in pagina | — | — | Sì | Mancanti: fotografia storica della famiglia e dell’azienda |
 | Media editoriale sotto hero | `hero-rio-storto.webp/.jpg` riusata come atmosfera | Asset homepage | asset temporaneo | Sì | Sostituire con foto storica dedicata; contenitore `.editorial-media` con fallback CSS |
 | Nomi e date | Non presenti | — | da confermare | Sì | Non ancora forniti dal cliente |
 | OG image | `hero-rio-storto.jpg` (provvisoria) | Asset homepage | asset temporaneo | Sì | Sostituire con visual dedicato quando disponibile |
+
+## Pagina `/azienda/agricoltura/`
+
+| Sezione | Testo o immagine | Fonte | Stato | Conferma cliente necessaria | Note |
+| --- | --- | --- | --- | --- | --- |
+| Hero | H1, intro, foto `agricoltura-rio-storto` | Brief | riscritto provvisorio / asset temporaneo | Sì | Foto atmosferica temporanea |
+| Lavoro nei campi | Due paragrafi editoriali | Brief | riscritto provvisorio | Sì | — |
+| Sequenza stagionale | Osservare / Coltivare / Raccogliere / Ricominciare | Brief | riscritto provvisorio | Sì | Volutamente generica, senza mesi/colture |
+| Filiera collegata | Testo + foraggi per mucche | Brief + sito precedente | recuperato dal sito precedente — da confermare con il cliente | Sì | Foraggi, destinazione, formulazione |
+| Continuità | Fascia breve | Brief | riscritto provvisorio | Sì | — |
+| CTA | Link allevamento + prodotti | Brief | riscritto provvisorio | — | `/prodotti/` ancora 404 |
+
+## Pagina `/azienda/allevamento/`
+
+| Sezione | Testo o immagine | Fonte | Stato | Conferma cliente necessaria | Note |
+| --- | --- | --- | --- | --- | --- |
+| Hero | H1, intro, foto `allevamento-rio-storto` | Brief | riscritto provvisorio / asset temporaneo | Sì | Foto atmosferica temporanea |
+| Presenza quotidiana | Due paragrafi | Brief | riscritto provvisorio | Sì | Nessuna certificazione |
+| Tre principi | Alimentazione, attenzione, origine | Brief | riscritto provvisorio | Sì | Relazione foraggi/mucche da confermare |
+| Latte e carne | Materie prime | Sito precedente | recuperato dal sito precedente — da confermare con il cliente | Sì | Disponibilità e formulazione |
+| Mucche in allevamento | Presenza implicita nei testi foraggi/foto | Sito precedente | recuperato dal sito precedente — da confermare con il cliente | Sì | Non inventare razze o quantità |
+| Campi e animali | Collegamento ad agricoltura | Brief | riscritto provvisorio | Sì | — |
+| CTA | Prodotti + Storia | Brief | riscritto provvisorio | — | `/prodotti/` ancora 404 |
+
+### Informazioni recuperate dal sito precedente (da confermare)
+
+1. Produzione di latte — `recuperato dal sito precedente — da confermare con il cliente`
+2. Produzione di carne — `recuperato dal sito precedente — da confermare con il cliente`
+3. Presenza di mucche nell’allevamento — `recuperato dal sito precedente — da confermare con il cliente`
+4. Utilizzo di foraggi coltivati dall’azienda per l’alimentazione delle mucche — `recuperato dal sito precedente — da confermare con il cliente`
+
+Non utilizzati perché non verificati: ettari, razze, quantità animali, certificazioni, claim assoluti di sostenibilità o benessere.
 
 ## Note operative
 

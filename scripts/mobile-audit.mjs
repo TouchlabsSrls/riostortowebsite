@@ -1,7 +1,10 @@
 /**
- * Audit mobile temporaneo — Rio Storto homepage
- * Uso: node scripts/mobile-audit.mjs
- * Dipendenza: npx playwright (non permanente nel progetto)
+ * Audit mobile temporaneo — Rio Storto
+ * Uso:
+ *   node scripts/mobile-audit.mjs
+ *   AUDIT_URL=http://localhost:8086/storia/ AUDIT_OUT=reference/visual-review/storia node scripts/mobile-audit.mjs
+ *   AUDIT_URL=http://localhost:8086/azienda/agricoltura/ AUDIT_OUT=reference/visual-review/azienda-pages/agricoltura node scripts/mobile-audit.mjs
+ * Dipendenza: playwright (non permanente nel progetto)
  */
 import { chromium } from "playwright";
 import fs from "node:fs";
@@ -10,7 +13,7 @@ import { fileURLToPath } from "node:url";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, "..");
-const OUT = path.join(ROOT, "reference/visual-review/mobile-audit");
+const OUT = path.resolve(ROOT, process.env.AUDIT_OUT || "reference/visual-review/mobile-audit");
 const BASE = process.env.AUDIT_URL || "http://localhost:8086/";
 
 const VIEWPORTS = [
@@ -23,6 +26,7 @@ const VIEWPORTS = [
   { name: "412x915", width: 412, height: 915 },
   { name: "430x932", width: 430, height: 932 },
   { name: "768x1024", width: 768, height: 1024 },
+  { name: "1024x768", width: 1024, height: 768 },
   { name: "1440x900", width: 1440, height: 900 },
 ];
 
@@ -40,10 +44,6 @@ const ASSETS = [
 
 fs.mkdirSync(OUT, { recursive: true });
 
-function round(n) {
-  return Math.round(n * 100) / 100;
-}
-
 async function auditViewport(browser, vp) {
   const page = await browser.newPage({ viewport: { width: vp.width, height: vp.height } });
   const consoleErrors = [];
@@ -53,15 +53,16 @@ async function auditViewport(browser, vp) {
   page.on("pageerror", (err) => consoleErrors.push(String(err)));
 
   await page.goto(BASE, { waitUntil: "networkidle", timeout: 60000 });
-  await page.waitForTimeout(400);
+  await page.evaluate(() => {
+    document.querySelectorAll(".reveal").forEach((el) => el.classList.add("is-visible"));
+  });
+  await page.waitForTimeout(300);
 
   const metrics = await page.evaluate(() => {
     const doc = document.documentElement;
-    const body = document.body;
     const vw = window.innerWidth;
     const overflowing = [];
     const absoluteSpill = [];
-    const overlaps = [];
 
     document.querySelectorAll("body *").forEach((el) => {
       const style = window.getComputedStyle(el);
@@ -69,9 +70,11 @@ async function auditViewport(browser, vp) {
       const r = el.getBoundingClientRect();
       if (!r.width && !r.height) return;
       if (r.right > vw + 1 || r.left < -1) {
+        const className = (el.className && String(el.className).slice(0, 80)) || "";
+        if (className.includes("skip-link")) return;
         overflowing.push({
           tag: el.tagName.toLowerCase(),
-          className: (el.className && String(el.className).slice(0, 80)) || "",
+          className,
           left: r.left,
           right: r.right,
           width: r.width,
@@ -82,41 +85,17 @@ async function auditViewport(browser, vp) {
         if (parent) {
           const pr = parent.getBoundingClientRect();
           if (r.bottom > pr.bottom + 2 || r.top < pr.top - 2 || r.right > pr.right + 2 || r.left < pr.left - 2) {
+            const className = (el.className && String(el.className).slice(0, 80)) || "";
+            if (className.includes("skip-link")) return;
             absoluteSpill.push({
               tag: el.tagName.toLowerCase(),
-              className: (el.className && String(el.className).slice(0, 80)) || "",
+              className,
               parent: (parent.className && String(parent.className).slice(0, 60)) || parent.tagName,
             });
           }
         }
       }
     });
-
-    const intro = document.querySelector(".intro");
-    const filiera = document.querySelector(".filiera");
-    if (intro && filiera) {
-      const a = intro.getBoundingClientRect();
-      const b = filiera.getBoundingClientRect();
-      // Check intro path markers vs filiera title
-      const markers = [...document.querySelectorAll(".intro__path li")].map((li) => {
-        const before = window.getComputedStyle(li, "::before");
-        const r = li.getBoundingClientRect();
-        return {
-          text: li.textContent.trim(),
-          position: before.position,
-          left: before.left,
-          top: r.top,
-          bottom: r.bottom,
-          right: r.right,
-        };
-      });
-      overlaps.push({
-        introBottom: a.bottom + window.scrollY,
-        filieraTop: b.top + window.scrollY,
-        gap: b.top - a.bottom,
-        markers,
-      });
-    }
 
     const images = [...document.images].map((img) => {
       const nw = img.naturalWidth;
@@ -135,12 +114,12 @@ async function auditViewport(browser, vp) {
     return {
       scrollWidth: doc.scrollWidth,
       clientWidth: doc.clientWidth,
-      bodyScrollWidth: body.scrollWidth,
+      scrollHeight: doc.scrollHeight,
       overflowX: doc.scrollWidth > doc.clientWidth + 1,
       overflowing: overflowing.slice(0, 25),
       absoluteSpill: absoluteSpill.slice(0, 25),
-      overlaps,
       images,
+      h1Count: document.querySelectorAll("h1").length,
       consoleErrors: [],
     };
   });
@@ -150,20 +129,8 @@ async function auditViewport(browser, vp) {
   const fullPath = path.join(OUT, `full-${vp.name}.png`);
   await page.screenshot({ path: fullPath, fullPage: true });
 
-  // Close-up: intro → filiera transition
-  const intro = page.locator(".intro");
-  if (await intro.count()) {
-    await intro.scrollIntoViewIfNeeded();
-    await page.waitForTimeout(200);
-    await page.screenshot({
-      path: path.join(OUT, `detail-intro-filiera-${vp.name}.png`),
-      clip: {
-        x: 0,
-        y: Math.max(0, (await intro.boundingBox()).y - 20),
-        width: vp.width,
-        height: Math.min(vp.height, 700),
-      },
-    });
+  if (vp.name === "390x844" || vp.name === "1440x900") {
+    await page.screenshot({ path: path.join(OUT, `top-${vp.name}.png`) });
   }
 
   await page.close();
@@ -196,13 +163,14 @@ for (const vp of VIEWPORTS) {
     viewport: result.viewport,
     scrollWidth: result.scrollWidth,
     clientWidth: result.clientWidth,
+    scrollHeight: result.scrollHeight,
     overflowX: result.overflowX,
     overflowingCount: result.overflowing.length,
     overflowing: result.overflowing,
     absoluteSpillCount: result.absoluteSpill.length,
     absoluteSpill: result.absoluteSpill,
-    introFiliera: result.overlaps[0] || null,
     distortedImages: result.images.filter((i) => i.distorted),
+    h1Count: result.h1Count,
     consoleErrors: result.consoleErrors,
     screenshot: path.relative(ROOT, result.screenshot),
   });
@@ -214,5 +182,7 @@ const reportPath = path.join(OUT, "audit-report.json");
 fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
 process.stdout.write(`\nReport: ${reportPath}\n`);
 
-const issues = report.viewports.filter((v) => v.overflowX || v.consoleErrors.length || v.overflowingCount);
+const issues = report.viewports.filter(
+  (v) => v.overflowX || v.consoleErrors.length || v.overflowingCount || v.h1Count !== 1
+);
 process.stdout.write(`Viewports with issues: ${issues.length}/${report.viewports.length}\n`);
