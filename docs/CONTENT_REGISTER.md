@@ -115,7 +115,8 @@ Stati ammessi:
 | Indicazioni | Link Google Maps search (no iframe) | Brief | — | — | Via Pila 27/C Camposampiero |
 | Temi informativi | Rimossi nella semplificazione strutturale | — | — | — | La pagina Contatti non elenca più i motivi di contatto |
 | Come raggiungerci (pannello) | Fascia salvia compatta con link Maps | Brief bilanciamento | — | — | Azione Maps fuori dalla directory; senza mappa/iframe |
-| Struttura pagina | Hero + directory + fascia indicazioni + riga legale | Brief bilanciamento | — | — | Semplice ma con ritmo/colore; senza temi narrativi |
+| Dati societari in footer | Ragione sociale, P.IVA/CF, REA, link PEC (solo etichetta) | Sito precedente | recuperato dal sito precedente — da confermare con il cliente | Sì | In `.site-footer__company` su tutte le pagine; PEC non mostrata per esteso |
+| Struttura pagina | Hero + directory + fascia indicazioni + footer | Brief bilanciamento | — | — | Nessun blocco legale autonomo prima del footer |
 | Modulo di contatto | Non inserito | — | rimandato | Sì | Richiede definizione del destinatario, gestione SMTP/API, privacy e protezione antispam |
 | Form | — | — | — | — | Modulo di contatto non inserito: richiede definizione del destinatario, gestione SMTP/API, privacy e protezione antispam |
 
