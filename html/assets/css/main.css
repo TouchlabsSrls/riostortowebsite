@@ -4101,26 +4101,6 @@ html.font-newsreader .site-footer__claim {
   overflow: clip;
 }
 
-.page-fattoria-didattica .didactic-hero__mark {
-  position: absolute;
-  z-index: 1;
-  left: 0;
-  top: 6%;
-  margin: 0;
-  writing-mode: vertical-rl;
-  transform: rotate(180deg);
-  font-family: var(--font-display);
-  font-weight: 500;
-  font-size: clamp(4.5rem, 11vw, 8.5rem);
-  line-height: 0.85;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--didactic-terracotta-deep);
-  opacity: 0.2;
-  pointer-events: none;
-  user-select: none;
-}
-
 .page-fattoria-didattica .didactic-hero__blob {
   position: absolute;
   z-index: 0;
@@ -4212,23 +4192,6 @@ html.font-newsreader .site-footer__claim {
     grid-template-columns: 1fr;
     min-height: 0;
     gap: 0;
-  }
-
-  .page-fattoria-didattica .didactic-hero__mark {
-    writing-mode: horizontal-tb;
-    transform: none;
-    top: auto;
-    bottom: auto;
-    left: 0;
-    right: 0;
-    font-size: clamp(3.25rem, 16vw, 5rem);
-    opacity: 0.1;
-    letter-spacing: 0.04em;
-    z-index: 0;
-    pointer-events: none;
-    overflow: hidden;
-    white-space: nowrap;
-    max-width: 100%;
   }
 
   .page-fattoria-didattica .didactic-hero__media {
