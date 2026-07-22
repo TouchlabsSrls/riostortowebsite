@@ -54,7 +54,8 @@ html/
     ├── img/
     │   ├── logo-rio-storto-96.png
     │   ├── logo-rio-storto-192.png
-    │   └── home/               → fotografie homepage (webp/jpg)
+    │   ├── home/               → fotografie homepage (webp/jpg)
+    │   └── prodotti/           → fotografie pagina prodotti (webp/jpg)
     ├── icons/favicon.svg
     └── fonts/                  (vuota — font ancora da CDN in prototipo)
 ```

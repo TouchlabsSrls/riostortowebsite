@@ -85,13 +85,15 @@ Stati ammessi:
 | Hero | H1, intro, foto `prodotti-rio-storto` | Brief pagina prodotti | riscritto provvisorio / asset temporaneo | Sì | Fotografia atmosferica temporanea (tavola); non documentazione catalogo |
 | Introduzione | Due colonne editoriali | Brief | riscritto provvisorio | Sì | — |
 | Categorie pubbliche | Formaggi, Carni, Gelato, Prodotti da forno, Idee regalo, Produzioni stagionali | Brief + homepage | riscritto provvisorio | Sì | Mosaico editoriale, non schede e-commerce; senza link a pagine categoria |
+| Media Formaggi | `formaggi-rio-storto-temporanea.webp/.jpg` nel blocco principale del mosaico | source-assets → `html/assets/img/prodotti/` | asset temporaneo | Sì | Fotografia atmosferica temporanea generata; non rappresenta prodotti reali specifici Rio Storto; sostituire con fotografia autentica del cliente |
+| Media Prodotti da forno | `prodotti-da-forno-rio-storto-temporanea.webp/.jpg` nel blocco largo dedicato | source-assets → `html/assets/img/prodotti/` | asset temporaneo | Sì | Fotografia atmosferica temporanea generata; non rappresenta prodotti reali specifici Rio Storto; sostituire con fotografia autentica del cliente |
 | Categoria Salumi | Non pubblicata | Materiale progettuale | da confermare | Sì | Salumificio non stabilmente in produzione; non annunciare aperture o disponibilità |
 | Latte | Menzionato in testi Formaggi/Gelato e percorso | Sito precedente | recuperato dal sito precedente — da confermare con il cliente | Sì | Non elencare varietà |
 | Carne | Menzionata in categoria Carni | Sito precedente | recuperato dal sito precedente — da confermare con il cliente | Sì | Nessun taglio/specie inventato |
 | Percorso produzione | Origine / Cura / Trasformazione / Stagionalità | Brief | riscritto provvisorio | Sì | Compatto; distinto dalla timeline homepage |
 | Disponibilità | Fascia stagionale + link Contatti | Brief | riscritto provvisorio | Sì | Formulazione neutra; assortimento da definire con il cliente |
 | Idee regalo / confezioni | Solo testo editoriale | Brief | riscritto / da documentare | Sì | Documentare proposte e confezioni reali quando disponibili |
-| Foto per categoria | Non presenti | — | — | Sì | Servono fotografie reali dedicate per ciascuna categoria |
+| Foto per categoria | Formaggi e forno con atmosfere temporanee; altre categorie tipografiche | Asset temporanei | asset temporaneo | Sì | Servono fotografie reali dedicate delle produzioni Rio Storto |
 | Navigazione correlata | Agricoltura + Allevamento | Brief | — | — | Componente `.related-navigation` |
 | OG image | `prodotti-rio-storto.jpg` | Asset homepage | asset temporaneo | Sì | — |
 
