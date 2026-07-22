@@ -33,8 +33,8 @@ Stati ammessi:
 | Fattoria didattica | Titolo e testo | Brief fase 2 | riscritto provvisorio | Sì | Attività e modalità reali |
 | Fattoria didattica | Immagine atmosferica (`fattoria-didattica-rio-storto.webp` / `.jpg`) | Asset temporaneo in `html/assets/img/home/` | asset temporaneo | Sì | Fotografia reale Rio Storto (stesso nome file) |
 | Stagionalità | Testo editoriale generico | Brief fase 2 | riscritto provvisorio | Sì | Eventi/prodotti solo se confermati |
-| Contatti | Messaggio pubblico senza dati inventati | Brief fase 2 | riscritto provvisorio | Sì | Indirizzo, telefono, email, orari, mappa, social |
-| Contatti | Campi strutturali (indirizzo, tel, email, orari, mappa, social) | Commento HTML interno | da confermare | Sì | Valori reali da inserire nel markup |
+| Contatti | Messaggio pubblico + link a /contatti/ | Brief fase 2 | riscritto provvisorio | Sì | Pagina /contatti/ attiva |
+| Contatti | Campi strutturali (indirizzo, tel, email, orari, mappa, social) | Commento HTML interno | da confermare | Sì | Dati pubblicati in /contatti/; orari e social ancora da confermare |
 | Footer | Nome azienda + link privacy/cookie | Bozza | riscritto provvisorio | Sì | Ragione sociale, P. IVA, privacy/cookie definitive |
 | Logo | PNG ottimizzati header/footer | Logo cliente 2024 | verificato da materiale precedente | No | Eventuale PNG/SVG trasparente ufficiale |
 
@@ -96,6 +96,26 @@ Stati ammessi:
 | Foto per categoria | Formaggi e forno con atmosfere temporanee; altre categorie tipografiche | Asset temporanei | asset temporaneo | Sì | Servono fotografie reali dedicate delle produzioni Rio Storto |
 | Navigazione correlata | Agricoltura + Allevamento | Brief | — | — | Componente `.related-navigation` |
 | OG image | `prodotti-rio-storto.jpg` | Asset homepage | asset temporaneo | Sì | — |
+
+## Pagina `/contatti/`
+
+| Sezione | Testo o immagine | Fonte | Stato | Conferma cliente necessaria | Note |
+| --- | --- | --- | --- | --- | --- |
+| Hero | H1, intro, foto `hero-rio-storto` (crop distinto dalla home) | Brief | riscritto / asset temporaneo | Sì | Sostituire con foto reale ingresso/sede |
+| Ragione sociale | Società Agricola Storica Rio Storto di Ferro Lucia & C. S.A.S. | Sito precedente | recuperato dal sito precedente — da confermare con il cliente | Sì | — |
+| Indirizzo | Via Pila 27/C, 35012 Camposampiero (PD) | Sito precedente | recuperato dal sito precedente — da confermare con il cliente | Sì | — |
+| P.IVA / C.F. | 05100260289 | Sito precedente | recuperato dal sito precedente — da confermare con il cliente | Sì | — |
+| REA | PD 443079 | Sito precedente | recuperato dal sito precedente — da confermare con il cliente | Sì | — |
+| PEC | soc.agr.amabile.ferro.lucia.sas@pec.it | Sito precedente | recuperato dal sito precedente — da confermare con il cliente | Sì | Solo area “Comunicazioni legali”, non contatto principale |
+| Telefono | 392 395 4176 / tel:+393923954176 | Materiali pubblici recenti | dato pubblico recuperato — da confermare con il cliente prima della pubblicazione definitiva | Sì | — |
+| Email | ff.eferro@gmail.com | Materiali pubblici recenti | dato pubblico recuperato — da confermare con il cliente prima della pubblicazione definitiva | Sì | — |
+| Orari di apertura | Non pubblicati | — | da verificare | Sì | Esclusi volutamente in questo ciclo |
+| WhatsApp | Non pubblicato | — | da verificare | Sì | Non inventare canale |
+| Social Instagram / Facebook | Non pubblicati | — | da confermare | Sì | URL non presenti nel progetto; non inventati |
+| Indicazioni | Link Google Maps search (no iframe) | Brief | — | — | Via Pila 27/C Camposampiero |
+| Temi informativi | Prodotti (link), Fattoria/Agriturismo (testo), Azienda (link agri+alle) | Brief | riscritto provvisorio | Sì | Link Fattoria didattica e Agriturismo da attivare quando le pagine esistono |
+| Modulo di contatto | Non inserito | — | rimandato | Sì | Richiede definizione del destinatario, gestione SMTP/API, privacy e protezione antispam |
+| Form | — | — | — | — | Modulo di contatto non inserito: richiede definizione del destinatario, gestione SMTP/API, privacy e protezione antispam |
 
 ### Informazioni recuperate dal sito precedente (da confermare)
 
