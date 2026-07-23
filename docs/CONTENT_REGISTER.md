@@ -37,6 +37,7 @@ Stati ammessi:
 | Contatti | Campi strutturali (indirizzo, tel, email, orari, mappa, social) | Commento HTML interno | da confermare | Sì | Dati pubblicati in /contatti/; orari e social ancora da confermare |
 | Footer | Nome azienda + link privacy/cookie | Bozza | riscritto provvisorio | Sì | Ragione sociale, P. IVA, privacy/cookie definitive |
 | Logo | PNG ottimizzati header/footer | Logo cliente 2024 | verificato da materiale precedente | No | Eventuale PNG/SVG trasparente ufficiale |
+| Logo header | `logo-rio-storto-header.png` + `header-2x.png` | Crop da `logo-rio-storto-192.png` | asset web | No | Rifilatura margini trasparenti; originali 96/192 conservati (footer e OG) |
 
 ## Pagina `/storia/`
 

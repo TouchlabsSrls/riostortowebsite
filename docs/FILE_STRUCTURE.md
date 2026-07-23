@@ -60,6 +60,8 @@ html/
     ├── img/
     │   ├── logo-rio-storto-96.png
     │   ├── logo-rio-storto-192.png
+    │   ├── logo-rio-storto-header.png      → logo header 1x (crop web)
+    │   ├── logo-rio-storto-header-2x.png   → logo header 2x (crop web)
     │   ├── home/               → fotografie homepage (webp/jpg)
     │   └── prodotti/           → fotografie pagina prodotti (webp/jpg)
     ├── icons/favicon.svg
