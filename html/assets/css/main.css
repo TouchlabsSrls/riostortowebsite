@@ -5501,6 +5501,47 @@ svg[data-draw-line] circle {
   --reveal-distance: 1rem; /* 16px */
 }
 
+/* Hero copy refine: lift static position via padding (not transform — keeps reveal translateY separate) */
+.page-home .hero__content {
+  --hero-copy-lift: 0.75rem; /* ~12px mobile default */
+  --hero-actions-gap: 1.625rem; /* ~26px: slightly tighter after shorter lead */
+  padding-bottom: calc(clamp(4rem, 10vw, 6.5rem) + var(--hero-copy-lift));
+}
+
+.page-home .hero__lead {
+  max-width: 36rem;
+  line-height: 1.55;
+}
+
+.page-home .hero__actions {
+  margin-top: var(--hero-actions-gap);
+}
+
+@media (max-width: 767px) {
+  .page-home .hero__content {
+    --hero-copy-lift: 0.75rem; /* 8–16px band */
+    padding-bottom: calc(clamp(3.5rem, 12vw, 5rem) + var(--hero-copy-lift));
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .page-home .hero__content {
+    --hero-copy-lift: 1.25rem; /* ~20px */
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .page-home .hero__content {
+    --hero-copy-lift: 1.875rem; /* ~30px */
+  }
+}
+
+@media (min-width: 1280px) {
+  .page-home .hero__content {
+    --hero-copy-lift: 2.5rem; /* ~40px */
+  }
+}
+
 /* Evita che il reveal sull’hero media nasconda tutto lo sfondo: solo scale sull’immagine */
 .page-home.js-ready .hero__media.reveal:not(.is-visible) {
   opacity: 1;
