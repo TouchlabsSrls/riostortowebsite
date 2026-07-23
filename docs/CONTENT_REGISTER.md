@@ -129,6 +129,7 @@ Stati ammessi:
 | Hero media | `fattoria-didattica-rio-storto.webp/.jpg` | Asset homepage | asset temporaneo | Sì | Fotografia atmosferica temporanea; non documenta un’attività specifica Rio Storto |
 | Introduzione | Titolo + testo + accento tipografico | Brief | riscritto provvisorio | Sì | — |
 | Percorso scoperta | Tre momenti (animali / natura e campi / origine del cibo) | Brief | riscritto provvisorio | Sì | Concetti generali; non elenco laboratori |
+| Media esperienza | `incontro-animali-rio-storto-temporanea.webp/.jpg` | Asset generato in `html/assets/img/fattoria-didattica/` | asset temporaneo | Sì | Fotografia atmosferica temporanea generata di un bambino accompagnato da un adulto durante l’incontro con una capra. Non documenta una specifica attività Rio Storto. Da sostituire con fotografia autentica. |
 | Fascia sensoriale | “Vedere. Toccare. Ascoltare. Domandare.” | Brief | riscritto provvisorio | Sì | — |
 | Per chi | Famiglie / Scuole / Gruppi + nota modalità | Brief | riscritto provvisorio | Sì | Nessun pacchetto, programma o tariffa |
 | Contatto | Conversazione → Contatti + link agricoltura/allevamento | Brief | riscritto provvisorio | — | Nessun form, calendario o prenotazione online |
@@ -143,7 +144,7 @@ Stati ammessi:
 | QR code | Non presenti | — | evoluzione futura | Sì | — |
 | Virtual tour | Non presente | — | evoluzione futura | Sì | — |
 | Video autentico | Non inserito | — | da produrre | Sì | Futuro clip 8–15 s: bambini e adulti in esperienza, animali, campi/natura, gesti reali, luce naturale; muto o audio opzionale; con poster; non autoplay se prefers-reduced-motion; compresso; non sostituisce testi |
-| Fotografie reali | Solo atmosfera temporanea in hero | Asset temporaneo | asset temporaneo | Sì | Servono foto reali di attività + eventuali dettagli ravvicinati |
+| Fotografie reali | Atmosfera temporanea in hero + pausa fotografica esperienza | Asset temporanei | asset temporaneo | Sì | Servono foto reali di attività + eventuali dettagli ravvicinati |
 | OG image | `fattoria-didattica-rio-storto.jpg` | Asset homepage | asset temporaneo | Sì | — |
 
 ## Pagina `/agriturismo/`
@@ -156,7 +157,7 @@ Stati ammessi:
 | Dalla terra alla tavola | Testo + foto `prodotti-rio-storto` + link agricoltura/allevamento | Brief | riscritto / asset temporaneo | Sì | Ponte narrativo; non documentazione menu |
 | Fascia scura | “Il gusto ha bisogno di tempo” + Terra/Attesa/Cura/Condivisione | Brief | riscritto provvisorio | Sì | — |
 | La tavola | Testo + `formaggi-rio-storto-temporanea` + link prodotti | Brief | riscritto / asset temporaneo | Sì | Non rappresenta menu o prodotti specifici garantiti |
-| Atmosfera | Titolo tipografico a tre frasi | Brief | riscritto provvisorio | Sì | Nessuna nuova fotografia |
+| Atmosfera | Titolo tipografico a tre frasi + `convivialita-rio-storto-temporanea.webp/.jpg` | Brief / asset generato | riscritto / asset temporaneo | Sì | Fotografia atmosferica temporanea generata di una scena conviviale. Non documenta un menu, un servizio o un ambiente specifico Rio Storto. Da sostituire con fotografia autentica. |
 | Informazioni | Telefono + email + link Contatti | Contatti / materiali pubblici | dato pubblico recuperato — da confermare | Sì | Nessun form, calendario o prenotazione online |
 | Aperture / orari / giorni | Non pubblicati | — | da confermare | Sì | — |
 | Modalità di prenotazione | Solo contatto diretto | Brief | da confermare | Sì | Prenotazione online non implementata |

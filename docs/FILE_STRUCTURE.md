@@ -63,7 +63,13 @@ html/
     │   ├── logo-rio-storto-header.png      → logo header 1x (crop web)
     │   ├── logo-rio-storto-header-2x.png   → logo header 2x (crop web)
     │   ├── home/               → fotografie homepage (webp/jpg)
-    │   └── prodotti/           → fotografie pagina prodotti (webp/jpg)
+    │   ├── prodotti/           → fotografie pagina prodotti (webp/jpg)
+    │   ├── agriturismo/
+    │   │   ├── convivialita-rio-storto-temporanea.jpg
+    │   │   └── convivialita-rio-storto-temporanea.webp
+    │   └── fattoria-didattica/
+    │       ├── incontro-animali-rio-storto-temporanea.jpg
+    │       └── incontro-animali-rio-storto-temporanea.webp
     ├── icons/favicon.svg
     └── fonts/                  (vuota — font ancora da CDN in prototipo)
 ```
