@@ -279,23 +279,44 @@
     </section>
 
     <section class="section story-closing" aria-labelledby="oggi-title">
-      <div class="container container--wide story-closing__layout reveal">
-        <div class="story-closing__copy">
+      <div class="container container--wide story-closing__layout">
+        <div class="story-closing__copy reveal">
           <p class="eyebrow">Rio Storto oggi</p>
-          <h2 id="oggi-title">Una storia che continua nel lavoro di ogni giorno.</h2>
-          <p class="story-closing__text content-measure">La storia di Rio Storto non è fatta di attività separate. Agricoltura, allevamento e trasformazione fanno parte di un percorso seguito direttamente dall’azienda, dalla terra fino ai prodotti e all’accoglienza.</p>
+          <h2 id="oggi-title">Una storia che continua nel <span class="title-accent">lavoro di ogni giorno</span>.</h2>
+          <p class="story-closing__text">La storia di Rio Storto non è fatta di attività separate. Agricoltura, allevamento e trasformazione fanno parte di un percorso seguito direttamente dall’azienda, dalla terra fino ai prodotti e all’accoglienza.</p>
         </div>
 
-        <div class="story-closing__next">
-          <ul class="story-closing__values" aria-label="Valori di Rio Storto">
-            <li>Genuinità</li>
-            <li>Stagionalità</li>
-            <li>Cura</li>
-            <li>Accoglienza</li>
+        <!-- IMAGE STATUS: fotografia atmosferica temporanea (campi contemporanei); riuso da home/agricoltura con crop verticale narrativo diverso; sostituire con asset reale Rio Storto -->
+        <figure class="story-closing__media reveal reveal-media" style="--media-reveal-scale: 1.02">
+          <svg class="story-closing__river" data-draw-line viewBox="0 0 120 220" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+            <path class="graphic-river__stroke" d="M78 8 C 52 48, 98 78, 64 118 S 28 168, 54 212" fill="none" stroke="currentColor" stroke-width="1.35"/>
+          </svg>
+          <div class="story-closing__frame">
+            <picture>
+              <source srcset="/assets/img/home/agricoltura-rio-storto.webp" type="image/webp">
+              <img
+                class="story-closing__image"
+                src="/assets/img/home/agricoltura-rio-storto.jpg"
+                alt="Filari coltivati e corso d’acqua al tramonto, paesaggio agricolo contemporaneo"
+                width="1672"
+                height="941"
+                loading="lazy"
+                decoding="async"
+              >
+            </picture>
+          </div>
+        </figure>
+
+        <div class="story-closing__values">
+          <ul class="story-closing__value-list" aria-label="Valori di Rio Storto">
+            <li class="story-closing__value story-closing__value--lg reveal" data-reveal-delay="0">Genuinità</li>
+            <li class="story-closing__value story-closing__value--italic reveal" data-reveal-delay="50">Stagionalità</li>
+            <li class="story-closing__value story-closing__value--sm reveal" data-reveal-delay="100">Cura</li>
+            <li class="story-closing__value story-closing__value--accent reveal" data-reveal-delay="150">Accoglienza</li>
           </ul>
-          <p class="story-closing__values-note">Valori tramandati nel tempo e applicati ogni giorno al lavoro nei campi, alla cura degli animali, alle produzioni e all’incontro con le persone.</p>
-          <p class="story-closing__future">Il futuro nasce dalle stesse radici.</p>
-          <div class="context-links" aria-label="Continua nella storia attuale di Rio Storto">
+          <p class="story-closing__values-note reveal" data-reveal-delay="80">Valori tramandati nel tempo e applicati ogni giorno al lavoro nei campi, alla cura degli animali, alle produzioni e all’incontro con le persone.</p>
+          <p class="story-closing__future reveal" data-reveal-delay="110">Il futuro nasce dalle stesse radici.</p>
+          <div class="story-closing__links context-links reveal" data-reveal-delay="140" aria-label="Continua nella storia attuale di Rio Storto">
             <a class="context-links__item" href="/azienda/agricoltura/">
               Scopri l’agricoltura
               <svg width="18" height="12" viewBox="0 0 18 12" aria-hidden="true" focusable="false">
